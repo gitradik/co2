@@ -5,3 +5,4 @@ css/main.sass
 *.css.map
 *.sass.map
 *.scss.map
+*.sass
