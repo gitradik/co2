@@ -1,8 +1,7 @@
 .vscode
 node_modules/
-css/main.sass
+./css/main.sass
 .sass-cache/
 *.css.map
 *.sass.map
 *.scss.map
-*.sass

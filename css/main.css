@@ -1,6 +1,10 @@
 body {
-    background-color: green;
-    color: white;
+    background-color: #040402;
+}
+
+img[alt=logo] {
+    height: auto;
+    max-width: 132px;
 }
 
 /*# sourceMappingURL=main.css.map */
