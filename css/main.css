@@ -566,6 +566,9 @@ form input::placeholder {
     .main-scroll .form-content {
         margin-left: 0;
     }
+    .main-scroll .form-content form input {
+        margin-right: 0;
+    }
     .main-scroll .form-content .advantages {
         flex-direction: column;
     }
