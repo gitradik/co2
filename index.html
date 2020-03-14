@@ -16,7 +16,7 @@
   <title>Покупка и доставка авто из США</title>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg">
+  <nav id="headerMenu" class="navbar navbar-expand-lg">
     <div class="navbar-start">
       <a class="navbar-brand" href="/">
         <img src="./img/logo.png" alt="logo">
@@ -73,6 +73,8 @@
     <div class="content">
       <div class="content-text">
         <h1>покупка<br> и доставка<br> авто из сша</h1>
+        <h2>Дешевле рынка на <span>30 - 60%</span></h2>
+        <hr>
       </div>
       <div class="content-menu">
         <a href="#">О нас</a>
@@ -81,6 +83,44 @@
         <a href="#">Преимущества</a>
         <a href="#">Отзывы</a>
         <a href="#">Контакты</a>
+      </div>
+    </div>
+
+    <div class="form-content">
+      <form>
+        <input type="text" name="name" placeholder="Имя" required>
+        <input class="input-mask-s" type="text" name="phone" placeholder="Телефон" required>
+        <button class="content-btn" type="submit">получить предложение</button>
+      </form> 
+
+      <div class="advantages">
+        <div class="adv-card">
+          <div class="card-img">
+            <img src="./img/icons/work.png" alt="work">
+          </div>
+          <div class="card-text">
+            Работаем четко<br>
+            по договору
+          </div>
+        </div>
+        <div class="adv-card">
+          <div class="card-img">
+            <img src="./img/icons/garantiya.png" alt="g">
+          </div>
+          <div class="card-text">
+            Гарантия на весь<br>
+            спектр услуг
+          </div>
+        </div>
+        <div class="adv-card">
+          <div class="card-img">
+            <img src="./img/icons/cars.png" alt="cars">
+          </div>
+          <div class="card-text">
+            Широкий выбор<br>
+            автомобилей
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -96,5 +136,6 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="./js/main.js"></script>
+    <script src="./modules/inputmask/dist/jquery.inputmask.bundle.js"></script>
 </body>
 </html>

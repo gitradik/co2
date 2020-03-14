@@ -1,5 +1,6 @@
 $black: #040402
 $white: #fff
+$orange: #FF7A00
 $orang-opacity: rgba(255, 122, 0, 0.65)
 $overlay-black: rgba($black, .5)
 $mar: calc(16px + 300px)
@@ -20,6 +21,110 @@ a
 
   &:hover
     text-decoration: none
+
+// Form start
+
+form
+
+  input
+    font-family: SF UI Display Semibold
+    outline: none
+    width: 100%
+    max-width: 373px
+    background-color: rgba(247, 247, 247, 0.06)
+    box-sizing: border-box
+    height: 54px
+    box-shadow: 0px 20px 12px rgba(0, 0, 0, 0.02)
+    border-radius: 2px
+    padding-left: 5px
+    color: $white
+    transition: .2s
+    border: 2px solid rgba(255, 255, 255, 0.4)
+
+    &:focus
+      transition: .2s
+      border-color: $orange
+
+    &::placeholder
+      color: rgba($white, .7)
+      font-family: SF UI Display Semibold
+      font-size: 16px
+
+@media only screen and (max-width: 1799px)
+  form
+
+    input
+      max-width: 340px
+      height: 48px
+      font-size: 14px
+
+      &::placeholder
+        font-size: 14px
+
+@media only screen and (max-width: 1599px)
+  form
+
+    input
+      max-width: 350px
+
+@media only screen and (max-width: 1499px)
+  form
+
+    input
+      max-width: 300px
+
+@media only screen and (max-width: 1349px)
+  form
+
+    input
+      max-width: 250px
+
+@media only screen and (max-width: 1199px)
+  form
+
+    input
+      max-width: 220px
+      font-size: 12px
+
+
+
+// Form end
+
+
+.content-btn
+  font-family: SF UI Display Semibold
+  color: $white
+  width: 100%
+  max-width: 373px
+  height: 54px
+  font-size: 16px
+  background: $orange
+  border: none
+  text-transform: uppercase
+  border-radius: 27px
+
+@media only screen and (max-width: 1799px)
+  .content-btn
+    max-width: 340px
+    height: 48px
+    font-size: 14px
+
+@media only screen and (max-width: 1599px)
+  .content-btn
+    max-width: 350px
+
+@media only screen and (max-width: 1499px)
+  .content-btn
+    max-width: 300px
+
+@media only screen and (max-width: 1349px)
+  .content-btn
+    max-width: 250px
+
+@media only screen and (max-width: 1199px)
+  .content-btn
+    max-width: 220px
+    font-size: 12px
     
 
 .overlay-bg
@@ -250,6 +355,60 @@ a
   background-position: center
   background-repeat: no-repeat 
   padding-top: 200px
+  padding-bottom: 50px
+
+  .form-content
+    position: relative
+    z-index: 1
+    margin-left: $mar
+
+    form
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      width: 100%
+      margin-bottom: 40px
+
+      input
+        margin-right: 10px
+
+    .advantages
+      display: flex
+      align-items: center
+
+    .adv-card
+      width: 100%
+      max-width: 373px
+      padding: 10px
+      background: rgba(14, 14, 14, 0.34)
+      border-radius: 55px
+      margin-right: 10px
+      display: flex
+      align-items: center
+      justify-content: flex-start
+
+      &:last-child
+        margin-right: 0
+
+      .card-img
+        height: 50px
+        width: 50px
+        border-radius: 100%
+        background-color: $orange
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-right: 10px
+
+      img
+        height: 25px
+        width: 25px
+
+      .card-text
+        font-family: SF UI Display Light
+        font-size: 16px
+        color: $white
+
 
   .content
     position: relative
@@ -277,6 +436,14 @@ a
           transition: .2s
           background-color: $orang-opacity
 
+    .content-text
+      width: 100%
+
+      hr
+        margin-top: 40px
+        margin-bottom: 40px
+        border-color: rgba(196, 196, 196, 0.24)
+
 
   h1
     display: inline-block
@@ -286,10 +453,22 @@ a
     color: $white
     text-shadow: 0px 20px 12px rgba(0, 0, 0, 0.02)
 
+  h2
+    font-family: SF UI Display Light
+    font-weight: normal
+    font-size: 40px
+    line-height: 48px
+    text-transform: uppercase
+    color: white
+
+    span
+      color: $orange
+      font-family: SF UI Display Black
+
 @media only screen and (max-width: 1799px)
   .main-scroll
 
-    .content
+    .content, .form-content
       margin-left: $mar-1799
 
       .content-menu
@@ -299,30 +478,53 @@ a
           font-size: 16px
           height: 40px
 
+      .adv-card
+        max-width: 340px
+
+        .card-text
+          font-size: 14px
+
     h1
       font-size: 60px
+
+    h2
+      font-size: 35px
 
 @media only screen and (max-width: 1599px)
   .main-scroll
 
-    .content
+    .content, .form-content
       margin-left: $mar-1599
+
+      .adv-card
+        max-width: 350px
 
       .content-menu
         
         a
           padding-right: $mar-1599
 
-@media only screen and (max-width: 1599px)
+@media only screen and (max-width: 1499px)
   .main-scroll
 
-    .content
+    .content, .form-content
       margin-left: $mar-1499
+
+      .adv-card
+        max-width: 300px
 
       .content-menu
         
         a
           padding-right: $mar-1499
+
+@media only screen and (max-width: 1349px)
+  .main-scroll
+
+    .form-content
+
+      .adv-card
+        max-width: 250px
 
 @media only screen and (max-width: 1199px)
   .main-scroll
@@ -335,9 +537,30 @@ a
         a
           padding-left: 32px
 
+    .form-content
+
+      .adv-card
+        max-width: 220px
+
+        .card-text
+          font-size: 12px
+
 @media only screen and (max-width: 991px)
   .main-scroll
     padding-top: 175px
+
+    .form-content
+      margin-left: 0
+
+      .advantages
+        flex-direction: column
+
+        .adv-card
+          margin-right: 0
+          margin-bottom: 10px
+
+          &:last-child
+            margin-bottom: 0
 
     .content
       margin-left: 0
@@ -352,6 +575,24 @@ a
       display: block
       text-align: center
 
+    h2
+      display: block
+      text-align: center
+      font-size: 30px
+
+    form
+      display: flex
+      flex-direction: column
+
+      input
+        max-width: 340px
+        margin-right: 0
+        margin-bottom: 10px
+
+      .content-btn
+        max-width: 340px
+
+
 @media only screen and (max-width: 767px)
   .main-scroll
     padding-top: 160px
@@ -365,5 +606,13 @@ a
 
     h1
       font-size: 35px
+
+    form
+
+      input
+        max-width: 300px
+
+      .content-btn
+        max-width: 300px
     
 // main-scroll end
