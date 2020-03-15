@@ -1217,6 +1217,12 @@ form input::placeholder {
     }
 }
 
+.clients {
+    background-image: url("../img/Layer.png");
+    background-position: right bottom;
+    background-repeat: no-repeat;
+}
+
 .clients .card {
     background: #040402;
     border: 2px solid rgba(255, 255, 255, 0.15);
