@@ -121,6 +121,10 @@ form input::placeholder {
     font-size: 16px;
 }
 
+form button {
+    margin-top: 10px;
+}
+
 .form {
     display: flex;
 }
@@ -215,15 +219,9 @@ form input::placeholder {
     border-radius: 27px;
 }
 
-@media only screen and (max-width: 1799px) {
-    .content-btn {
-        font-size: 14px;
-    }
-}
-
 @media only screen and (max-width: 1199px) {
     .content-btn {
-        font-size: 12px;
+        font-size: 14px;
     }
 }
 
@@ -410,7 +408,7 @@ form input::placeholder {
     }
 }
 
-@media only screen and (max-width: 1599px) {
+@media only screen and (max-width: 1499px) {
     .navbar .navbar-start {
         margin-left: 150px;
     }
@@ -774,7 +772,7 @@ form input::placeholder {
     bottom: -10px;
     background-color: rgba(255, 122, 0, 0.95);
     border-radius: 15px;
-    padding: 15px 20px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -785,17 +783,19 @@ form input::placeholder {
     font-family: SF UI Display Bold;
     border: 2px solid #fff;
     margin-top: 15px;
+    height: 46px;
 }
 
 .check-auto .check-auto-card .inner .auto-card-detail .title {
     position: relative;
-    margin-left: 0;
-    margin-bottom: 15px;
+    margin: 0;
+    padding-bottom: 10px;
 }
 
 .check-auto .check-auto-card .inner .auto-card-detail h3 {
     font-size: 24px;
     text-transform: uppercase;
+    margin: 0;
 }
 
 .check-auto .check-auto-card .inner .auto-card-detail .list {
@@ -850,16 +850,14 @@ form input::placeholder {
     margin: 2%;
     font-size: 24px;
     text-transform: uppercase;
+    text-align: left;
 }
 
 .check-auto .check-auto-card .top .title span {
     display: block;
     font-weight: 300;
-    font-size: 22px;
-    line-height: 26px;
     color: #FF7A00;
     font-family: SF UI Display Light;
-    padding-top: 10px;
 }
 
 .check-auto .check-auto-card .bottom {
@@ -871,122 +869,69 @@ form input::placeholder {
     margin-top: 15px;
 }
 
-@media only screen and (max-width: 1599px) {
-    .check-auto .check-auto-card .inner .auto-card-detail .title {
-        margin: 0;
-        margin-bottom: 10px;
-    }
-    .check-auto .check-auto-card .inner .auto-card-detail .title h3 {
-        font-size: 22px;
-        margin: 0;
-    }
-    .check-auto .check-auto-card .inner .auto-card-detail .list.ec {
-        margin-top: 10px;
-    }
-    .check-auto .check-auto-card .inner .auto-card-detail {
-        padding: 45px;
-    }
-}
-
 @media only screen and (max-width: 1199px) {
-    .check-auto .check-auto-card .top .title {
-        text-align: left;
-    }
-    .check-auto .check-auto-card .inner .auto-card-detail {
-        padding: 5% 7%;
-    }
-}
-
-@media only screen and (max-width: 991px) {
-    .check-auto .check-auto-card .inner .auto-card-detail .title {
-        margin-left: 0;
-        text-align: left;
-    }
-    .check-auto .check-auto-card .top .title {
-        text-align: left;
-        font-size: 24px;
-    }
     .check-auto .list {
         font-size: 16px;
     }
     .check-auto .list span:last-child {
         font-size: 17px;
     }
-    .check-auto .check-auto-card .inner .auto-card-detail {
-        padding: 45px;
+    .check-auto .check-auto-card .top .title {
+        font-size: 20px;
     }
-}
-
-@media only screen and (max-width: 767px) {
-    .check-auto .check-auto-card .inner .auto-card-detail {
-        padding: 35px;
+    .check-auto .check-auto-card .bottom {
+        padding: 15px;
     }
-}
-
-@media only screen and (max-width: 576px) {
-    .check-auto .check-auto-card .inner .auto-card-detail {
-        padding: 5% 7%;
+    .check-auto .check-auto-card .inner .auto-card-detail .title {
+        text-align: left;
     }
-    .check-auto .check-auto-card .inner .auto-card-detail .content-btn {
-        height: 35px;
+    .check-auto .check-auto-card .inner .auto-card-detail .title h3 {
+        font-size: 18px;
     }
     .check-auto .check-auto-card .inner .auto-card-detail .list {
         margin-bottom: 5px;
     }
     .check-auto .check-auto-card .inner .auto-card-detail .list span {
-        font-size: 12px;
+        font-size: 14px;
     }
     .check-auto .check-auto-card .inner .auto-card-detail .list.ec span {
         font-size: 18px;
     }
-    .check-auto .list {
-        font-size: 14px;
+}
+
+@media only screen and (max-width: 767px) {
+    .check-auto .cats {
+        max-width: 70%;
     }
-    .check-auto .list span:last-child {
-        font-size: 15px;
-    }
-    .check-auto .check-auto-card .bottom {
-        padding: 18px;
-    }
-    .check-auto .check-auto-card .bottom button {
-        height: 35px;
-    }
-    .check-auto .check-auto-card .top .title {
-        font-size: 20px;
-    }
-    .check-auto .check-auto-card .inner .auto-card-detail .title {
-        margin-bottom: 0;
-    }
-    .check-auto .check-auto-card .top .title span {
-        padding-top: 0;
-    }
+}
+
+@media only screen and (max-width: 576px) {
     .check-auto .check-auto-card .inner .auto-card-detail .title h3 {
         font-size: 16px;
-    }
-    .check-auto .check-auto-card .inner .auto-card-detail .list.ec {
-        margin-top: 0;
     }
     .check-auto .check-auto-card .inner .auto-card-detail .list.ec span {
         font-size: 15px;
     }
-    .check-auto .check-auto-card .inner .auto-card-detail .content-btn {
-        margin-top: 0;
-    }
-    .check-auto .check-auto-card .inner .auto-card-detail .list {
-        margin: 0;
-    }
-    .check-auto .check-auto-card .top .title {
-        font-size: 16px;
-        line-height: normal;
-    }
-    .check-auto .check-auto-card .top .title span {
-        font-size: 17px;
+    .check-auto .check-auto-card .inner .auto-card-detail .list span {
+        font-size: 13px;
     }
 }
 
-@media only screen and (max-width: 349px) {
-    .check-auto .check-auto-card .inner .auto-card-detail .content-btn {
-        height: 30px;
+@media only screen and (max-width: 499px) {
+    .check-auto .cats {
+        max-width: 80%;
+    }
+    .check-auto .check-auto-card .auto-card-detail .list.ec {
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 399px) {
+    .check-auto .cats {
+        max-width: 98%;
+    }
+    .check-auto .check-auto-card .inner .auto-card-detail .list.ec {
+        margin-top: 8px;
     }
 }
 
@@ -1228,6 +1173,7 @@ form input::placeholder {
     border: 2px solid rgba(255, 255, 255, 0.15);
     margin-bottom: 20px;
     border-radius: 0;
+    min-height: 80px;
 }
 
 .clients .card .card-header {
@@ -1307,6 +1253,9 @@ form input::placeholder {
 }
 
 @media only screen and (max-width: 991px) {
+    .clients .card {
+        min-height: 65px;
+    }
     .clients .card .btn-link {
         font-size: 16px;
     }

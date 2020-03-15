@@ -133,6 +133,9 @@ form
       font-family: SF UI Display Semibold
       font-size: 16px
 
+  button
+    margin-top: 10px
+
 .form
   display: flex
   
@@ -237,13 +240,9 @@ form
   text-transform: uppercase
   border-radius: 27px
 
-@media only screen and (max-width: 1799px)
-  .content-btn
-    font-size: 14px
-
 @media only screen and (max-width: 1199px)
   .content-btn
-    font-size: 12px
+    font-size: 14px
 
     
 .overlay-bg
@@ -408,7 +407,7 @@ form
     .navbar-social-links
       margin-right: $mar-proc-1599
 
-@media only screen and (max-width: 1599px)
+@media only screen and (max-width: 1499px)
   .navbar
 
     .navbar-start
@@ -780,7 +779,7 @@ form
         bottom: -10px
         background-color: rgba(255, 122, 0, 0.95)
         border-radius: 15px
-        padding: 15px 20px
+        padding: 20px
         display: flex
         flex-direction: column
         justify-content: space-between
@@ -790,15 +789,17 @@ form
           font-family: SF UI Display Bold
           border: 2px solid $white
           margin-top: 15px
+          height: 46px
 
         .title
           position: relative
-          margin-left: 0
-          margin-bottom: 15px
+          margin: 0
+          padding-bottom: 10px
 
         h3
           font-size: 24px
           text-transform: uppercase
+          margin: 0
 
         .list
           padding: 0
@@ -846,18 +847,15 @@ form
         left: 0
         font-family: SF UI Display Semibold
         margin: 2%
-        font-size: 
         font-size: 24px
         text-transform: uppercase
+        text-align: left
 
         span
           display: block
           font-weight: 300
-          font-size: 22px
-          line-height: 26px
           color: $orange
           font-family: SF UI Display Light
-          padding-top: 10px
       
 
     .bottom
@@ -867,133 +865,116 @@ form
         height: 46px
         margin-top: 15px
 
-@media only screen and (min-width: 1600px)
-  .check-auto
-    
-    .check-auto-card
-      
-      .top
-        //height: 220px
-
-@media only screen and (max-width: 1599px)
-  .check-auto
-    
-    .check-auto-card
-      
-      .top
-        //height: 220px
-
-      .inner
-
-        .auto-card-detail
-
-          .content-btn
-
-          .title
-            margin: 0
-            margin-bottom: 10px
-
-            h3
-              font-size: 22px
-              margin: 0
-
-  .check-auto .check-auto-card .inner .auto-card-detail .list.ec
-    margin-top: 10px
-
-  .check-auto .check-auto-card .inner .auto-card-detail
-    padding: 45px
 
 @media only screen and (max-width: 1199px)
-  .check-auto .check-auto-card .top .title
-    text-align: left
+  .check-auto
 
-  .check-auto .check-auto-card .inner .auto-card-detail
-    padding: 5% 7%
+    .list
+      font-size: 16px
+
+      span
+
+        &:last-child
+          font-size: 17px
+    
+    .check-auto-card
+
+      .top
+
+        .title
+          font-size: 20px
+
+      .bottom
+        padding: 15px
+      
+      .inner
+        
+        .auto-card-detail
+          
+          .title
+            text-align: left
+
+            h3
+              font-size: 18px
+
+          .list
+            margin-bottom: 5px
+
+            span
+              font-size: 14px
+
+            &.ec
+
+              span
+                font-size: 18px
 
 @media only screen and (max-width: 991px)
-  .check-auto .check-auto-card .inner .auto-card-detail .title
-    margin-left: 0
-    text-align: left
-
-  .check-auto .check-auto-card .top .title
-    text-align: left
-    font-size: 24px
-
-  .check-auto .list
-    font-size: 16px
-
-  .check-auto .list span:last-child
-    font-size: 17px
-
-  .check-auto .check-auto-card .inner .auto-card-detail
-    padding: 45px
+  .check-auto
 
 
 @media only screen and (max-width: 767px)
-  .check-auto .check-auto-card .inner .auto-card-detail
-    padding: 35px
+  .check-auto
+    
+    .cats
+      max-width: 70%
 
 @media only screen and (max-width: 576px)
-  .check-auto .check-auto-card .inner .auto-card-detail
-    padding: 5% 7%
+  .check-auto
+    
+    .check-auto-card
+      
+      .inner
+        
+        .auto-card-detail
 
-  .check-auto .check-auto-card .inner .auto-card-detail .content-btn
-    height: 35px
+          .title
 
-  .check-auto .check-auto-card .inner .auto-card-detail .list
-    margin-bottom: 5px
+            h3
+              font-size: 16px
+          
+          .list.ec
+            
+            span
+              font-size: 15px
 
-  .check-auto .check-auto-card .inner .auto-card-detail .list span
-    font-size: 12px
+          .list
 
-  .check-auto .check-auto-card .inner .auto-card-detail .list.ec span
-    font-size: 18px
+            span
+              font-size: 13px
 
-  .check-auto .list
-    font-size: 14px
+@media only screen and (max-width: 499px)
+  .check-auto 
+    
+    .cats
+      max-width: 80%
 
-  .check-auto .list span:last-child
-    font-size: 15px
+    .check-auto-card
+        
+      .auto-card-detail
 
-  .check-auto .check-auto-card .bottom
-    padding: 18px
+        .list
+         
+          &.ec
+            margin-top: 10px
 
-  .check-auto .check-auto-card .bottom button 
-    height: 35px
+@media only screen and (max-width: 399px)
+  .check-auto 
+    
+    .cats
+      max-width: 98%
 
-  .check-auto .check-auto-card .top .title
-    font-size: 20px
+    .check-auto-card
 
-  .check-auto .check-auto-card .inner .auto-card-detail .title
-    margin-bottom: 0
+      .inner
+        
+        .auto-card-detail
 
-  .check-auto .check-auto-card .top .title span
-    padding-top: 0
+          .list
+          
+            &.ec
+              margin-top: 8px
 
-  .check-auto .check-auto-card .inner .auto-card-detail .title h3
-    font-size: 16px
 
-  .check-auto .check-auto-card .inner .auto-card-detail .list.ec
-    margin-top: 0
-
-  .check-auto .check-auto-card .inner .auto-card-detail .list.ec span
-    font-size: 15px
-  
-  .check-auto .check-auto-card .inner .auto-card-detail .content-btn
-    margin-top: 0
-
-  .check-auto .check-auto-card .inner .auto-card-detail .list
-    margin: 0
-
-  .check-auto .check-auto-card .top .title
-    font-size: 16px
-    line-height: normal
-    span
-      font-size: 17px
-
-@media only screen and (max-width: 349px)
-  .check-auto .check-auto-card .inner .auto-card-detail .content-btn
-    height: 30px
 
 .detroit
 
@@ -1240,6 +1221,7 @@ form
     border: 2px solid rgba(255,255,255,.15)
     margin-bottom: 20px
     border-radius: 0
+    min-height: 80px
 
     .card-header
       padding: 25px
@@ -1316,6 +1298,7 @@ form
   .clients
 
     .card
+      min-height: 65px
 
       .btn-link
         font-size: 16px

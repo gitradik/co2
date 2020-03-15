@@ -45,13 +45,13 @@ $('.slick-slider').slick({
   dots: true,
   responsive: [
     {
-      breakpoint: 1499,
+      breakpoint: 991,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 2
       }
     },
     {
-      breakpoint: 991,
+      breakpoint: 767,
       settings: {
         slidesToShow: 1
       }
