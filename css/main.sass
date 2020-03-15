@@ -12,15 +12,71 @@ $mar-proc-1599: 200px
 $mar-1499: calc(16px + 150px)
 $mar-proc-1499: 150px
 
+$mwBig: 70%
+$mwSmall: 15%
+
 body
   background-color: $black
 
 
-a
+a, button
   outline: none
+
+  &:focus
+    outline: none
 
   &:hover
     text-decoration: none
+
+
+
+.title
+  margin-left: $mwSmall
+  color: $white
+  margin-bottom: 60px
+
+  h3
+    font-family: SF UI Display Medium
+    font-style: normal
+    font-weight: bold
+    font-size: 42px
+    text-transform: uppercase
+
+@media only screen and (max-width: 1799px)
+  .title
+    max-width: 70%
+
+    h3
+      font-size: 38px
+
+@media only screen and (max-width: 1199px)
+  .title
+    margin-bottom: 30px
+
+    h3
+      font-size: 32px
+
+@media only screen and (max-width: 991px)
+  .title
+    margin: 0 auto
+    margin-bottom: 20px
+    text-align: center
+
+    h3
+      font-size: 32px
+
+@media only screen and (max-width: 767px)
+  .title
+
+    h3
+      font-size: 28px
+
+@media only screen and (max-width: 576px)
+  .title
+    margin-bottom: 10px
+
+    h3
+      font-size: 24px
 
 // Form start
 
@@ -30,7 +86,6 @@ form
     font-family: SF UI Display Semibold
     outline: none
     width: 100%
-    max-width: 373px
     background-color: rgba(247, 247, 247, 0.06)
     box-sizing: border-box
     height: 54px
@@ -50,52 +105,86 @@ form
       font-family: SF UI Display Semibold
       font-size: 16px
 
-@media only screen and (max-width: 1799px)
+@media only screen and (max-width: 1499px)
   form
 
     input
-      max-width: 340px
       height: 48px
       font-size: 14px
 
       &::placeholder
         font-size: 14px
 
-@media only screen and (max-width: 1599px)
+@media only screen and (max-width: 991px)
   form
 
     input
-      max-width: 350px
-
-@media only screen and (max-width: 1499px)
-  form
-
-    input
-      max-width: 300px
-
-@media only screen and (max-width: 1349px)
-  form
-
-    input
-      max-width: 250px
-
-@media only screen and (max-width: 1199px)
-  form
-
-    input
-      max-width: 220px
       font-size: 12px
 
 
 
 // Form end
 
+// SLICK start
+
+.slick-slider
+
+  img
+    height: auto
+    width: 100%
+    max-width: 100%
+
+  .slick-dots
+
+    li
+
+      &.slick-active
+
+        button
+
+          &::before
+            color: $orange
+
+      button
+
+        &::before
+          font-size: 10px
+          color: $white
+
+.slick-btn
+  position: absolute
+  z-index: 999
+  color: $white
+  top: calc(100% + 8px)
+  
+  &::before
+    display: none
+
+  i
+    color: $white
+    font-size: 28px
+
+.slick-prev
+  left: 10%
+
+  i
+    transform: rotate(-90deg)
+
+
+.slick-next
+  right: 10%
+
+  i
+    transform: rotate(-90deg)
+  
+
+// SLICK end
+
 
 .content-btn
   font-family: SF UI Display Semibold
   color: $white
   width: 100%
-  max-width: 373px
   height: 54px
   font-size: 16px
   background: $orange
@@ -105,28 +194,14 @@ form
 
 @media only screen and (max-width: 1799px)
   .content-btn
-    max-width: 340px
     height: 48px
     font-size: 14px
 
-@media only screen and (max-width: 1599px)
-  .content-btn
-    max-width: 350px
-
-@media only screen and (max-width: 1499px)
-  .content-btn
-    max-width: 300px
-
-@media only screen and (max-width: 1349px)
-  .content-btn
-    max-width: 250px
-
 @media only screen and (max-width: 1199px)
   .content-btn
-    max-width: 220px
     font-size: 12px
-    
 
+    
 .overlay-bg
   position: absolute
   left: 0
@@ -301,6 +376,7 @@ form
 @media only screen and (max-width: 991px)
   .navbar
     background-color: $black
+    box-shadow: 0 2px 5px 0 rgba(255,255,255,.2)
 
     .navbar-social-links
       display: none
@@ -360,7 +436,19 @@ form
   .form-content
     position: relative
     z-index: 1
-    margin-left: $mar
+    max-width: $mwBig
+    margin-left: auto
+    margin-right: auto
+
+    .offer
+      color: $white
+      font-size: 22px
+      margin-bottom: 40px
+
+      span
+        text-transform: uppercase
+        color: $orange
+        font-family: SF UI Display Bold
 
     form
       display: flex
@@ -372,13 +460,12 @@ form
       input
         margin-right: 10px
 
-    .advantages
-      display: flex
-      align-items: center
+  .advantages
+    display: flex
+    align-items: center
 
     .adv-card
       width: 100%
-      max-width: 373px
       padding: 10px
       background: rgba(14, 14, 14, 0.34)
       border-radius: 55px
@@ -413,7 +500,7 @@ form
   .content
     position: relative
     z-index: 1
-    margin-left: $mar
+    margin-left: $mwSmall
     display: flex
     align-items: flex-start
     justify-content: space-between
@@ -468,8 +555,7 @@ form
 @media only screen and (max-width: 1799px)
   .main-scroll
 
-    .content, .form-content
-      margin-left: $mar-1799
+    .content
 
       .content-menu
         
@@ -478,11 +564,10 @@ form
           font-size: 16px
           height: 40px
 
-      .adv-card
-        max-width: 340px
+    .advantages
 
-        .card-text
-          font-size: 14px
+      .card-text
+        font-size: 14px
 
     h1
       font-size: 60px
@@ -493,11 +578,7 @@ form
 @media only screen and (max-width: 1599px)
   .main-scroll
 
-    .content, .form-content
-      margin-left: $mar-1599
-
-      .adv-card
-        max-width: 350px
+    .content
 
       .content-menu
         
@@ -507,24 +588,17 @@ form
 @media only screen and (max-width: 1499px)
   .main-scroll
 
-    .content, .form-content
-      margin-left: $mar-1499
+    .form-content
 
-      .adv-card
-        max-width: 300px
+      .offer
+        font-size: 20px
+
+    .content
 
       .content-menu
         
         a
           padding-right: $mar-1499
-
-@media only screen and (max-width: 1349px)
-  .main-scroll
-
-    .form-content
-
-      .adv-card
-        max-width: 250px
 
 @media only screen and (max-width: 1199px)
   .main-scroll
@@ -539,33 +613,27 @@ form
 
     .form-content
 
-      .adv-card
-        max-width: 220px
+      .offer
+        
+        br
+          display: none
 
-        .card-text
-          font-size: 12px
+      .card-text
+        font-size: 12px
 
 @media only screen and (max-width: 991px)
   .main-scroll
     padding-top: 175px
 
-    .form-content
-      margin-left: 0
+    .advantages
+      flex-direction: column
 
-      form
+      .adv-card
+        margin-right: 0
+        margin-bottom: 10px
 
-        input
-          margin-right: 0
-
-      .advantages
-        flex-direction: column
-
-        .adv-card
-          margin-right: 0
-          margin-bottom: 10px
-
-          &:last-child
-            margin-bottom: 0
+        &:last-child
+          margin-bottom: 0
 
     .content
       margin-left: 0
@@ -585,22 +653,26 @@ form
       text-align: center
       font-size: 30px
 
-    form
-      display: flex
-      flex-direction: column
+    .form-content
+      max-width: 50%
 
-      input
-        max-width: 340px
-        margin-right: 0
-        margin-bottom: 10px
+      .offer
+        text-align: center
 
-      .content-btn
-        max-width: 340px
+      form
+        display: flex
+        flex-direction: column
 
+        input
+          margin-right: 0
+          margin-bottom: 10px
 
 @media only screen and (max-width: 767px)
   .main-scroll
     padding-top: 160px
+
+    .form-content
+      max-width: 60%
 
     h1
       font-size: 40px
@@ -609,15 +681,283 @@ form
   .main-scroll
     padding-top: 140px
 
+    .content
+
+      .content-text
+        max-width: 90%
+
+    .form-content
+      max-width: 70%
+
     h1
       font-size: 35px
-
-    form
-
-      input
-        max-width: 300px
-
-      .content-btn
-        max-width: 300px
     
 // main-scroll end
+
+// CHECK AUTO
+
+.check-auto
+  padding: 50px 0
+        
+  .list
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 10px 5px
+    font-size: 18px
+    line-height: 21px
+    color: $white
+
+    span
+
+      &:last-child
+        font-weight: bold
+        color: $orange
+        font-size: 19px
+
+  .cats
+    max-width: 70%
+    margin: 0 auto
+
+    .slick-slider
+
+  .check-auto-card
+    position: relative
+    padding: 15px
+
+    .inner
+      position: relative
+      border: 1px solid rgba(255,255,255,.1)          
+
+      .auto-card-detail
+        position: absolute
+        z-index: 1
+        left: -10px
+        top: -10px
+        right: -10px
+        bottom: -10px
+        background-color: rgba(255, 122, 0, 0.95)
+        border-radius: 15px
+        padding: 15px 20px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        visibility: hidden
+
+        .content-btn
+          font-family: SF UI Display Bold
+          border: 2px solid $white
+          margin-top: 15px
+
+        .title
+          position: relative
+          margin-left: 0
+          margin-bottom: 15px
+
+        h3
+          font-size: 28px
+          text-transform: uppercase
+
+        .list
+          padding: 0
+          margin-bottom: 10px
+
+          span
+            font-family: SF UI Display Light
+            font-size: 16px
+            
+            &:last-child
+              color: $white
+          
+          &.ec
+            margin-top: 20px
+            margin-bottom: 0
+
+            span
+              font-size: 22px
+              text-transform: uppercase
+
+              &:last-child
+                font-family: SF UI Display Bold
+
+    .top
+
+      &:hover
+
+        .auto-card-detail
+          visibility: visible
+
+    .top
+      //height: 270px
+      background-size: cover
+      background-repeat: no-repeat
+      display: flex
+      align-items: flex-end
+
+      .top-img
+        position: relative
+        width: 100%
+
+      .title
+        position: absolute
+        bottom: 0
+        left: 0
+        font-family: SF UI Display Semibold
+        margin: 2%
+        font-size: 
+        font-size: 28px
+        text-transform: uppercase
+
+        span
+          display: block
+          font-weight: 300
+          font-size: 22px
+          line-height: 26px
+          color: $orange
+          font-family: SF UI Display Light
+          padding-top: 10px
+      
+
+    .bottom
+      padding: 25px
+
+      button
+        height: 46px
+        margin-top: 15px
+
+@media only screen and (min-width: 1600px)
+  .check-auto
+    
+    .check-auto-card
+      
+      .top
+        //height: 220px
+
+@media only screen and (max-width: 1599px)
+  .check-auto
+    
+    .check-auto-card
+      
+      .top
+        //height: 220px
+
+      .inner
+
+        .auto-card-detail
+
+          .content-btn
+
+          .title
+            margin: 0
+            margin-bottom: 10px
+
+            h3
+              font-size: 22px
+              margin: 0
+
+  .check-auto .check-auto-card .inner .auto-card-detail .list.ec
+    margin-top: 10px
+
+@media only screen and (max-width: 1199px)
+  .check-auto .check-auto-card .top .title
+    text-align: left
+
+@media only screen and (max-width: 991px)
+  .check-auto .cats
+    max-width: 60%
+
+  .check-auto .check-auto-card .inner .auto-card-detail .title
+    margin-left: 0
+    text-align: left
+
+  .check-auto .check-auto-card .top .title
+    text-align: left
+    font-size: 24px
+
+  .check-auto .list
+    font-size: 16px
+
+  .check-auto .list span:last-child
+    font-size: 17px
+
+
+@media only screen and (max-width: 767px)
+  .check-auto .cats
+    max-width: 70%
+
+@media only screen and (max-width: 576px)
+  .check-auto .check-auto-card .inner .auto-card-detail
+    padding: 5% 7%
+
+  .check-auto .check-auto-card .inner .auto-card-detail .content-btn
+    height: 35px
+
+  .check-auto .check-auto-card .inner .auto-card-detail .list
+    margin-bottom: 5px
+
+  .check-auto .check-auto-card .inner .auto-card-detail .list span
+    font-size: 12px
+
+  .check-auto .check-auto-card .inner .auto-card-detail .list.ec span
+    font-size: 18px
+
+  .check-auto .list
+    font-size: 14px
+
+  .check-auto .list span:last-child
+    font-size: 15px
+
+  .check-auto .check-auto-card .bottom
+    padding: 18px
+
+  .check-auto .check-auto-card .bottom button 
+    height: 35px
+
+  .check-auto .check-auto-card .top .title
+    font-size: 20px
+
+  .check-auto .check-auto-card .inner .auto-card-detail .title
+    margin-bottom: 0
+
+  .check-auto .check-auto-card .top .title span
+    padding-top: 0
+
+  .check-auto .check-auto-card .inner .auto-card-detail .title h3
+    font-size: 16px
+
+  .check-auto .check-auto-card .inner .auto-card-detail .list.ec
+    margin-top: 0
+
+  .check-auto .check-auto-card .inner .auto-card-detail .list.ec span
+    font-size: 15px
+  
+  .check-auto .check-auto-card .inner .auto-card-detail .content-btn
+    margin-top: 0
+
+  .check-auto .check-auto-card .inner .auto-card-detail .list
+    margin: 0
+
+  .check-auto .check-auto-card .top .title
+    font-size: 16px
+    line-height: normal
+    span
+      font-size: 17px
+
+  .check-auto .cats
+    max-width: 80%
+
+@media only screen and (max-width: 499px)
+  .check-auto .cats
+    max-width: 95%
+
+@media only screen and (max-width: 349px)
+  .check-auto .check-auto-card .inner .auto-card-detail .content-btn
+    height: 30px
+
+
+
+
+
+
+
+

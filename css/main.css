@@ -2,19 +2,80 @@ body {
     background-color: #040402;
 }
 
-a {
+a, button {
     outline: none;
 }
 
-a:hover {
+a:focus, button:focus {
+    outline: none;
+}
+
+a:hover, button:hover {
     text-decoration: none;
+}
+
+.title {
+    margin-left: 15%;
+    color: #fff;
+    margin-bottom: 60px;
+}
+
+.title h3 {
+    font-family: SF UI Display Medium;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 42px;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 1799px) {
+    .title {
+        max-width: 70%;
+    }
+    .title h3 {
+        font-size: 38px;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .title {
+        margin-bottom: 30px;
+    }
+    .title h3 {
+        font-size: 32px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .title {
+        margin: 0 auto;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .title h3 {
+        font-size: 32px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .title h3 {
+        font-size: 28px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .title {
+        margin-bottom: 10px;
+    }
+    .title h3 {
+        font-size: 24px;
+    }
 }
 
 form input {
     font-family: SF UI Display Semibold;
     outline: none;
     width: 100%;
-    max-width: 373px;
     background-color: rgba(247, 247, 247, 0.06);
     box-sizing: border-box;
     height: 54px;
@@ -37,9 +98,8 @@ form input::placeholder {
     font-size: 16px;
 }
 
-@media only screen and (max-width: 1799px) {
+@media only screen and (max-width: 1499px) {
     form input {
-        max-width: 340px;
         height: 48px;
         font-size: 14px;
     }
@@ -48,36 +108,63 @@ form input::placeholder {
     }
 }
 
-@media only screen and (max-width: 1599px) {
+@media only screen and (max-width: 991px) {
     form input {
-        max-width: 350px;
-    }
-}
-
-@media only screen and (max-width: 1499px) {
-    form input {
-        max-width: 300px;
-    }
-}
-
-@media only screen and (max-width: 1349px) {
-    form input {
-        max-width: 250px;
-    }
-}
-
-@media only screen and (max-width: 1199px) {
-    form input {
-        max-width: 220px;
         font-size: 12px;
     }
+}
+
+.slick-slider img {
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+}
+
+.slick-slider .slick-dots li.slick-active button::before {
+    color: #FF7A00;
+}
+
+.slick-slider .slick-dots li button::before {
+    font-size: 10px;
+    color: #fff;
+}
+
+.slick-btn {
+    position: absolute;
+    z-index: 999;
+    color: #fff;
+    top: calc(100% + 8px);
+}
+
+.slick-btn::before {
+    display: none;
+}
+
+.slick-btn i {
+    color: #fff;
+    font-size: 28px;
+}
+
+.slick-prev {
+    left: 10%;
+}
+
+.slick-prev i {
+    transform: rotate(-90deg);
+}
+
+.slick-next {
+    right: 10%;
+}
+
+.slick-next i {
+    transform: rotate(-90deg);
 }
 
 .content-btn {
     font-family: SF UI Display Semibold;
     color: #fff;
     width: 100%;
-    max-width: 373px;
     height: 54px;
     font-size: 16px;
     background: #FF7A00;
@@ -88,33 +175,13 @@ form input::placeholder {
 
 @media only screen and (max-width: 1799px) {
     .content-btn {
-        max-width: 340px;
         height: 48px;
         font-size: 14px;
     }
 }
 
-@media only screen and (max-width: 1599px) {
-    .content-btn {
-        max-width: 350px;
-    }
-}
-
-@media only screen and (max-width: 1499px) {
-    .content-btn {
-        max-width: 300px;
-    }
-}
-
-@media only screen and (max-width: 1349px) {
-    .content-btn {
-        max-width: 250px;
-    }
-}
-
 @media only screen and (max-width: 1199px) {
     .content-btn {
-        max-width: 220px;
         font-size: 12px;
     }
 }
@@ -314,6 +381,7 @@ form input::placeholder {
 @media only screen and (max-width: 991px) {
     .navbar {
         background-color: #040402;
+        box-shadow: 0 2px 5px 0 rgba(255, 255, 255, 0.2);
     }
     .navbar .navbar-social-links {
         display: none;
@@ -373,7 +441,21 @@ form input::placeholder {
 .main-scroll .form-content {
     position: relative;
     z-index: 1;
-    margin-left: calc(16px + 300px);
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-scroll .form-content .offer {
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+
+.main-scroll .form-content .offer span {
+    text-transform: uppercase;
+    color: #FF7A00;
+    font-family: SF UI Display Bold;
 }
 
 .main-scroll .form-content form {
@@ -388,14 +470,13 @@ form input::placeholder {
     margin-right: 10px;
 }
 
-.main-scroll .form-content .advantages {
+.main-scroll .advantages {
     display: flex;
     align-items: center;
 }
 
-.main-scroll .form-content .adv-card {
+.main-scroll .advantages .adv-card {
     width: 100%;
-    max-width: 373px;
     padding: 10px;
     background: rgba(14, 14, 14, 0.34);
     border-radius: 55px;
@@ -405,11 +486,11 @@ form input::placeholder {
     justify-content: flex-start;
 }
 
-.main-scroll .form-content .adv-card:last-child {
+.main-scroll .advantages .adv-card:last-child {
     margin-right: 0;
 }
 
-.main-scroll .form-content .adv-card .card-img {
+.main-scroll .advantages .adv-card .card-img {
     height: 50px;
     width: 50px;
     border-radius: 100%;
@@ -420,12 +501,12 @@ form input::placeholder {
     margin-right: 10px;
 }
 
-.main-scroll .form-content .adv-card img {
+.main-scroll .advantages .adv-card img {
     height: 25px;
     width: 25px;
 }
 
-.main-scroll .form-content .adv-card .card-text {
+.main-scroll .advantages .adv-card .card-text {
     font-family: SF UI Display Light;
     font-size: 16px;
     color: #fff;
@@ -434,7 +515,7 @@ form input::placeholder {
 .main-scroll .content {
     position: relative;
     z-index: 1;
-    margin-left: calc(16px + 300px);
+    margin-left: 15%;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -492,18 +573,12 @@ form input::placeholder {
 }
 
 @media only screen and (max-width: 1799px) {
-    .main-scroll .content, .main-scroll .form-content {
-        margin-left: calc(16px + 250px);
-    }
-    .main-scroll .content .content-menu a, .main-scroll .form-content .content-menu a {
+    .main-scroll .content .content-menu a {
         padding-right: calc(16px + 250px);
         font-size: 16px;
         height: 40px;
     }
-    .main-scroll .content .adv-card, .main-scroll .form-content .adv-card {
-        max-width: 340px;
-    }
-    .main-scroll .content .adv-card .card-text, .main-scroll .form-content .adv-card .card-text {
+    .main-scroll .advantages .card-text {
         font-size: 14px;
     }
     .main-scroll h1 {
@@ -515,32 +590,17 @@ form input::placeholder {
 }
 
 @media only screen and (max-width: 1599px) {
-    .main-scroll .content, .main-scroll .form-content {
-        margin-left: calc(16px + 200px);
-    }
-    .main-scroll .content .adv-card, .main-scroll .form-content .adv-card {
-        max-width: 350px;
-    }
-    .main-scroll .content .content-menu a, .main-scroll .form-content .content-menu a {
+    .main-scroll .content .content-menu a {
         padding-right: calc(16px + 200px);
     }
 }
 
 @media only screen and (max-width: 1499px) {
-    .main-scroll .content, .main-scroll .form-content {
-        margin-left: calc(16px + 150px);
+    .main-scroll .form-content .offer {
+        font-size: 20px;
     }
-    .main-scroll .content .adv-card, .main-scroll .form-content .adv-card {
-        max-width: 300px;
-    }
-    .main-scroll .content .content-menu a, .main-scroll .form-content .content-menu a {
+    .main-scroll .content .content-menu a {
         padding-right: calc(16px + 150px);
-    }
-}
-
-@media only screen and (max-width: 1349px) {
-    .main-scroll .form-content .adv-card {
-        max-width: 250px;
     }
 }
 
@@ -551,10 +611,10 @@ form input::placeholder {
     .main-scroll .content .content-menu a {
         padding-left: 32px;
     }
-    .main-scroll .form-content .adv-card {
-        max-width: 220px;
+    .main-scroll .form-content .offer br {
+        display: none;
     }
-    .main-scroll .form-content .adv-card .card-text {
+    .main-scroll .form-content .card-text {
         font-size: 12px;
     }
 }
@@ -563,20 +623,14 @@ form input::placeholder {
     .main-scroll {
         padding-top: 175px;
     }
-    .main-scroll .form-content {
-        margin-left: 0;
-    }
-    .main-scroll .form-content form input {
-        margin-right: 0;
-    }
-    .main-scroll .form-content .advantages {
+    .main-scroll .advantages {
         flex-direction: column;
     }
-    .main-scroll .form-content .advantages .adv-card {
+    .main-scroll .advantages .adv-card {
         margin-right: 0;
         margin-bottom: 10px;
     }
-    .main-scroll .form-content .advantages .adv-card:last-child {
+    .main-scroll .advantages .adv-card:last-child {
         margin-bottom: 0;
     }
     .main-scroll .content {
@@ -597,23 +651,28 @@ form input::placeholder {
         text-align: center;
         font-size: 30px;
     }
-    .main-scroll form {
+    .main-scroll .form-content {
+        max-width: 50%;
+    }
+    .main-scroll .form-content .offer {
+        text-align: center;
+    }
+    .main-scroll .form-content form {
         display: flex;
         flex-direction: column;
     }
-    .main-scroll form input {
-        max-width: 340px;
+    .main-scroll .form-content form input {
         margin-right: 0;
         margin-bottom: 10px;
-    }
-    .main-scroll form .content-btn {
-        max-width: 340px;
     }
 }
 
 @media only screen and (max-width: 767px) {
     .main-scroll {
         padding-top: 160px;
+    }
+    .main-scroll .form-content {
+        max-width: 60%;
     }
     .main-scroll h1 {
         font-size: 40px;
@@ -624,14 +683,277 @@ form input::placeholder {
     .main-scroll {
         padding-top: 140px;
     }
+    .main-scroll .content .content-text {
+        max-width: 90%;
+    }
+    .main-scroll .form-content {
+        max-width: 70%;
+    }
     .main-scroll h1 {
         font-size: 35px;
     }
-    .main-scroll form input {
-        max-width: 300px;
+}
+
+.check-auto {
+    padding: 50px 0;
+}
+
+.check-auto .list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 5px;
+    font-size: 18px;
+    line-height: 21px;
+    color: #fff;
+}
+
+.check-auto .list span:last-child {
+    font-weight: bold;
+    color: #FF7A00;
+    font-size: 19px;
+}
+
+.check-auto .cats {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.check-auto .check-auto-card {
+    position: relative;
+    padding: 15px;
+}
+
+.check-auto .check-auto-card .inner {
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.check-auto .check-auto-card .inner .auto-card-detail {
+    position: absolute;
+    z-index: 1;
+    left: -10px;
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    background-color: rgba(255, 122, 0, 0.95);
+    border-radius: 15px;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    visibility: hidden;
+}
+
+.check-auto .check-auto-card .inner .auto-card-detail .content-btn {
+    font-family: SF UI Display Bold;
+    border: 2px solid #fff;
+    margin-top: 15px;
+}
+
+.check-auto .check-auto-card .inner .auto-card-detail .title {
+    position: relative;
+    margin-left: 0;
+    margin-bottom: 15px;
+}
+
+.check-auto .check-auto-card .inner .auto-card-detail h3 {
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+.check-auto .check-auto-card .inner .auto-card-detail .list {
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.check-auto .check-auto-card .inner .auto-card-detail .list span {
+    font-family: SF UI Display Light;
+    font-size: 16px;
+}
+
+.check-auto .check-auto-card .inner .auto-card-detail .list span:last-child {
+    color: #fff;
+}
+
+.check-auto .check-auto-card .inner .auto-card-detail .list.ec {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.check-auto .check-auto-card .inner .auto-card-detail .list.ec span {
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.check-auto .check-auto-card .inner .auto-card-detail .list.ec span:last-child {
+    font-family: SF UI Display Bold;
+}
+
+.check-auto .check-auto-card .top:hover .auto-card-detail {
+    visibility: visible;
+}
+
+.check-auto .check-auto-card .top {
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+}
+
+.check-auto .check-auto-card .top .top-img {
+    position: relative;
+    width: 100%;
+}
+
+.check-auto .check-auto-card .top .title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-family: SF UI Display Semibold;
+    margin: 2%;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+.check-auto .check-auto-card .top .title span {
+    display: block;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 26px;
+    color: #FF7A00;
+    font-family: SF UI Display Light;
+    padding-top: 10px;
+}
+
+.check-auto .check-auto-card .bottom {
+    padding: 25px;
+}
+
+.check-auto .check-auto-card .bottom button {
+    height: 46px;
+    margin-top: 15px;
+}
+
+@media only screen and (max-width: 1599px) {
+    .check-auto .check-auto-card .inner .auto-card-detail .title {
+        margin: 0;
+        margin-bottom: 10px;
     }
-    .main-scroll form .content-btn {
-        max-width: 300px;
+    .check-auto .check-auto-card .inner .auto-card-detail .title h3 {
+        font-size: 22px;
+        margin: 0;
+    }
+    .check-auto .check-auto-card .inner .auto-card-detail .list.ec {
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .check-auto .check-auto-card .top .title {
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .check-auto .cats {
+        max-width: 60%;
+    }
+    .check-auto .check-auto-card .inner .auto-card-detail .title {
+        margin-left: 0;
+        text-align: left;
+    }
+    .check-auto .check-auto-card .top .title {
+        text-align: left;
+        font-size: 24px;
+    }
+    .check-auto .list {
+        font-size: 16px;
+    }
+    .check-auto .list span:last-child {
+        font-size: 17px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .check-auto .cats {
+        max-width: 70%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .check-auto .check-auto-card .inner .auto-card-detail {
+        padding: 5% 7%;
+    }
+    .check-auto .check-auto-card .inner .auto-card-detail .content-btn {
+        height: 35px;
+    }
+    .check-auto .check-auto-card .inner .auto-card-detail .list {
+        margin-bottom: 5px;
+    }
+    .check-auto .check-auto-card .inner .auto-card-detail .list span {
+        font-size: 12px;
+    }
+    .check-auto .check-auto-card .inner .auto-card-detail .list.ec span {
+        font-size: 18px;
+    }
+    .check-auto .list {
+        font-size: 14px;
+    }
+    .check-auto .list span:last-child {
+        font-size: 15px;
+    }
+    .check-auto .check-auto-card .bottom {
+        padding: 18px;
+    }
+    .check-auto .check-auto-card .bottom button {
+        height: 35px;
+    }
+    .check-auto .check-auto-card .top .title {
+        font-size: 20px;
+    }
+    .check-auto .check-auto-card .inner .auto-card-detail .title {
+        margin-bottom: 0;
+    }
+    .check-auto .check-auto-card .top .title span {
+        padding-top: 0;
+    }
+    .check-auto .check-auto-card .inner .auto-card-detail .title h3 {
+        font-size: 16px;
+    }
+    .check-auto .check-auto-card .inner .auto-card-detail .list.ec {
+        margin-top: 0;
+    }
+    .check-auto .check-auto-card .inner .auto-card-detail .list.ec span {
+        font-size: 15px;
+    }
+    .check-auto .check-auto-card .inner .auto-card-detail .content-btn {
+        margin-top: 0;
+    }
+    .check-auto .check-auto-card .inner .auto-card-detail .list {
+        margin: 0;
+    }
+    .check-auto .check-auto-card .top .title {
+        font-size: 16px;
+        line-height: normal;
+    }
+    .check-auto .check-auto-card .top .title span {
+        font-size: 17px;
+    }
+    .check-auto .cats {
+        max-width: 80%;
+    }
+}
+
+@media only screen and (max-width: 499px) {
+    .check-auto .cats {
+        max-width: 95%;
+    }
+}
+
+@media only screen and (max-width: 349px) {
+    .check-auto .check-auto-card .inner .auto-card-detail .content-btn {
+        height: 30px;
     }
 }
 
