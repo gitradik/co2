@@ -212,7 +212,7 @@ form button {
     color: #fff;
     width: 100%;
     height: 54px;
-    font-size: 16px;
+    font-size: 18px;
     background: #FF7A00;
     border: none;
     text-transform: uppercase;
@@ -221,7 +221,21 @@ form button {
 
 @media only screen and (max-width: 1199px) {
     .content-btn {
+        font-size: 16px;
+        height: 46px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .content-btn {
         font-size: 14px;
+        height: 40px;
+    }
+}
+
+@media only screen and (max-width: 499px) {
+    .content-btn {
+        font-size: 13px;
     }
 }
 
@@ -312,6 +326,7 @@ form button {
     font-size: 24px;
     transition: .2s;
     color: #fff;
+    font-family: SF UI Display Light;
 }
 
 .navbar .navbar-social-links a:last-child {
@@ -378,6 +393,7 @@ form button {
     color: #fff;
     padding-left: 5px;
     padding-right: 5px;
+    font-family: SF UI Display Light;
 }
 
 .navbar .nav-link:hover {
@@ -486,6 +502,7 @@ form button {
 }
 
 .main-scroll .form-content .offer {
+    font-family: SF UI Display Light;
     color: #fff;
     font-size: 22px;
     margin-bottom: 40px;
@@ -561,6 +578,7 @@ form button {
 }
 
 .main-scroll .content .content-menu a {
+    font-family: SF UI Display Light;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -583,7 +601,7 @@ form button {
 }
 
 .main-scroll .content .content-text hr {
-    margin-top: 40px;
+    margin-top: 80px;
     margin-bottom: 40px;
     border-color: rgba(196, 196, 196, 0.24);
 }
@@ -591,10 +609,11 @@ form button {
 .main-scroll h1 {
     display: inline-block;
     text-transform: uppercase;
-    font-family: SF UI Display Bold;
-    font-size: 80px;
+    font-family: SF UI Display Black;
+    font-size: 78px;
     color: #fff;
     text-shadow: 0px 20px 12px rgba(0, 0, 0, 0.02);
+    margin-top: -13px;
 }
 
 .main-scroll h2 {
@@ -661,6 +680,7 @@ form button {
 @media only screen and (max-width: 991px) {
     .main-scroll {
         padding-top: 175px;
+        background-position: right;
     }
     .main-scroll .advantages {
         flex-direction: column;
@@ -679,6 +699,10 @@ form button {
     }
     .main-scroll .content .content-menu {
         display: none;
+    }
+    .main-scroll .content .content-text hr {
+        margin-top: 50px;
+        margin-bottom: 30px;
     }
     .main-scroll h1 {
         font-size: 45px;
@@ -959,6 +983,18 @@ form button {
     display: block;
 }
 
+@media only screen and (max-width: 576px) {
+    .detroit .content .text-cards, .detroit .content .detroit-slider, .detroit .content .content-text {
+        padding: 10px;
+    }
+    .detroit .content .text-cards span, .detroit .content .detroit-slider span, .detroit .content .content-text span {
+        font-size: 32px;
+    }
+    .detroit .content .text-cards p, .detroit .content .detroit-slider p, .detroit .content .content-text p {
+        font-size: 14px;
+    }
+}
+
 .slick-slider-2 .slick-dots {
     display: flex;
     justify-content: flex-end;
@@ -975,6 +1011,7 @@ form button {
 }
 
 .you-can .can-card .can-text {
+    font-family: SF UI Display Light;
     padding: 30px;
     color: #fff;
 }
@@ -985,6 +1022,7 @@ form button {
 
 .you-can .can-card .can-active button {
     max-width: 315px;
+    margin-top: 10px;
 }
 
 .you-can .can-card .can-img {
@@ -1025,6 +1063,9 @@ form button {
 }
 
 @media only screen and (max-width: 567px) {
+    .you-can .can-card {
+        padding: 10px;
+    }
     .you-can .can-card .can-text {
         padding: 10px 5px;
         font-size: 14px;
@@ -1074,6 +1115,7 @@ form button {
 }
 
 .thought .thught-text p {
+    font-family: SF UI Display Light;
     color: #fff;
     margin-bottom: 20px;
 }
@@ -1099,6 +1141,7 @@ form button {
 
 .thought .form-title {
     text-align: left;
+    font-family: SF UI Display Medium;
 }
 
 @media only screen and (max-width: 991px) {
@@ -1231,6 +1274,7 @@ form button {
     padding: 37px;
     padding-top: 0;
     color: #fff;
+    font-family: SF UI Display Light;
 }
 
 @media only screen and (max-width: 1499px) {
