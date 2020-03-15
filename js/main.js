@@ -16,7 +16,7 @@ function changeNavBar() {
   var docSrollTop = $(document).scrollTop();
   var windowWidth = $(window).width();
   if (windowWidth > 992) {
-    if (docSrollTop > 70) {
+    if (docSrollTop > 50) {
       $('#headerMenu').css('display', 'none');
     } else {
       $('#headerMenu').css('display', 'flex');
@@ -70,7 +70,3 @@ $('.slick-slider-2').slick({
 });
 
 $('#accordion').collapse();
-
-function accordionClick(event) {
-  console.log(event.toElement)
-}

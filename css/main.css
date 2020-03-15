@@ -126,7 +126,7 @@ form input::placeholder {
 }
 
 .form input {
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 @media only screen and (max-width: 1499px) {
@@ -233,7 +233,7 @@ form input::placeholder {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(4, 4, 2, 0.5);
+    background-color: rgba(4, 4, 2, 0.1);
     z-index: 0;
 }
 
@@ -436,7 +436,7 @@ form input::placeholder {
         line-height: 20px;
     }
     .navbar .navbar-brand img[alt=logo] {
-        max-width: 78px;
+        max-width: 58px;
     }
     .navbar .navbar-quick-contact {
         margin-left: 15px;
@@ -471,7 +471,7 @@ form input::placeholder {
 .main-scroll {
     position: relative;
     min-height: 100vh;
-    background-image: url("../img/main-scroll-bg.jpg");
+    background-image: url("../img/Bg.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
