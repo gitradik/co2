@@ -121,10 +121,6 @@ form input::placeholder {
     font-size: 16px;
 }
 
-form button {
-    margin-top: 10px;
-}
-
 .form {
     display: flex;
 }
@@ -157,6 +153,7 @@ form button {
     }
     .form button {
         max-width: 343px;
+        margin-top: 10px;
     }
 }
 
@@ -192,7 +189,7 @@ form button {
 }
 
 .slick-prev {
-    left: 10%;
+    left: 24%;
 }
 
 .slick-prev i {
@@ -200,7 +197,7 @@ form button {
 }
 
 .slick-next {
-    right: 10%;
+    right: 24%;
 }
 
 .slick-next i {
@@ -222,14 +219,13 @@ form button {
 @media only screen and (max-width: 1199px) {
     .content-btn {
         font-size: 16px;
-        height: 46px;
     }
 }
 
 @media only screen and (max-width: 576px) {
     .content-btn {
         font-size: 14px;
-        height: 40px;
+        height: 46px;
     }
 }
 
@@ -633,8 +629,6 @@ form button {
 @media only screen and (max-width: 1799px) {
     .main-scroll .content .content-menu a {
         padding-right: calc(16px + 250px);
-        font-size: 16px;
-        height: 40px;
     }
     .main-scroll .advantages .card-text {
         font-size: 14px;
@@ -927,6 +921,12 @@ form button {
     .check-auto .cats {
         max-width: 70%;
     }
+    .check-auto .cats .slick-slider .slick-prev {
+        left: 10%;
+    }
+    .check-auto .cats .slick-slider .slick-next {
+        right: 10%;
+    }
 }
 
 @media only screen and (max-width: 576px) {
@@ -1144,9 +1144,15 @@ form button {
     font-family: SF UI Display Medium;
 }
 
+@media only screen and (max-width: 1199px) {
+    .thought {
+        background-size: 70%;
+    }
+}
+
 @media only screen and (max-width: 991px) {
     .thought {
-        background: none !important;
+        background-size: 30%;
     }
     .thought .man {
         display: none;
@@ -1154,6 +1160,16 @@ form button {
     .thought .form-title {
         text-align: center;
     }
+}
+
+@media only screen and (max-width: 767px) {
+    .thought {
+        background: none !important;
+    }
+}
+
+.questions {
+    padding-bottom: 50px;
 }
 
 .questions .title {
@@ -1200,6 +1216,9 @@ form button {
 }
 
 @media only screen and (max-width: 576px) {
+    .why .advs .adv-card img {
+        max-width: 58px;
+    }
     .why .advs .adv-card .card-text {
         font-size: 14px;
     }
@@ -1209,6 +1228,7 @@ form button {
     background-image: url("../img/Layer.png");
     background-position: right bottom;
     background-repeat: no-repeat;
+    padding-bottom: 0;
 }
 
 .clients .card {
@@ -1216,11 +1236,17 @@ form button {
     border: 2px solid rgba(255, 255, 255, 0.15);
     margin-bottom: 20px;
     border-radius: 0;
-    min-height: 80px;
 }
 
 .clients .card .card-header {
-    padding: 25px;
+    padding: 0 2rem;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.clients .card .card-header h5 button {
+    min-height: 80px;
+    padding: 0;
 }
 
 .clients .card .btn-link {
@@ -1271,7 +1297,7 @@ form button {
 }
 
 .clients .card .card-body {
-    padding: 37px;
+    padding: 2rem;
     padding-top: 0;
     color: #fff;
     font-family: SF UI Display Light;
@@ -1284,31 +1310,22 @@ form button {
 }
 
 @media only screen and (max-width: 1199px) {
+    .clients .card h5 button {
+        min-height: 50px;
+    }
     .clients .card .btn-link {
         font-size: 19px;
-    }
-    .clients .card .card-header {
-        padding: 20px;
-    }
-    .clients .card .card-body {
-        padding: 32px;
-        padding-top: 0;
     }
 }
 
 @media only screen and (max-width: 991px) {
-    .clients .card {
-        min-height: 65px;
+    .clients .card .card-header h5 button {
+        min-height: 60px;
     }
     .clients .card .btn-link {
         font-size: 16px;
     }
-    .clients .card .card-header {
-        padding: 13px;
-    }
     .clients .card .card-body {
-        padding: 25px;
-        padding-top: 0;
         font-size: 14px;
     }
 }
@@ -1320,13 +1337,80 @@ form button {
     .clients .card .btn-link span {
         max-width: 85%;
     }
-    .clients .card .card-header {
-        padding: 3px;
-    }
     .clients .card .card-body {
-        padding: 15px;
+        padding: 1.2rem;
         padding-top: 0;
         font-size: 12px;
+    }
+    .clients .card .card-header {
+        padding: 0 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 567px) {
+    .clients .card .btn-link {
+        font-size: 13px;
+    }
+}
+
+footer .title h3 {
+    text-transform: none;
+}
+
+footer .contacts {
+    padding: 30px 0;
+}
+
+footer .contacts p, footer .contacts a {
+    font-family: SF UI Display Light;
+    font-size: 18px;
+    color: #fff;
+}
+
+footer .contacts p i, footer .contacts a i {
+    margin-right: 10px;
+}
+
+footer .contacts p {
+    margin-bottom: 30px;
+}
+
+footer .contacts .time-work {
+    margin-bottom: 5px;
+    font-family: SF UI Display Bold;
+}
+
+footer .contacts .time-work span {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+footer .contacts a {
+    display: block;
+    margin-bottom: 5px;
+}
+
+footer iframe {
+    height: 400px;
+}
+
+@media only screen and (max-width: 991px) {
+    footer .contacts {
+        padding-bottom: 0;
+    }
+    footer .contacts p, footer .contacts a {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    footer iframe {
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    footer iframe {
+        height: 250px;
     }
 }
 
