@@ -2,6 +2,21 @@ body {
     background-color: #040402;
 }
 
+.pad {
+    padding: 50px 0;
+}
+
+@media only screen and (max-width: 991px) {
+    .pad {
+        padding-bottom: 0;
+    }
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
 a, button {
     outline: none;
 }
@@ -15,7 +30,6 @@ a:hover, button:hover {
 }
 
 .title {
-    margin-left: 15%;
     color: #fff;
     margin-bottom: 60px;
 }
@@ -28,10 +42,16 @@ a:hover, button:hover {
     text-transform: uppercase;
 }
 
+.title p {
+    font-size: 22px;
+    font-family: SF UI Display Medium;
+}
+
+.title p span {
+    color: #FF7A00;
+}
+
 @media only screen and (max-width: 1799px) {
-    .title {
-        max-width: 70%;
-    }
     .title h3 {
         font-size: 38px;
     }
@@ -39,7 +59,7 @@ a:hover, button:hover {
 
 @media only screen and (max-width: 1199px) {
     .title {
-        margin-bottom: 30px;
+        margin-bottom: 40px;
     }
     .title h3 {
         font-size: 32px;
@@ -49,11 +69,14 @@ a:hover, button:hover {
 @media only screen and (max-width: 991px) {
     .title {
         margin: 0 auto;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
         text-align: center;
     }
     .title h3 {
         font-size: 32px;
+    }
+    .title p {
+        font-size: 20px;
     }
 }
 
@@ -65,7 +88,7 @@ a:hover, button:hover {
 
 @media only screen and (max-width: 576px) {
     .title {
-        margin-bottom: 10px;
+        margin-bottom: 25px;
     }
     .title h3 {
         font-size: 24px;
@@ -81,7 +104,7 @@ form input {
     height: 54px;
     box-shadow: 0px 20px 12px rgba(0, 0, 0, 0.02);
     border-radius: 2px;
-    padding-left: 5px;
+    padding-left: 15px;
     color: #fff;
     transition: .2s;
     border: 2px solid rgba(255, 255, 255, 0.4);
@@ -98,9 +121,16 @@ form input::placeholder {
     font-size: 16px;
 }
 
+.form {
+    display: flex;
+}
+
+.form input {
+    margin-right: 10px;
+}
+
 @media only screen and (max-width: 1499px) {
     form input {
-        height: 48px;
         font-size: 14px;
     }
     form input::placeholder {
@@ -111,6 +141,18 @@ form input::placeholder {
 @media only screen and (max-width: 991px) {
     form input {
         font-size: 12px;
+    }
+    .form {
+        flex-direction: column;
+        align-items: center;
+    }
+    .form input {
+        margin-right: 0;
+        margin-bottom: 10px;
+        max-width: 343px;
+    }
+    .form button {
+        max-width: 343px;
     }
 }
 
@@ -142,7 +184,7 @@ form input::placeholder {
 
 .slick-btn i {
     color: #fff;
-    font-size: 28px;
+    font-size: 34px;
 }
 
 .slick-prev {
@@ -175,7 +217,6 @@ form input::placeholder {
 
 @media only screen and (max-width: 1799px) {
     .content-btn {
-        height: 48px;
         font-size: 14px;
     }
 }
@@ -694,10 +735,6 @@ form input::placeholder {
     }
 }
 
-.check-auto {
-    padding: 50px 0;
-}
-
 .check-auto .list {
     display: flex;
     align-items: center;
@@ -715,7 +752,6 @@ form input::placeholder {
 }
 
 .check-auto .cats {
-    max-width: 70%;
     margin: 0 auto;
 }
 
@@ -847,18 +883,21 @@ form input::placeholder {
     .check-auto .check-auto-card .inner .auto-card-detail .list.ec {
         margin-top: 10px;
     }
+    .check-auto .check-auto-card .inner .auto-card-detail {
+        padding: 45px;
+    }
 }
 
 @media only screen and (max-width: 1199px) {
     .check-auto .check-auto-card .top .title {
         text-align: left;
     }
+    .check-auto .check-auto-card .inner .auto-card-detail {
+        padding: 5% 7%;
+    }
 }
 
 @media only screen and (max-width: 991px) {
-    .check-auto .cats {
-        max-width: 60%;
-    }
     .check-auto .check-auto-card .inner .auto-card-detail .title {
         margin-left: 0;
         text-align: left;
@@ -873,11 +912,14 @@ form input::placeholder {
     .check-auto .list span:last-child {
         font-size: 17px;
     }
+    .check-auto .check-auto-card .inner .auto-card-detail {
+        padding: 45px;
+    }
 }
 
 @media only screen and (max-width: 767px) {
-    .check-auto .cats {
-        max-width: 70%;
+    .check-auto .check-auto-card .inner .auto-card-detail {
+        padding: 35px;
     }
 }
 
@@ -940,21 +982,192 @@ form input::placeholder {
     .check-auto .check-auto-card .top .title span {
         font-size: 17px;
     }
-    .check-auto .cats {
-        max-width: 80%;
-    }
-}
-
-@media only screen and (max-width: 499px) {
-    .check-auto .cats {
-        max-width: 95%;
-    }
 }
 
 @media only screen and (max-width: 349px) {
     .check-auto .check-auto-card .inner .auto-card-detail .content-btn {
         height: 30px;
     }
+}
+
+.detroit .content {
+    margin: 0 auto;
+}
+
+.detroit .content .content-text {
+    color: #fff;
+    font-family: SF UI Display Light;
+}
+
+.detroit .content .text-cards {
+    margin-top: 45px;
+}
+
+.detroit .content .text-cards p {
+    max-width: 232px;
+    color: #fff;
+}
+
+.detroit .content .text-cards span {
+    font-size: 42px;
+    font-family: SF UI Display Bold;
+    display: block;
+}
+
+.slick-slider-2 .slick-dots {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 60px;
+}
+
+.slick-slider-2 .slick-next {
+    right: 35px;
+}
+
+.slick-slider-2 .slick-prev {
+    left: auto;
+    right: 185px;
+}
+
+.you-can .can-card .can-text {
+    padding: 30px;
+    color: #fff;
+}
+
+.you-can .can-card .can-active {
+    padding: 0 30px;
+}
+
+.you-can .can-card .can-active button {
+    max-width: 315px;
+}
+
+.you-can .can-card .can-img {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.you-can .can-card .can-img .title {
+    font-family: SF UI Display Bold;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    margin: 0;
+    text-align: left;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 991px) {
+    .you-can .can-card {
+        margin-bottom: 40px;
+    }
+    .you-can .can-card .can-text {
+        padding: 30px 15px;
+    }
+    .you-can .can-card .can-active {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .you-can .can-card .can-img .title {
+        left: 15px;
+        bottom: 15px;
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 567px) {
+    .you-can .can-card .can-text {
+        padding: 10px 5px;
+        font-size: 14px;
+    }
+    .you-can .can-card .can-img .title {
+        left: 5px;
+        bottom: 5px;
+        font-size: 20px;
+    }
+}
+
+.marks .mrks {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.marks .mrks .mark-card {
+    color: #fff;
+    max-width: 190px;
+    padding: 10px;
+    text-align: center;
+}
+
+.marks .mrks .mark-card h4 {
+    margin-top: 20px;
+    font-size: 19px;
+}
+
+@media only screen and (max-width: 1199px) {
+    .marks .mrks {
+        justify-content: center;
+    }
+    .marks .mrks .mark-card {
+        margin-bottom: 20px;
+    }
+}
+
+.thought {
+    background-position: right bottom;
+    background-repeat: no-repeat;
+}
+
+.thought .thught-text {
+    margin-bottom: 40px;
+}
+
+.thought .thught-text p {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.thought .thught-text p span {
+    color: #FF7A00;
+    font-family: SF UI Display Medium;
+}
+
+.thought form {
+    flex-direction: column;
+}
+
+.thought form input {
+    margin: 0;
+    margin-bottom: 10px;
+    max-width: 343px;
+}
+
+.thought form button {
+    max-width: 343px;
+}
+
+.thought .form-title {
+    text-align: left;
+}
+
+@media only screen and (max-width: 991px) {
+    .thought {
+        background: none !important;
+    }
+    .thought .man {
+        display: none;
+    }
+}
+
+.questions .title {
+    margin: 10px;
+    margin-left: 0;
 }
 
 /*# sourceMappingURL=main.css.map */

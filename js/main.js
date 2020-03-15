@@ -58,3 +58,13 @@ $('.slick-slider').slick({
     }
   ]
 });
+
+$('.slick-slider-2').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  prevArrow: '<button type="button" class="slick-btn slick-prev"><i class="fas fa-sort-up"></i></button>',
+  nextArrow: '<button type="button" class="slick-btn slick-next"><i class="fas fa-sort-down"></i></button>',
+  dots: true,
+  responsive: [
+  ]
+});

@@ -18,6 +18,18 @@ $mwSmall: 15%
 body
   background-color: $black
 
+.pad
+  padding: 50px 0
+
+@media only screen and (max-width: 991px)
+  .pad
+    padding-bottom: 0
+  
+
+
+img
+  height: auto
+  max-width: 100%
 
 a, button
   outline: none
@@ -29,9 +41,15 @@ a, button
     text-decoration: none
 
 
+// content
+
+.content
+
+  
+
 
 .title
-  margin-left: $mwSmall
+  //margin-left: $mwSmall
   color: $white
   margin-bottom: 60px
 
@@ -42,16 +60,23 @@ a, button
     font-size: 42px
     text-transform: uppercase
 
+  p
+    font-size: 22px
+    font-family: SF UI Display Medium
+
+    span
+      color: $orange
+
 @media only screen and (max-width: 1799px)
   .title
-    max-width: 70%
+    //max-width: 70%
 
     h3
       font-size: 38px
 
 @media only screen and (max-width: 1199px)
   .title
-    margin-bottom: 30px
+    margin-bottom: 40px
 
     h3
       font-size: 32px
@@ -59,11 +84,14 @@ a, button
 @media only screen and (max-width: 991px)
   .title
     margin: 0 auto
-    margin-bottom: 20px
+    margin-bottom: 40px
     text-align: center
 
     h3
       font-size: 32px
+
+    p
+      font-size: 20px
 
 @media only screen and (max-width: 767px)
   .title
@@ -73,7 +101,7 @@ a, button
 
 @media only screen and (max-width: 576px)
   .title
-    margin-bottom: 10px
+    margin-bottom: 25px
 
     h3
       font-size: 24px
@@ -91,7 +119,7 @@ form
     height: 54px
     box-shadow: 0px 20px 12px rgba(0, 0, 0, 0.02)
     border-radius: 2px
-    padding-left: 5px
+    padding-left: 15px
     color: $white
     transition: .2s
     border: 2px solid rgba(255, 255, 255, 0.4)
@@ -105,11 +133,16 @@ form
       font-family: SF UI Display Semibold
       font-size: 16px
 
+.form
+  display: flex
+  
+  input
+    margin-right: 10px
+
 @media only screen and (max-width: 1499px)
   form
 
     input
-      height: 48px
       font-size: 14px
 
       &::placeholder
@@ -120,6 +153,18 @@ form
 
     input
       font-size: 12px
+
+  .form
+    flex-direction: column
+    align-items: center
+
+    input
+      margin-right: 0
+      margin-bottom: 10px
+      max-width: 343px
+
+    button
+      max-width: 343px
 
 
 
@@ -162,7 +207,7 @@ form
 
   i
     color: $white
-    font-size: 28px
+    font-size: 34px
 
 .slick-prev
   left: 10%
@@ -194,7 +239,6 @@ form
 
 @media only screen and (max-width: 1799px)
   .content-btn
-    height: 48px
     font-size: 14px
 
 @media only screen and (max-width: 1199px)
@@ -697,7 +741,6 @@ form
 // CHECK AUTO
 
 .check-auto
-  padding: 50px 0
         
   .list
     display: flex
@@ -716,7 +759,6 @@ form
         font-size: 19px
 
   .cats
-    max-width: 70%
     margin: 0 auto
 
     .slick-slider
@@ -858,14 +900,17 @@ form
   .check-auto .check-auto-card .inner .auto-card-detail .list.ec
     margin-top: 10px
 
+  .check-auto .check-auto-card .inner .auto-card-detail
+    padding: 45px
+
 @media only screen and (max-width: 1199px)
   .check-auto .check-auto-card .top .title
     text-align: left
 
-@media only screen and (max-width: 991px)
-  .check-auto .cats
-    max-width: 60%
+  .check-auto .check-auto-card .inner .auto-card-detail
+    padding: 5% 7%
 
+@media only screen and (max-width: 991px)
   .check-auto .check-auto-card .inner .auto-card-detail .title
     margin-left: 0
     text-align: left
@@ -880,10 +925,13 @@ form
   .check-auto .list span:last-child
     font-size: 17px
 
+  .check-auto .check-auto-card .inner .auto-card-detail
+    padding: 45px
+
 
 @media only screen and (max-width: 767px)
-  .check-auto .cats
-    max-width: 70%
+  .check-auto .check-auto-card .inner .auto-card-detail
+    padding: 35px
 
 @media only screen and (max-width: 576px)
   .check-auto .check-auto-card .inner .auto-card-detail
@@ -943,16 +991,188 @@ form
     span
       font-size: 17px
 
-  .check-auto .cats
-    max-width: 80%
-
-@media only screen and (max-width: 499px)
-  .check-auto .cats
-    max-width: 95%
-
 @media only screen and (max-width: 349px)
   .check-auto .check-auto-card .inner .auto-card-detail .content-btn
     height: 30px
+
+.detroit
+
+  .content
+    margin: 0 auto
+
+    .content-text
+      color: $white
+      font-family: SF UI Display Light
+
+    .text-cards
+      margin-top: 45px 
+
+      p
+        max-width: 232px
+        color: $white
+
+      span
+        font-size: 42px
+        font-family: SF UI Display Bold
+        display: block
+
+.slick-slider-2
+
+  .slick-dots
+    display: flex
+    justify-content: flex-end
+    padding-right: 60px
+
+  .slick-next
+    right: 35px
+
+  .slick-prev
+    left: auto
+    right: 185px
+
+.you-can
+
+  .can-card
+
+    .can-text
+      padding: 30px
+      color: $white
+
+    .can-active
+      padding: 0 30px
+
+      button
+        max-width: 315px
+      
+
+    .can-img
+      position: relative
+      display: flex
+      align-items: center
+      justify-content: center
+
+      .title
+        font-family: SF UI Display Bold
+        position: absolute
+        bottom: 30px
+        left: 30px
+        margin: 0
+        text-align: left
+        font-size: 28px
+        text-transform: uppercase
+
+@media only screen and (max-width: 991px)
+  .you-can
+
+    .can-card
+      margin-bottom: 40px
+
+      .can-text
+        padding: 30px 15px
+
+      .can-active
+        display: flex
+        align-items: center
+        justify-content: center
+      
+
+      .can-img
+
+        .title
+          left: 15px
+          bottom: 15px
+          font-size: 24px
+
+@media only screen and (max-width: 567px)
+  .you-can
+
+    .can-card
+
+      .can-text
+        padding: 10px 5px
+        font-size: 14px
+      
+      .can-img
+
+        .title
+          left: 5px
+          bottom: 5px
+          font-size: 20px
+
+.marks 
+
+  .mrks
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    flex-wrap: wrap
+
+    .mark-card
+      color: $white
+      max-width: 190px
+      padding: 10px
+      text-align: center
+
+      h4
+        margin-top: 20px
+        font-size: 19px
+
+@media only screen and (max-width: 1199px)
+  .marks 
+
+    .mrks
+      justify-content: center
+
+      .mark-card
+        margin-bottom: 20px
+
+
+.thought
+  background-position: right bottom
+  background-repeat: no-repeat
+
+  .thught-text
+    margin-bottom: 40px
+
+    p
+      color: $white
+      margin-bottom: 20px
+      
+      span
+        color: $orange
+        font-family: SF UI Display Medium
+
+  form
+    flex-direction: column
+
+    input
+      margin: 0
+      margin-bottom: 10px
+      max-width: 343px
+
+    button
+      max-width: 343px
+
+  .form-title
+    text-align: left
+
+@media only screen and (max-width: 991px)
+  .thought
+    background: none!important
+
+    .man
+      display: none
+
+  
+.questions
+
+  .title
+    margin: 10px
+    margin-left: 0
+
+  
+
+  
 
 
 
