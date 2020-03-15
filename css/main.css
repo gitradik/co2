@@ -794,7 +794,7 @@ form input::placeholder {
 }
 
 .check-auto .check-auto-card .inner .auto-card-detail h3 {
-    font-size: 28px;
+    font-size: 24px;
     text-transform: uppercase;
 }
 
@@ -848,7 +848,7 @@ form input::placeholder {
     left: 0;
     font-family: SF UI Display Semibold;
     margin: 2%;
-    font-size: 28px;
+    font-size: 24px;
     text-transform: uppercase;
 }
 
@@ -1163,6 +1163,9 @@ form input::placeholder {
     .thought .man {
         display: none;
     }
+    .thought .form-title {
+        text-align: center;
+    }
 }
 
 .questions .title {
@@ -1180,25 +1183,20 @@ form input::placeholder {
 }
 
 .why .advs .adv-card .card-img {
-    height: 50px;
-    width: 50px;
-    border-radius: 100%;
-    background-color: #FF7A00;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10px;
+    display: contents;
 }
 
 .why .advs .adv-card img {
-    height: 25px;
-    width: 25px;
+    height: auto;
+    width: 100%;
+    max-width: 71px;
 }
 
 .why .advs .adv-card .card-text {
     font-family: SF UI Display Light;
     font-size: 20px;
     color: #fff;
+    margin-left: 15px;
 }
 
 @media only screen and (max-width: 1199px) {
@@ -1216,6 +1214,120 @@ form input::placeholder {
 @media only screen and (max-width: 576px) {
     .why .advs .adv-card .card-text {
         font-size: 14px;
+    }
+}
+
+.clients .card {
+    background: #040402;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    margin-bottom: 20px;
+    border-radius: 0;
+}
+
+.clients .card .card-header {
+    padding: 25px;
+}
+
+.clients .card .btn-link {
+    font-family: SF UI Display Bold;
+    font-size: 22px;
+    transition: .2s;
+    color: #FF7A00;
+    outline: none;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    text-align: left;
+}
+
+.clients .card .btn-link:focus {
+    text-decoration: none;
+}
+
+.clients .card .btn-link .fa-minus {
+    display: inline-block;
+}
+
+.clients .card .btn-link .fa-plus {
+    display: none;
+    transition: .2s;
+    color: #fff;
+}
+
+.clients .card .btn-link.collapsed {
+    transition: .2s;
+    color: #fff;
+}
+
+.clients .card .btn-link.collapsed .fa-minus {
+    display: none;
+    transition: .2s;
+    color: #FF7A00;
+}
+
+.clients .card .btn-link.collapsed .fa-plus {
+    display: inline-block;
+}
+
+.clients .card .btn-link:focus {
+    text-decoration: none;
+}
+
+.clients .card .card-body {
+    padding: 37px;
+    padding-top: 0;
+    color: #fff;
+}
+
+@media only screen and (max-width: 1499px) {
+    .clients .card .btn-link {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .clients .card .btn-link {
+        font-size: 19px;
+    }
+    .clients .card .card-header {
+        padding: 20px;
+    }
+    .clients .card .card-body {
+        padding: 32px;
+        padding-top: 0;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .clients .card .btn-link {
+        font-size: 16px;
+    }
+    .clients .card .card-header {
+        padding: 13px;
+    }
+    .clients .card .card-body {
+        padding: 25px;
+        padding-top: 0;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .clients .card .btn-link {
+        font-size: 14px;
+    }
+    .clients .card .btn-link span {
+        max-width: 85%;
+    }
+    .clients .card .card-header {
+        padding: 3px;
+    }
+    .clients .card .card-body {
+        padding: 15px;
+        padding-top: 0;
+        font-size: 12px;
     }
 }
 

@@ -797,7 +797,7 @@ form
           margin-bottom: 15px
 
         h3
-          font-size: 28px
+          font-size: 24px
           text-transform: uppercase
 
         .list
@@ -847,7 +847,7 @@ form
         font-family: SF UI Display Semibold
         margin: 2%
         font-size: 
-        font-size: 28px
+        font-size: 24px
         text-transform: uppercase
 
         span
@@ -1163,6 +1163,9 @@ form
     .man
       display: none
 
+    .form-title
+      text-align: center
+
   
 .questions
 
@@ -1183,23 +1186,18 @@ form
       margin-bottom: 20px
 
       .card-img
-        height: 50px
-        width: 50px
-        border-radius: 100%
-        background-color: $orange
-        display: flex
-        align-items: center
-        justify-content: center
-        margin-right: 10px
+        display: contents
 
       img
-        height: 25px
-        width: 25px
+        height: auto
+        width: 100%
+        max-width: 71px
 
       .card-text
         font-family: SF UI Display Light
         font-size: 20px
         color: $white
+        margin-left: 15px
 
 @media only screen and (max-width: 1199px)
   .why
@@ -1231,6 +1229,123 @@ form
         .card-text
           font-size: 14px
 
+
+.clients
+
+  .card
+    background: $black
+    border: 2px solid rgba(255,255,255,.15)
+    margin-bottom: 20px
+    border-radius: 0
+
+    .card-header
+      padding: 25px
+
+    .btn-link
+      font-family: SF UI Display Bold
+      font-size: 22px
+      transition: .2s
+      color: $orange
+      outline: none
+      text-decoration: none
+      display: flex
+      align-items: center
+      justify-content: space-between
+      width: 100%
+      text-align: left
+
+      &:focus
+        text-decoration: none
+
+      .fa-minus
+        display: inline-block
+
+      .fa-plus
+        display: none
+        transition: .2s
+        color: $white
+
+      &.collapsed
+        transition: .2s
+        color: $white
+
+        .fa-minus
+          display: none
+          transition: .2s
+          color: $orange
+
+        .fa-plus
+          display: inline-block
+
+      &:focus
+        text-decoration: none
+
+    .card-body
+      padding: 37px
+      padding-top: 0
+      color: $white
+
+
+@media only screen and ( max-width: 1499px )
+  .clients
+
+    .card
+
+      .btn-link
+        font-size: 20px
+
+@media only screen and ( max-width: 1199px )
+  .clients
+
+    .card
+
+      .btn-link
+        font-size: 19px
+
+      .card-header
+        padding: 20px
+
+      .card-body
+        padding: 32px
+        padding-top: 0
+
+@media only screen and ( max-width: 991px )
+  .clients
+
+    .card
+
+      .btn-link
+        font-size: 16px
+
+      .card-header
+        padding: 13px
+
+      .card-body
+        padding: 25px
+        padding-top: 0
+        font-size: 14px
+
+@media only screen and ( max-width: 767px )
+  .clients
+
+    .card
+
+      .btn-link
+        font-size: 14px
+
+        span
+          max-width: 85%
+
+      .card-header
+        padding: 3px
+
+      .card-body
+        padding: 15px
+        padding-top: 0
+        font-size: 12px
+    
+
+  
   
 
   

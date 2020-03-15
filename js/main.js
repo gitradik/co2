@@ -68,3 +68,9 @@ $('.slick-slider-2').slick({
   responsive: [
   ]
 });
+
+$('#accordion').collapse();
+
+function accordionClick(event) {
+  console.log(event.toElement)
+}
