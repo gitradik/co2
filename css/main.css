@@ -962,16 +962,16 @@ form button {
 .slick-slider-2 .slick-dots {
     display: flex;
     justify-content: flex-end;
-    padding-right: 60px;
+    padding-right: 30px;
 }
 
 .slick-slider-2 .slick-next {
-    right: 35px;
+    right: 13px;
 }
 
 .slick-slider-2 .slick-prev {
     left: auto;
-    right: 185px;
+    right: 148px;
 }
 
 .you-can .can-card .can-text {
