@@ -9,14 +9,14 @@ $(document).on('click', function (e){
 });
 
 $(document).ready(function(){
-  $(".input-mask-s").inputmask("+38(999) 999-99-99");
+  $(".input-mask-s").inputmask("+38 (999) 999-99-99");
 });
 
 function changeNavBar() {
   var docSrollTop = $(document).scrollTop();
   var windowWidth = $(window).width();
   if (windowWidth > 992) {
-    if (docSrollTop > 40) {
+    if (docSrollTop > 120) {
       $('#headerMenu').css('display', 'none');
     } else {
       $('#headerMenu').css('display', 'flex');

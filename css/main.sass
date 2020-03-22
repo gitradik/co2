@@ -2,15 +2,6 @@ $black: #040402
 $white: #fff
 $orange: #FF7A00
 $orang-opacity: rgba(255, 122, 0, 0.65)
-$overlay-black: rgba($black, .1)
-$mar: calc(16px + 300px)
-$mar-proc: 300px
-$mar-1799: calc(16px + 250px)
-$mar-proc-1799: 250px
-$mar-1599: calc(16px + 200px)
-$mar-proc-1599: 200px
-$mar-1499: calc(16px + 150px)
-$mar-proc-1499: 150px
 
 $mwBig: 70%
 $mwSmall: 15%
@@ -21,12 +12,13 @@ body
 .pad
   padding: 50px 0
 
+p
+  margin: 0
+
 @media only screen and (max-width: 991px)
   .pad
     padding-bottom: 0
   
-
-
 img
   height: auto
   max-width: 100%
@@ -40,24 +32,30 @@ a, button
   &:hover
     text-decoration: none
 
-
-// content
-
-.content
-
-  
-
-
+// title start
 .title
-  //margin-left: $mwSmall
   color: $white
   margin-bottom: 60px
+
+  h1
+    font-family: SF UI Display Black
+    text-transform: uppercase
+    font-size: 52px
+
+  h2
+    font-family: SF UI Display Light
+    text-transform: uppercase
+    font-size: 34px
+
+    span
+      color: $orange
+      font-family: SF UI Display Bold
 
   h3
     font-family: SF UI Display Medium
     font-style: normal
     font-weight: bold
-    font-size: 42px
+    font-size: 34px
     text-transform: uppercase
 
   p
@@ -67,19 +65,18 @@ a, button
     span
       color: $orange
 
-@media only screen and (max-width: 1799px)
-  .title
-    //max-width: 70%
-
-    h3
-      font-size: 38px
-
 @media only screen and (max-width: 1199px)
   .title
     margin-bottom: 40px
 
+    h1
+      font-size: 44px
+
+    h2
+      font-size: 30px
+
     h3
-      font-size: 32px
+      font-size: 30px
 
 @media only screen and (max-width: 991px)
   .title
@@ -87,8 +84,14 @@ a, button
     margin-bottom: 40px
     text-align: center
 
-    h3
+    h1
+      font-size: 38px
+
+    h2
       font-size: 32px
+
+    h3
+      font-size: 26px
 
     p
       font-size: 20px
@@ -96,8 +99,17 @@ a, button
 @media only screen and (max-width: 767px)
   .title
 
-    h3
+    h1
+      font-size: 34px
+
+    h2
       font-size: 28px
+
+    h3
+      font-size: 24px
+
+    p
+      font-size: 18px
 
 @media only screen and (max-width: 576px)
   .title
@@ -105,9 +117,34 @@ a, button
 
     h3
       font-size: 24px
+// title end
+
+// my-btn start
+.my-btn
+  text-transform: uppercase
+  outline: none
+  width: 100%
+  padding: 15px
+  border-radius: 27px
+  border: none
+  box-shadow: 0px 20px 12px rgba(0, 0, 0, 0.02)
+  background-color: $orange
+  font-family: SF UI Display Semibold
+  color: $white
+  font-size: 16px
+
+@media only screen and (max-width: 1199px)
+  .my-btn
+    font-size: 14px
+
+@media only screen and (max-width: 991px)
+  .my-btn
+    max-width: 300px
+    margin: 0 auto
+
+// my-btn end
 
 // Form start
-
 form
 
   input
@@ -116,11 +153,11 @@ form
     width: 100%
     background-color: rgba(247, 247, 247, 0.06)
     box-sizing: border-box
-    height: 54px
     box-shadow: 0px 20px 12px rgba(0, 0, 0, 0.02)
     border-radius: 2px
-    padding-left: 15px
+    padding: 15px
     color: $white
+    font-size: 16px
     transition: .2s
     border: 2px solid rgba(255, 255, 255, 0.4)
 
@@ -133,46 +170,22 @@ form
       font-family: SF UI Display Semibold
       font-size: 16px
 
-.form
-  display: flex
-  
-  input
-    margin-right: 20px
-
-@media only screen and (max-width: 1499px)
-  form
-
-    input
-      font-size: 14px
-
-      &::placeholder
-        font-size: 14px
-
 @media only screen and (max-width: 991px)
   form
 
     input
-      font-size: 12px
+      max-width: 300px
+      margin: 0 auto
+      margin-bottom: 5px
 
-  .form
-    flex-direction: column
-    align-items: center
+    .my-btn
+      margin-top: 5px
 
-    input
-      margin-right: 0
-      margin-bottom: 10px
-      max-width: 343px
+  button
 
-    button
-      max-width: 343px
-      margin-top: 10px
+//form end
 
-
-
-// Form end
-
-// SLICK start
-
+// slick start
 .slick-slider
 
   img
@@ -216,552 +229,219 @@ form
   i
     transform: rotate(-90deg)
 
-
 .slick-next
   right: 24%
 
   i
     transform: rotate(-90deg)
-  
-
-// SLICK end
-
-
-.content-btn
-  font-family: SF UI Display Semibold
-  color: $white
-  width: 100%
-  height: 54px
-  font-size: 18px
-  background: $orange
-  border: none
-  text-transform: uppercase
-  border-radius: 27px
-
-@media only screen and (max-width: 1199px)
-  .content-btn
-    font-size: 16px
-
-@media only screen and (max-width: 576px)
-  .content-btn
-    font-size: 14px
-    height: 46px
-
-@media only screen and (max-width: 499px)
-  .content-btn
-    font-size: 13px
-    
-.overlay-bg
-  position: absolute
-  left: 0
-  top: 0
-  width: 100%
-  height: 100%
-  background-color: $overlay-black
-  z-index: 0
+// slick end
 
 // navbar start
 .navbar
+  z-index: 9999
   position: fixed
   width: 100%
-  z-index: 9999
-  background-color: transparent
+  background: transparent
 
-  .navbar-start
-    display: flex
-    align-items: center
-    justify-content: flex-start
-    width: 100%
-    margin-left: $mar-proc
+  hr
+    border: 0
+    height: 1px
+    background-image: -webkit-linear-gradient(left, rgba(255,255,255,0.3), rgba(255,255,255,0.3), rgba(255,255,255,0))
+    background-image:    -moz-linear-gradient(left, rgba(255,255,255,0.3), rgba(255,255,255,0.3), rgba(255,255,255,0))
+    background-image:     -ms-linear-gradient(left, rgba(255,255,255,0.3), rgba(255,255,255,0.3), rgba(255,255,255,0))
+    background-image:      -o-linear-gradient(left, rgba(255,255,255,0.3), rgba(255,255,255,0.3), rgba(255,255,255,0))
+    margin: 0
 
-  .navbar-brand
-    display: flex
-    flex-direction: column
-    align-items: center
-    justify-content: center
-    font-family: SF UI Display Bold
-    font-size: 22px
-    line-height: 26px
-    transition: .2s
-    color: $white 
-
-    &:hover
-      transition: .2s
-      color: rgba($white, .8)
-
-    img[alt=logo]
-      height: auto
-      max-width: 132px
 
   .navbar-quick-contact
     display: flex
     flex-direction: column
-    align-items: flex-start
-    justify-content: center
+
+    .navbar-quick-social
+      display: flex
+
+  .navbar-toggler
+
+    .navbar-toggler-icon
+      height: auto
+      transition: .2s
+      color: rgba(255,255,255,.6)
+
+    &.collapsed
+      
+      .navbar-toggler-icon
+        transition: .2s
+        color: $white
+
+  img[alt=logo]
+    max-width: 110px
+    margin-right: 30px
+
+  .nav-link
+    font-family: SF UI Display Light
     color: $white
-    margin-left: 65px
+    font-size: 18px
+
+  .navbar-quick-contact
+    font-family: SF UI Display Medium
 
     span
-      font-family: SF UI Display Medium
       font-size: 18px
-      line-height: 21px
+      color: $white
 
     a
       font-family: SF UI Display Bold
+      color: $white
       font-size: 22px
-      line-height: 26px
-      transition: .2s
-      color: $white 
-      white-space: nowrap
 
-      &:hover
-        transition: .2s
-        color: rgba($white, .8)
-
-  .navbar-social-links
-    display: flex
-    align-items: center
-    margin-right: $mar-proc
+  .navbar-quick-social
 
     a
-      margin-right: 30px
       font-size: 24px
-      transition: .2s
       color: $white
-      font-family: SF UI Display Light
-
-      &:last-child
-        margin-right: 0
-
-      &:hover
-        transition: .2s
-        color: rgba($white, .8)
-
-  .nav-social-links
-    margin-top: 10px
-    padding-left: 5px
-
-    a
-      margin-right: 10px
-      font-size: 18px
-      transition: .2s
-      color: $white
-
-      &:last-child
-        margin-right: 0
-
-      &:hover
-        transition: .2s
-        color: rgba($white, .8)
-
-  .navbar-toggler
-    outline: none
-
-    .navbar-toggler-icon
-      display: flex
-      align-items: center
-      justify-content: center
-
-      i
-        font-size: 24px
-        transition: .2s
-        color: rgba($white, .5)
-
-    &.collapsed
-      transition: .2s
-
-      .navbar-toggler-icon
-
-        i
-          transition: .2s
-          color: rgba($white, .85)
-      
-  .navbar-nav
-    margin-top: 20px
-
-  .nav-link
-    display: inline-block
-    color: $white
-    padding-left: 5px
-    padding-right: 5px
-    font-family: SF UI Display Light
-
-    &:hover 
-      background-color: $orang-opacity
 
 @media only screen and (min-width: 992px)
   .navbar
+    display: flex
+    flex-direction: row
+    max-width: 960px
+    left: 50%
+    transform: translateX(-50%)
+    padding-left: 15px
+    padding-right: 15px
 
-    .navbar-nav
+    .navbar-collapse
+      align-items: flex-start
 
-      &.hidden
-        display: none
-
-@media only screen and (max-width: 1799px)
-  .navbar
-
-    .navbar-start
-      margin-left: $mar-proc-1799
-
-    .navbar-social-links
-      margin-right: $mar-proc-1799
-
-@media only screen and (max-width: 1599px)
-  .navbar
-
-    .navbar-start
-      margin-left: $mar-proc-1599
-
-    .navbar-social-links
-      margin-right: $mar-proc-1599
-
-@media only screen and (max-width: 1499px)
-  .navbar
-
-    .navbar-start
-      margin-left: $mar-proc-1499
-
-    .navbar-social-links
-      margin-right: $mar-proc-1499
-
-@media only screen and (max-width: 991px)
-  .navbar
-    background-color: $black
-    box-shadow: 0 2px 5px 0 rgba(255,255,255,.2)
-
-    .navbar-social-links
-      display: none
-
-    .navbar-start
-      width: auto
-      margin-left: 0
-
-    .navbar-brand
-      font-size: 16px
-      line-height: 20px
-
-      img[alt=logo]
-        max-width: 58px
+      .navbar-nav
+        padding-top: 20px
+        margin-left: auto
 
     .navbar-quick-contact
-      margin-left: 15px
+      padding-bottom: 15px
 
-      span
-        font-size: 14px
-
-      a
-        font-size: 16px
-
-@media only screen and (max-width: 575px)
-  .navbar
-
-    .navbar-brand
-      font-size: 10px
-      line-height: auto
-
-      img[alt=logo]
-        max-width: 50px
-
-    .navbar-quick-contact
-      margin-left: 10px
-
-      span
-        font-size: 11px
+    .navbar-quick-social
+      padding-top: 15px
+      position: relative
 
       a
-        font-size: 13px
-// navbar end
-  
-
-// main-scroll start
-.main-scroll
-  position: relative
-  min-height: 100vh
-  background-image: url('../img/Bg.png')
-  background-size: cover
-  background-position: center
-  background-repeat: no-repeat 
-  padding-top: 200px
-  padding-bottom: 50px
-
-  .form-content
-    position: relative
-    z-index: 1
-    max-width: $mwBig
-    margin-left: auto
-    margin-right: auto
-
-    .offer
-      font-family: SF UI Display Light
-      color: $white
-      font-size: 22px
-      margin-bottom: 40px
-
-      span
-        text-transform: uppercase
-        color: $orange
-        font-family: SF UI Display Bold
-
-    form
-      display: flex
-      align-items: center
-      justify-content: flex-start
-      width: 100%
-      margin-bottom: 40px
-
-      input
-        margin-right: 10px
-
-  .advantages
-    display: flex
-    align-items: center
-
-    .adv-card
-      width: 100%
-      padding: 10px
-      background: rgba(14, 14, 14, 0.34)
-      border-radius: 55px
-      margin-right: 10px
-      display: flex
-      align-items: center
-      justify-content: flex-start
-
-      &:last-child
-        margin-right: 0
-
-      .card-img
-        height: 50px
-        width: 50px
-        border-radius: 100%
-        background-color: $orange
-        display: flex
-        align-items: center
-        justify-content: center
-        margin-right: 10px
-
-      img
-        height: 25px
-        width: 25px
-
-      .card-text
-        font-family: SF UI Display Light
-        font-size: 16px
-        color: $white
-
-
-  .content
-    position: relative
-    z-index: 1
-    margin-left: $mwSmall
-    display: flex
-    align-items: flex-start
-    justify-content: space-between
-
-    .content-menu
-      
-      a
-        font-family: SF UI Display Light
-        display: flex
-        align-items: center
-        justify-content: flex-end
-        padding-left: 52px
-        padding-right: $mar
-        font-size: 18px
-        height: 46px
-        line-height: 21px
-        color: $white
-        transition: .2s
-
-        &:hover
-          transition: .2s
-          background-color: $orang-opacity
-
-    .content-text
-      width: 100%
+        margin-right: 25px
 
       hr
-        margin-top: 80px
-        margin-bottom: 40px
-        border-color: rgba(196, 196, 196, 0.24)
+        position: absolute
+        left: 0
+        top: 0
+        right: -150%
+  
 
-
-  h1
-    display: inline-block
-    text-transform: uppercase
-    font-family: SF UI Display Black
-    font-size: 78px
-    color: $white
-    text-shadow: 0px 20px 12px rgba(0, 0, 0, 0.02)
-    margin-top: -13px
-
-  h2
-    font-family: SF UI Display Light
-    font-weight: normal
-    font-size: 40px
-    line-height: 48px
-    text-transform: uppercase
-    color: white
-
-    span
-      color: $orange
-      font-family: SF UI Display Black
-
-@media only screen and (max-width: 1799px)
-  .main-scroll
-
-    .content
-
-      .content-menu
-        
-        a
-          padding-right: $mar-1799
-
-    .advantages
-
-      .card-text
-        font-size: 14px
-
-    h1
-      font-size: 60px
-
-    h2
-      font-size: 35px
-
-@media only screen and (max-width: 1599px)
-  .main-scroll
-
-    .content
-
-      .content-menu
-        
-        a
-          padding-right: $mar-1599
-
-@media only screen and (max-width: 1499px)
-  .main-scroll
-
-    .form-content
-
-      .offer
-        font-size: 20px
-
-    .content
-
-      .content-menu
-        
-        a
-          padding-right: $mar-1499
-
-@media only screen and (max-width: 1199px)
-  .main-scroll
-    padding-top: 180px
-
-    .content
-
-      .content-menu
-
-        a
-          padding-left: 32px
-
-    .form-content
-
-      .offer
-        
-        br
-          display: none
-
-      .card-text
-        font-size: 12px
+@media only screen and (min-width: 1200px)
+  .navbar
+    max-width: 1140px  
 
 @media only screen and (max-width: 991px)
-  .main-scroll
-    padding-top: 175px
-    background-position: right
+  .navbar
+    background: rgb(21,33,50)
+    background: linear-gradient(90deg, rgba(21,33,50,.81) 0%, rgba(8,38,47,.8) 50%, rgba(21,33,50,0.8) 100%)
+    box-shadow: 0 1px 2px 0 rgba(255,255,255,.1)
+    
+    img[alt=logo]
+      max-width: 50px 
+      margin-right: 0
 
-    .advantages
-      flex-direction: column
+    .navbar-quick-contact
 
-      .adv-card
-        margin-right: 0
-        margin-bottom: 10px
+      span
+        font-size: 13px
 
-        &:last-child
-          margin-bottom: 0
+      a
+        font-size: 14px
+        margin-right: 10px
 
-    .content
-      margin-left: 0
-      flex-direction: column
+    .navbar-nav
+      margin-top: 10px
+// navbar end
+
+// main start
+.main
+  background-image: url('../img/R.png')
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+  padding: 0 5px
+  min-height: 100vh
+
+  .triggers
+    margin-bottom: 60px
+
+    .trigger
+      display: flex
       align-items: center
+      margin-bottom: 15px
 
-      .content-menu
-        display: none
+      p
+        font-family: SF UI Display Light
+        color: $white
+        font-size: 20px
+        margin-left: 10px
 
-      .content-text
+      &:last-child
+        margin-bottom: 0
 
-        hr
-          margin-top: 50px
-          margin-bottom: 30px
+@media only screen and (min-width: 992px)
+  .main
+    padding-top: 250px
 
-    h1
-      font-size: 45px
-      display: block
-      text-align: center
+@media only screen and (max-width: 1199px)
+  .main
+    padding-top: 210px
 
-    h2
-      display: block
-      text-align: center
-      font-size: 30px
+  .triggers
 
-    .form-content
-      max-width: 50%
+    .trigger
 
-      .offer
-        text-align: center
+      img
+        max-width: 65px
 
-      form
-        display: flex
-        flex-direction: column
+@media only screen and (max-width: 991px)
+  .main
+    padding-top: 150px
 
-        input
-          margin-right: 0
-          margin-bottom: 10px
+    .triggers
+
+      .trigger
+        margin-left: auto
+        margin-right: auto
+        max-width: 320px
+
+        img
+          max-width: 51px
+
+        p
+          font-size: 18px
 
 @media only screen and (max-width: 767px)
-  .main-scroll
-    padding-top: 160px
+  .main
+    padding-top: 130px
 
-    .form-content
-      max-width: 60%
+    .title
+      margin-bottom: 25px
 
-    h1
-      font-size: 40px
+    .triggers
+      margin-bottom: 20px
 
-@media only screen and (max-width: 565px)
-  .main-scroll
-    padding-top: 140px
+@media only screen and (max-width: 575px)
+  .main
 
-    .content
+// main end 
 
-      .content-text
-        max-width: 90%
-
-    .form-content
-      max-width: 70%
-
-    h1
-      font-size: 35px
-    
-// main-scroll end
-
-// CHECK AUTO
-
+// check-auto start
 .check-auto
         
   .list
     display: flex
     align-items: center
+    margin-bottom: 10px
     justify-content: space-between
-    padding: 10px 5px
     font-size: 18px
     line-height: 21px
     color: $white
@@ -780,7 +460,7 @@ form
 
   .check-auto-card
     position: relative
-    padding: 15px
+    padding: 25px
 
     .inner
       position: relative
@@ -789,28 +469,27 @@ form
       .auto-card-detail
         position: absolute
         z-index: 1
-        left: -10px
-        top: -10px
-        right: -10px
-        bottom: -10px
+        left: -20px
+        top: -20px
+        right: -20px
+        bottom: -20px
         background-color: rgba(255, 122, 0, 0.95)
         border-radius: 15px
         padding: 20px
+        visibility: hidden
         display: flex
         flex-direction: column
         justify-content: space-between
-        visibility: hidden
 
-        .content-btn
-          font-family: SF UI Display Bold
+        button
           border: 2px solid $white
-          margin-top: 15px
-          height: 46px
+          margin: 0 auto
+          padding: 10px
 
         .title
           position: relative
           margin: 0
-          padding-bottom: 10px
+          padding: 0
 
         h3
           font-size: 24px
@@ -819,7 +498,7 @@ form
 
         .list
           padding: 0
-          margin-bottom: 10px
+          margin-bottom: 2px
 
           span
             font-family: SF UI Display Light
@@ -829,7 +508,6 @@ form
               color: $white
           
           &.ec
-            margin-top: 20px
             margin-bottom: 0
 
             span
@@ -847,7 +525,6 @@ form
           visibility: visible
 
     .top
-      //height: 270px
       background-size: cover
       background-repeat: no-repeat
       display: flex
@@ -866,6 +543,7 @@ form
         font-size: 24px
         text-transform: uppercase
         text-align: left
+        padding: 0 5px
 
         span
           display: block
@@ -876,11 +554,13 @@ form
 
     .bottom
       padding: 25px
+      display: flex
+      flex-direction: column
 
       button
-        height: 46px
         margin-top: 15px
-
+        margin-left: auto
+        margin-right: auto
 
 @media only screen and (max-width: 1199px)
   .check-auto
@@ -895,37 +575,53 @@ form
     
     .check-auto-card
 
+      .inner
+
+        .auto-card-detail
+          padding: 15px
+
+          .title
+
+            h3
+              font-size: 20px
+
+          .list
+            font-size: 14px
+            margin-bottom: 0
+
+            &.ec
+              
+              span
+                font-size: 20px
+              
       .top
 
         .title
           font-size: 20px
 
-      .bottom
-        padding: 15px
+@media only screen and (max-width: 991px)
+  .check-auto
+    
+    .check-auto-card
       
       .inner
         
         .auto-card-detail
-          
+          padding: 20px
+
           .title
-            text-align: left
 
             h3
-              font-size: 18px
+              font-size: 22px
 
           .list
-            margin-bottom: 5px
-
-            span
-              font-size: 14px
+            font-size: 16px
+            margin-bottom: 0
 
             &.ec
-
+              
               span
-                font-size: 18px
-
-@media only screen and (max-width: 991px)
-  .check-auto
+                font-size: 22px
 
 @media only screen and (max-width: 767px)
   .check-auto
@@ -941,8 +637,11 @@ form
         .slick-next
           right: 10%
 
-@media only screen and (max-width: 576px)
+@media only screen and (max-width: 575px)
   .check-auto
+    
+    .cats
+      max-width: 80%
     
     .check-auto-card
       
@@ -954,22 +653,22 @@ form
 
             h3
               font-size: 16px
-          
-          .list.ec
-            
-            span
-              font-size: 15px
 
           .list
+            font-size: 12px
+            margin-bottom: 0
 
-            span
-              font-size: 13px
+            &.ec
+              font-size: 12px
+              
+              span
+                font-size: 16px
 
 @media only screen and (max-width: 499px)
   .check-auto 
     
     .cats
-      max-width: 80%
+      max-width: 85%
 
     .check-auto-card
         
@@ -996,9 +695,9 @@ form
           
             &.ec
               margin-top: 8px
+// check-auto end
 
-
-
+// detroit start
 .detroit
 
   .content
@@ -1006,6 +705,7 @@ form
 
     .content-text
       color: $white
+      font-size: 18px
       font-family: SF UI Display Light
 
     .text-cards
@@ -1014,12 +714,20 @@ form
       p
         max-width: 232px
         color: $white
+        font-size: 16px
 
       span
         font-size: 42px
         font-family: SF UI Display Bold
         display: block
 
+@media only screen and (max-width: 991px)
+  .detroit
+
+    .content
+
+      .content-text
+        margin-bottom: 30px
 
 @media only screen and ( max-width: 576px )
   .detroit
@@ -1034,8 +742,7 @@ form
 
         p
           font-size: 14px
-
-
+// detroit end
 
 .slick-slider-2
 
@@ -1051,6 +758,7 @@ form
     left: auto
     right: 148px
 
+// you-can start
 .you-can
 
   .can-card
@@ -1059,9 +767,11 @@ form
       font-family: SF UI Display Light
       padding: 30px
       color: $white
+      text-align: center
 
     .can-active
       padding: 0 30px
+      text-align: center
 
       button
         max-width: 315px
@@ -1076,12 +786,14 @@ form
       .title
         font-family: SF UI Display Bold
         position: absolute
-        bottom: 30px
-        left: 30px
+        bottom: 15px
+        left: 0
+        width: 100%
+        text-align: center
         margin: 0
-        text-align: left
-        font-size: 28px
+        font-size: 24px
         text-transform: uppercase
+        padding: 0 5px
 
 @media only screen and (max-width: 991px)
   .you-can
@@ -1103,7 +815,7 @@ form
         .title
           left: 15px
           bottom: 15px
-          font-size: 24px
+          font-size: 22px
 
 @media only screen and (max-width: 567px)
   .you-can
@@ -1120,7 +832,8 @@ form
         .title
           left: 5px
           bottom: 5px
-          font-size: 20px
+          font-size: 18px
+// you-can end
 
 .marks 
 
@@ -1335,7 +1048,6 @@ form
       color: $white
       font-family: SF UI Display Light
 
-
 @media only screen and ( max-width: 1499px )
   .clients
 
@@ -1404,7 +1116,6 @@ form
       .btn-link
         font-size: 13px
 
-
 footer
 
   .title
@@ -1449,13 +1160,11 @@ footer
       p, a
         font-size: 16px
 
-
 @media only screen and ( max-width: 767px )
   footer
 
     iframe
       height: 300px
-
 
 @media only screen and ( max-width: 767px )
   footer

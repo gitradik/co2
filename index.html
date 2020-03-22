@@ -18,7 +18,7 @@
   <title>Покупка и доставка авто из США</title>
 </head>
 <body>
-  <nav id="headerMenu" class="navbar navbar-expand-lg">
+  <!-- <nav id="headerMenu" class="navbar navbar-expand-lg">
     <div class="navbar-start">
       <a class="navbar-brand" href="/">
         <img src="./img/logo.png" alt="logo">
@@ -94,7 +94,7 @@
       <form>
         <input type="text" name="name" placeholder="Имя" required>
         <input class="input-mask-s" type="text" name="phone" placeholder="Телефон" required>
-        <button class="content-btn" type="submit">получить предложение</button>
+        <button class="my-btn" type="submit">получить предложение</button>
       </form> 
 
       <div class="advantages">
@@ -127,6 +127,104 @@
         </div>
       </div>
     </div>
+  </div> -->
+
+  <nav id="headerMenu" class="navbar navbar-expand-lg">
+    <div class="d-flex align-items-center">
+      <a class="navbar-brand" href="#">
+        <img src="./img/logo.png" alt="logo">
+      </a>
+      <div class="navbar-quick-contact d-lg-none">
+        <span>г. Киев</span>
+        <a href="tel:+380501500501">+38 (050) 150-05-01</a>
+        <div class="pt-2">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon">
+        <i class="fas fa-bars"></i>
+      </span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="d-none d-lg-flex flex-column">
+        <div class="navbar-quick-contact">
+          <span>г. Киев</span>
+          <a href="tel:+380501500501">+38 (050) 150-05-01</a>
+        </div>
+        <div class="navbar-quick-social">
+          <hr>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-toggle="collapse" data-target=".navbar-collapse.show">О нас</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-toggle="collapse" data-target=".navbar-collapse.show">Услуги</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-toggle="collapse" data-target=".navbar-collapse.show">Транспорт</a>
+          </li> 
+          <li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-toggle="collapse" data-target=".navbar-collapse.show">Преимущества</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-toggle="collapse" data-target=".navbar-collapse.show">Отзывы</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contactsId" class="nav-link smooth-anchor" data-toggle="collapse" data-target=".navbar-collapse.show">Контакты</a>
+          </li>
+        </li>
+    </div>
+  </nav>
+
+  <div class="main">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="title">
+            <h1>ПОКУПКА И ДОСТАВКА<br>АВТО ИЗ США</h1>
+            <h2>Дешевле рынка на <span>30 - 60%</span></h2>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="triggers">
+            <div class="trigger">
+              <img src="./img/icons/icon1.png">
+              <p>Работаем четко по договору</p>
+            </div>
+            <div class="trigger">
+              <img src="./img/icons/icon2.png">
+              <p>Гарантия на весь спектр услуг</p>
+            </div>
+            <div class="trigger">
+              <img src="./img/icons/icon3.png">
+              <p>Широкий выбор автомобилей</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <form>
+            <div class="title">
+              <p>Закажите <span>БЕСПЛАТНУЮ</span> консультацию специалиста и получите <span>10</span> актуальных предложений прямо сейчас</p>
+            </div>
+            <div class="d-flex flex-column flex-lg-row">
+              <input class="mr-lg-2" type="text" name="name" placeholder="Имя" required>
+              <input class="input-mask-s mr-lg-2" type="text" name="phone" placeholder="Телефон" required>
+              <button class="my-btn" type="submit">получить предложение</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="check-auto pad">
@@ -145,7 +243,7 @@
                 <div class="inner">
                   <div class="top">
                     <div class="top-img">
-                      <img src="./img/check-cars/Hyundai-santa-fe-2017.png" alt="Hyundai-santa-fe-2017">
+                      <img src="./img/R.png" alt=".">
                       <div class="title">
                         Ford Fusion 
                         <span>2015</span>
@@ -155,41 +253,44 @@
                       <div class="title">
                         <h3>VW JETTA 2014</h3>
                       </div>
-                      <div class="list">
-                        <span>Стоимость авто на Аукционе:</span><span>2.230$</span>
+                      <div>
+                        <div class="list">
+                          <span>Стоимость авто на Аукционе:</span><span>2.230$</span>
+                        </div>
+                        <div class="list">
+                          <span>Аукционный сбор:</span><span>420$</span>
+                        </div>
+          
+                        <div class="list">
+                          <span>Доставка в порт Одессы:</span><span>1.250$</span>
+                        </div>
+          
+                        <div class="list">
+                          <span>Таможенные платежи:</span><span>1.195$</span>
+                        </div>
+          
+                        <div class="list">
+                          <span>Разгрузочные работы:</span><span>300$</span>
+                        </div>
+          
+                        <div class="list">
+                          <span>Услуги брокера:</span><span>300$</span>
+                        </div>
+          
+                        <div class="list">
+                          <span>Итого авто «под ключ»: </span><span>5.695$</span>
+                        </div>
+          
+                        <div class="list">
+                          <span>Цена такого же авто в Украине: </span><span>11.500$</span>
+                        </div>
                       </div>
-                      <div class="list">
-                        <span>Аукционный сбор:</span><span>420$</span>
-                      </div>
-        
-                      <div class="list">
-                        <span>Доставка в порт Одессы:</span><span>1.250$</span>
-                      </div>
-        
-                      <div class="list">
-                        <span>Таможенные платежи:</span><span>1.195$</span>
-                      </div>
-        
-                      <div class="list">
-                        <span>Разгрузочные работы:</span><span>300$</span>
-                      </div>
-        
-                      <div class="list">
-                        <span>Услуги брокера:</span><span>300$</span>
-                      </div>
-        
-                      <div class="list">
-                        <span>Итого авто «под ключ»: </span><span>5.695$</span>
-                      </div>
-        
-                      <div class="list">
-                        <span>Цена такого же авто в Украине: </span><span>11.500$</span>
-                      </div>
-        
+
                       <div class="list ec">
                         <span>Экономия</span><span>$5.805 (50%)</span>
                       </div>
-                      <button class="content-btn" type="button">Хочу такую же</button>
+                      
+                      <button class="my-btn" type="button">Хочу такую же</button>
                     </div>  
                   </div>
                   <div class="bottom">
@@ -199,7 +300,7 @@
                     <div class="list">
                       <span>Авто в Украине</span><span style="color: #575757">$ 13,500</span>
                     </div>
-                    <button class="content-btn" type="button">Хочу такую же</button>
+                    <button class="my-btn" type="button">Хочу такую же</button>
                   </div>
                 </div>
               </div>
@@ -207,69 +308,7 @@
                 <div class="inner">
                   <div class="top">
                     <div class="top-img">
-                      <img src="./img/check-cars/Hyundai-santa-fe-2017.png" alt="Hyundai-santa-fe-2017">
-                      <div class="title">
-                        Chevrolet Colorado
-                        <span>2020</span>
-                      </div>
-                    </div>
-                    <div class="auto-card-detail">
-                      <div class="title">
-                        <h3>VW JETTA 2014</h3>
-                      </div>
-                      <div class="list">
-                        <span>Стоимость авто на Аукционе:</span><span>2.230$</span>
-                      </div>
-                      <div class="list">
-                        <span>Аукционный сбор:</span><span>420$</span>
-                      </div>
-        
-                      <div class="list">
-                        <span>Доставка в порт Одессы:</span><span>1.250$</span>
-                      </div>
-        
-                      <div class="list">
-                        <span>Таможенные платежи:</span><span>1.195$</span>
-                      </div>
-        
-                      <div class="list">
-                        <span>Разгрузочные работы:</span><span>300$</span>
-                      </div>
-        
-                      <div class="list">
-                        <span>Услуги брокера:</span><span>300$</span>
-                      </div>
-        
-                      <div class="list">
-                        <span>Итого авто «под ключ»: </span><span>5.695$</span>
-                      </div>
-        
-                      <div class="list">
-                        <span>Цена такого же авто в Украине: </span><span>11.500$</span>
-                      </div>
-        
-                      <div class="list ec">
-                        <span>Экономия</span><span>$5.805 (50%)</span>
-                      </div>
-                      <button class="content-btn" type="button">Хочу такую же</button>
-                    </div>
-                  </div>
-                  <div class="bottom">
-                    <div class="list">
-                      <span>Авто под ключ</span><span>$ 6,750</span>
-                    </div>
-                    <div class="list">
-                      <span>Авто в Украине</span><span style="color: #575757">$ 13,500</span>
-                    </div>
-                    <button class="content-btn" type="button">Хочу такую же</button>
-                  </div>
-                </div>
-              </div>
-              <div class="check-auto-card">
-                <div class="inner">
-                  <div class="top">
-                    <div class="top-img">
-                      <img src="./img/check-cars/Hyundai-santa-fe-2017.png" alt="Hyundai-santa-fe-2017">
+                      <img src="./img/R.png" alt=".">
                       <div class="title">
                         Chevrolet Colorado
                         <span>2020</span>
@@ -280,42 +319,45 @@
                       <div class="title">
                         <h3>VW JETTA 2014</h3>
                       </div>
-                      <div class="list">
-                        <span>Стоимость авто на Аукционе:</span><span>2.230$</span>
+                      <div>
+                        <div class="list">
+                          <span>Стоимость авто на Аукционе:</span><span>2.230$</span>
+                        </div>
+                        <div class="list">
+                          <span>Аукционный сбор:</span><span>420$</span>
+                        </div>
+          
+                        <div class="list">
+                          <span>Доставка в порт Одессы:</span><span>1.250$</span>
+                        </div>
+          
+                        <div class="list">
+                          <span>Таможенные платежи:</span><span>1.195$</span>
+                        </div>
+          
+                        <div class="list">
+                          <span>Разгрузочные работы:</span><span>300$</span>
+                        </div>
+          
+                        <div class="list">
+                          <span>Услуги брокера:</span><span>300$</span>
+                        </div>
+          
+                        <div class="list">
+                          <span>Итого авто «под ключ»: </span><span>5.695$</span>
+                        </div>
+          
+                        <div class="list">
+                          <span>Цена такого же авто в Украине: </span><span>11.500$</span>
+                        </div>
                       </div>
-                      <div class="list">
-                        <span>Аукционный сбор:</span><span>420$</span>
-                      </div>
-        
-                      <div class="list">
-                        <span>Доставка в порт Одессы:</span><span>1.250$</span>
-                      </div>
-        
-                      <div class="list">
-                        <span>Таможенные платежи:</span><span>1.195$</span>
-                      </div>
-        
-                      <div class="list">
-                        <span>Разгрузочные работы:</span><span>300$</span>
-                      </div>
-        
-                      <div class="list">
-                        <span>Услуги брокера:</span><span>300$</span>
-                      </div>
-        
-                      <div class="list">
-                        <span>Итого авто «под ключ»: </span><span>5.695$</span>
-                      </div>
-        
-                      <div class="list">
-                        <span>Цена такого же авто в Украине: </span><span>11.500$</span>
-                      </div>
-        
+
                       <div class="list ec">
                         <span>Экономия</span><span>$5.805 (50%)</span>
                       </div>
-                      <button class="content-btn" type="button">Хочу такую же</button>
-                    </div>
+                      
+                      <button class="my-btn" type="button">Хочу такую же</button>
+                    </div> 
                   </div>
                   <div class="bottom">
                     <div class="list">
@@ -324,7 +366,7 @@
                     <div class="list">
                       <span>Авто в Украине</span><span style="color: #575757">$ 13,500</span>
                     </div>
-                    <button class="content-btn" type="button">Хочу такую же</button>
+                    <button class="my-btn" type="button">Хочу такую же</button>
                   </div>
                 </div>
               </div>
@@ -332,177 +374,57 @@
                 <div class="inner">
                   <div class="top">
                     <div class="top-img">
-                      <img src="./img/check-cars/Hyundai-santa-fe-2017.png" alt="Hyundai-santa-fe-2017">
-                      <div class="title">
-                        Ford Fusion 
-                        <span>2015</span>
-                      </div>
-                    </div>
-                    <div class="auto-card-detail">
-                      <div class="title">
-                        <h3>VW JETTA 2014</h3>
-                      </div>
-                      <div class="list">
-                        <span>Стоимость авто на Аукционе:</span><span>2.230$</span>
-                      </div>
-                      <div class="list">
-                        <span>Аукционный сбор:</span><span>420$</span>
-                      </div>
-        
-                      <div class="list">
-                        <span>Доставка в порт Одессы:</span><span>1.250$</span>
-                      </div>
-        
-                      <div class="list">
-                        <span>Таможенные платежи:</span><span>1.195$</span>
-                      </div>
-        
-                      <div class="list">
-                        <span>Разгрузочные работы:</span><span>300$</span>
-                      </div>
-        
-                      <div class="list">
-                        <span>Услуги брокера:</span><span>300$</span>
-                      </div>
-        
-                      <div class="list">
-                        <span>Итого авто «под ключ»: </span><span>5.695$</span>
-                      </div>
-        
-                      <div class="list">
-                        <span>Цена такого же авто в Украине: </span><span>11.500$</span>
-                      </div>
-        
-                      <div class="list ec">
-                        <span>Экономия</span><span>$5.805 (50%)</span>
-                      </div>
-                      <button class="content-btn" type="button">Хочу такую же</button>
-                    </div>  
-                  </div>
-                  <div class="bottom">
-                    <div class="list">
-                      <span>Авто под ключ</span><span>$ 6,750</span>
-                    </div>
-                    <div class="list">
-                      <span>Авто в Украине</span><span style="color: #575757">$ 13,500</span>
-                    </div>
-                    <button class="content-btn" type="button">Хочу такую же</button>
-                  </div>
-                </div>
-              </div>
-              <div class="check-auto-card">
-                <div class="inner">
-                  <div class="top">
-                    <div class="top-img">
-                      <img src="./img/check-cars/Hyundai-santa-fe-2017.png" alt="Hyundai-santa-fe-2017">
-                      <div class="title">
-                        Chevrolet Colorado
-                        <span>2020</span>
-                      </div>
-                    </div>
-                    <div class="auto-card-detail">
-                      <div class="title">
-                        <h3>VW JETTA 2014</h3>
-                      </div>
-                      <div class="list">
-                        <span>Стоимость авто на Аукционе:</span><span>2.230$</span>
-                      </div>
-                      <div class="list">
-                        <span>Аукционный сбор:</span><span>420$</span>
-                      </div>
-        
-                      <div class="list">
-                        <span>Доставка в порт Одессы:</span><span>1.250$</span>
-                      </div>
-        
-                      <div class="list">
-                        <span>Таможенные платежи:</span><span>1.195$</span>
-                      </div>
-        
-                      <div class="list">
-                        <span>Разгрузочные работы:</span><span>300$</span>
-                      </div>
-        
-                      <div class="list">
-                        <span>Услуги брокера:</span><span>300$</span>
-                      </div>
-        
-                      <div class="list">
-                        <span>Итого авто «под ключ»: </span><span>5.695$</span>
-                      </div>
-        
-                      <div class="list">
-                        <span>Цена такого же авто в Украине: </span><span>11.500$</span>
-                      </div>
-        
-                      <div class="list ec">
-                        <span>Экономия</span><span>$5.805 (50%)</span>
-                      </div>
-                      <button class="content-btn" type="button">Хочу такую же</button>
-                    </div>
-                  </div>
-                  <div class="bottom">
-                    <div class="list">
-                      <span>Авто под ключ</span><span>$ 6,750</span>
-                    </div>
-                    <div class="list">
-                      <span>Авто в Украине</span><span style="color: #575757">$ 13,500</span>
-                    </div>
-                    <button class="content-btn" type="button">Хочу такую же</button>
-                  </div>
-                </div>
-              </div>
-              <div class="check-auto-card">
-                <div class="inner">
-                  <div class="top">
-                    <div class="top-img">
-                      <img src="./img/check-cars/Hyundai-santa-fe-2017.png" alt="Hyundai-santa-fe-2017">
+                      <img src="./img/R.png" alt=".">
                       <div class="title">
                         Chevrolet Colorado
                         <span>2020</span>
                       </div>
                     </div>
                     
+                  
                     <div class="auto-card-detail">
                       <div class="title">
                         <h3>VW JETTA 2014</h3>
                       </div>
-                      <div class="list">
-                        <span>Стоимость авто на Аукционе:</span><span>2.230$</span>
+                      <div>
+                        <div class="list">
+                          <span>Стоимость авто на Аукционе:</span><span>2.230$</span>
+                        </div>
+                        <div class="list">
+                          <span>Аукционный сбор:</span><span>420$</span>
+                        </div>
+          
+                        <div class="list">
+                          <span>Доставка в порт Одессы:</span><span>1.250$</span>
+                        </div>
+          
+                        <div class="list">
+                          <span>Таможенные платежи:</span><span>1.195$</span>
+                        </div>
+          
+                        <div class="list">
+                          <span>Разгрузочные работы:</span><span>300$</span>
+                        </div>
+          
+                        <div class="list">
+                          <span>Услуги брокера:</span><span>300$</span>
+                        </div>
+          
+                        <div class="list">
+                          <span>Итого авто «под ключ»: </span><span>5.695$</span>
+                        </div>
+          
+                        <div class="list">
+                          <span>Цена такого же авто в Украине: </span><span>11.500$</span>
+                        </div>
                       </div>
-                      <div class="list">
-                        <span>Аукционный сбор:</span><span>420$</span>
-                      </div>
-        
-                      <div class="list">
-                        <span>Доставка в порт Одессы:</span><span>1.250$</span>
-                      </div>
-        
-                      <div class="list">
-                        <span>Таможенные платежи:</span><span>1.195$</span>
-                      </div>
-        
-                      <div class="list">
-                        <span>Разгрузочные работы:</span><span>300$</span>
-                      </div>
-        
-                      <div class="list">
-                        <span>Услуги брокера:</span><span>300$</span>
-                      </div>
-        
-                      <div class="list">
-                        <span>Итого авто «под ключ»: </span><span>5.695$</span>
-                      </div>
-        
-                      <div class="list">
-                        <span>Цена такого же авто в Украине: </span><span>11.500$</span>
-                      </div>
-        
+
                       <div class="list ec">
                         <span>Экономия</span><span>$5.805 (50%)</span>
                       </div>
-                      <button class="content-btn" type="button">Хочу такую же</button>
-                    </div>
+                      
+                      <button class="my-btn" type="button">Хочу такую же</button>
+                    </div> 
                   </div>
                   <div class="bottom">
                     <div class="list">
@@ -511,7 +433,73 @@
                     <div class="list">
                       <span>Авто в Украине</span><span style="color: #575757">$ 13,500</span>
                     </div>
-                    <button class="content-btn" type="button">Хочу такую же</button>
+                    <button class="my-btn" type="button">Хочу такую же</button>
+                  </div>
+                </div>
+              </div>
+              <div class="check-auto-card">
+                <div class="inner">
+                  <div class="top">
+                    <div class="top-img">
+                      <img src="./img/R.png" alt=".">
+                      <div class="title">
+                        Ford Fusion 
+                        <span>2015</span>
+                      </div>
+                    </div>
+                  
+                    <div class="auto-card-detail">
+                      <div class="title">
+                        <h3>VW JETTA 2014</h3>
+                      </div>
+                      <div>
+                        <div class="list">
+                          <span>Стоимость авто на Аукционе:</span><span>2.230$</span>
+                        </div>
+                        <div class="list">
+                          <span>Аукционный сбор:</span><span>420$</span>
+                        </div>
+          
+                        <div class="list">
+                          <span>Доставка в порт Одессы:</span><span>1.250$</span>
+                        </div>
+          
+                        <div class="list">
+                          <span>Таможенные платежи:</span><span>1.195$</span>
+                        </div>
+          
+                        <div class="list">
+                          <span>Разгрузочные работы:</span><span>300$</span>
+                        </div>
+          
+                        <div class="list">
+                          <span>Услуги брокера:</span><span>300$</span>
+                        </div>
+          
+                        <div class="list">
+                          <span>Итого авто «под ключ»: </span><span>5.695$</span>
+                        </div>
+          
+                        <div class="list">
+                          <span>Цена такого же авто в Украине: </span><span>11.500$</span>
+                        </div>
+                      </div>
+
+                      <div class="list ec">
+                        <span>Экономия</span><span>$5.805 (50%)</span>
+                      </div>
+                      
+                      <button class="my-btn" type="button">Хочу такую же</button>
+                    </div> 
+                  </div>
+                  <div class="bottom">
+                    <div class="list">
+                      <span>Авто под ключ</span><span>$ 6,750</span>
+                    </div>
+                    <div class="list">
+                      <span>Авто в Украине</span><span style="color: #575757">$ 13,500</span>
+                    </div>
+                    <button class="my-btn" type="button">Хочу такую же</button>
                   </div>
                 </div>
               </div>
@@ -573,16 +561,16 @@
           <div class="detroit-slider">
             <div class="slick-slider-2">
               <div>
-                <img src="./img/detroit.png" alt="detroit">
+                <img src="./img/R.png" alt=".">
               </div>
               <div>
-                <img src="./img/detroit.png" alt="detroit">
+                <img src="./img/R.png" alt=".">
               </div>
               <div>
-                <img src="./img/detroit.png" alt="detroit">
+                <img src="./img/R.png" alt=".">
               </div>
               <div>
-                <img src="./img/detroit.png" alt="detroit">
+                <img src="./img/R.png" alt=".">
               </div>
             </div>
           </div>
@@ -591,7 +579,7 @@
     </div>
   </div>
 
-  <div class="you-can pad">
+  <div class="you-can pad center">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -602,7 +590,7 @@
         <div class="col-lg-4">
           <div class="can-card">
             <div class="can-img">
-              <img src="./img/you-can/1.png" alt=""> 
+              <img src="./img/R.png" alt=".">
               <div class="title">
                 Авто под заказ
               </div>
@@ -614,14 +602,14 @@
 
             </div>
             <div class="can-active">
-              <button class="content-btn">Получить консультацию</button>
+              <button class="my-btn">Получить консультацию</button>
             </div>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="can-card">
             <div class="can-img">
-              <img src="./img/you-can/2.png" alt=""> 
+              <img src="./img/R.png" alt=".">
               <div class="title">Авто в пути</div>
             </div>
             <div class="can-text">
@@ -630,14 +618,14 @@
 постановление на учет
             </div>
             <div class="can-active">
-              <button class="content-btn">Получить консультацию</button>
+              <button class="my-btn">Получить консультацию</button>
             </div>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="can-card">
             <div class="can-img">
-              <img src="./img/you-can/3.png" alt=""> 
+              <img src="./img/R.png" alt=".">
               <div class="title">Авто в наличии</div>
             </div>
             <div class="can-text">
@@ -646,7 +634,7 @@
 готовы к продаже
             </div>
             <div class="can-active">
-              <button class="content-btn">Получить консультацию</button>
+              <button class="my-btn">Получить консультацию</button>
             </div>
           </div>
         </div>
@@ -665,7 +653,7 @@
         <div class="col-lg-6">
           <div class="can-card">
             <div class="can-img">
-              <img src="./img/you-can/4.png" alt=""> 
+              <img src="./img/R.png" alt="."> 
               <div class="title">
                 Поможем продать
                 ваше личное Авто
@@ -674,15 +662,15 @@
             <div class="can-text">
               Наши специалисты с радость проконсультируют Вас по поводу продажи вашего старого авто. Сопровождаем на каждом этапе сделки.
             </div>
-            <div class="can-active justify-content-start">
-              <button class="content-btn">Получить консультацию</button>
+            <div class="can-active">
+              <button class="my-btn">Получить консультацию</button>
             </div>
           </div>
         </div>
         <div class="col-lg-6">
           <div class="can-card">
             <div class="can-img">
-              <img src="./img/you-can/5.png" alt=""> 
+              <img src="./img/R.png" alt=".">
               <div class="title">
                 Подберем запчасти на любое Авто
               </div>
@@ -690,8 +678,8 @@
             <div class="can-text">
               Поможем подобрать любую запчать для вашего автомобиля, 
               оформить доставку из США и осуществить установку новой детали.            </div>
-            <div class="can-active justify-content-start">
-              <button class="content-btn">Получить консультацию</button>
+            <div class="can-active">
+              <button class="my-btn">Получить консультацию</button>
             </div>
           </div>
         </div>
@@ -758,7 +746,7 @@
           <form class="form">
             <input type="text" name="name" placeholder="Имя" required>
             <input class="input-mask-s" type="text" name="phone" placeholder="Телефон" required>
-            <button class="content-btn" type="submit">получить предложение</button>
+            <button class="my-btn" type="submit">получить предложение</button>
           </form> 
         </div>
         <div class="col-lg-6 d-flex align-items-end">
@@ -781,7 +769,7 @@
         <div class="col-lg-6">
           <div class="adv-card">
             <div class="card-img">
-              <img src="./img/icons/icon1.png" alt="work">
+              <img src="./img/icons/p1.png" alt="work">
             </div>
             <div class="card-text">
               Поэтапная оплата, без посредников
@@ -792,7 +780,7 @@
         <div class="col-lg-6">
           <div class="adv-card">
             <div class="card-img">
-              <img src="./img/icons/icon2.png" alt="g">
+              <img src="./img/icons/p1.png" alt="work">
             </div>
             <div class="card-text">
               Тщательная проверка технического состояния и полной истории авто
@@ -802,7 +790,7 @@
         <div class="col-lg-6">
           <div class="adv-card">
             <div class="card-img">
-              <img src="./img/icons/icon3.png" alt="cars">
+              <img src="./img/icons/p1.png" alt="work">
             </div>
             <div class="card-text">
               Страхование авто на время доставки из США в Украину
@@ -812,7 +800,7 @@
         <div class="col-lg-6">
           <div class="adv-card">
             <div class="card-img">
-              <img src="./img/icons/icon3.png" alt="cars">
+              <img src="./img/icons/p1.png" alt="work">
             </div>
             <div class="card-text">
               Сопопровождение по оформлению полного пакета документов
@@ -939,16 +927,16 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <div class="title">
-            <p>Остались вопросы?</p>
-          </div>
-        </div>
-        <div class="col-md-12">
-          <form class="form">
-            <input type="text" name="name" placeholder="Имя" required>
-            <input class="input-mask-s" type="text" name="phone" placeholder="Телефон" required>
-            <button class="content-btn" type="submit">получить предложение</button>
-          </form> 
+          <form>
+            <div class="title">
+              <p>Остались вопросы?</p>
+            </div>
+            <div class="d-flex flex-column flex-lg-row">
+              <input class="mr-lg-2" type="text" name="name" placeholder="Имя" required>
+              <input class="input-mask-s mr-lg-2" type="text" name="phone" placeholder="Телефон" required>
+              <button class="my-btn" type="submit">получить предложение</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
