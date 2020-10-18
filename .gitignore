@@ -1,6 +1,7 @@
+.idea
 .vscode
 node_modules/
-./css/main.sass
+./css/style.scss
 .sass-cache/
 *.css.map
 *.sass.map

@@ -1,24 +1,16 @@
 {
-  "name": "cars-from-usa",
+  "name": "co2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "concurrently --names \"SASS,WATCH,SERVE\" -c \"bgBlue.bold,bgMagenta.bold,bgGreen.bold\" \"npm run sass\" \"npm run sass:watch\" \"npm run serve\"",
     "serve": "lite-server --host 0.0.0.0",
-    "sass": "node-sass css/main.sass --output ./css --indent-width 4 --output-style expanded --indent-type space --source-map true",
+    "sass": "node-sass css/style.scss --output ./css --indent-width 4 --output-style expanded --indent-type space --source-map true",
     "sass:watch": "npm run sass -- --watch"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://gitradik@github.com/gitradik/cars-from-usa.git"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/gitradik/cars-from-usa/issues"
-  },
-  "homepage": "https://github.com/gitradik/cars-from-usa#readme",
   "devDependencies": {
     "concurrently": "^5.1.0",
     "lite-server": "^2.5.4",
