@@ -58,18 +58,8 @@
     src: url(../assets/fonts/roboto/Roboto-ThinItalic.ttf);
 }
 
-a {
-    transition: .2s;
-    color: #31312D;
-}
-
-a:hover {
-    text-decoration: none;
-    transition: .2s;
-    color: rgba(49, 49, 45, 0.7);
-}
-
-p {
+p, label {
+    font-family: robotoLight;
     margin: 0;
 }
 
@@ -83,26 +73,40 @@ h1 {
     font-size: 60px;
 }
 
+h2 {
+    font-family: robotoBold;
+    font-size: 30px;
+}
+
 h3 {
     font-family: robotoLight;
     font-size: 22px;
 }
 
 h4 {
-    font-family: robotoLight;
+    font-family: robotoMedium;
     font-size: 19px;
 }
 
-input {
+input.form-control {
     font-family: robotoLight;
+    color: #31312D;
+    border: 2px solid #909090 !important;
+    padding: 25px 10px;
+    font-size: 18px;
 }
 
 button.btn {
-    font-family: robotoLight;
-    background-color: #F3E70D !important;
-    padding: 10px 20px !important;
-    color: #31312D !important;
-    border-color: #F3E70D !important;
+    font-family: robotoMedium;
+    padding: 17px 40px !important;
+    border: 2px solid #909090 !important;
+    background-color: #31312D !important;
+    color: white !important;
+}
+
+button.btn:hover {
+    transition: .15s;
+    background-color: rgba(49, 49, 45, 0.5) !important;
 }
 
 .navbar {
@@ -110,14 +114,14 @@ button.btn {
     top: 0;
     width: 100%;
     box-shadow: 0 0 5px 2px rgba(49, 49, 45, 0.1);
-    background-color: white;
+    background-color: black;
     min-height: 82px;
     z-index: 999;
 }
 
 .navbar .navbar-brand img {
     width: 100%;
-    max-width: 60px;
+    max-width: 212px;
 }
 
 .navbar .navbar-toggler {
@@ -144,23 +148,29 @@ button.btn {
 }
 
 .navbar .navbar-nav .nav-item {
-    font-family: robotoLight;
+    font-family: robotoMedium;
 }
 
 .navbar .navbar-nav .nav-item .nav-link {
     transition: .2s;
-    color: #31312D;
+    color: white;
 }
 
 .navbar .navbar-nav .nav-item:hover .nav-link {
     transition: .2s;
-    color: rgba(49, 49, 45, 0.7);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .navbar .navbar-contacts {
+    font-family: robotoMedium;
     display: flex;
     align-items: center;
     font-size: 14px;
+    color: white;
+}
+
+.navbar .navbar-contacts a {
+    color: white;
 }
 
 .navbar .navbar-contacts .navbar-contacts-tel {
@@ -184,7 +194,7 @@ button.btn {
 
 .navbar .navbar-contacts i {
     margin-right: 5px;
-    color: #31312D;
+    color: white;
     font-size: 14px;
 }
 
@@ -201,15 +211,97 @@ button.btn {
     }
 }
 
+.nav-tabs {
+    justify-content: center;
+    border-bottom: 0;
+}
+
+.nav-tabs .nav-item {
+    width: 300px;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.nav-tabs .nav-item:last-child {
+    margin-right: 0;
+}
+
+.nav-tabs .nav-link {
+    font-family: robotoMedium;
+    font-size: 18px;
+    color: white;
+}
+
+.slider img {
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+}
+
+.slider .slick-dots li.slick-active button::before {
+    color: #E2E100;
+}
+
+.slider .slick-dots li button::before {
+    font-size: 10px;
+    color: #31312D;
+}
+
+.slider .slick-btn {
+    position: absolute;
+    z-index: 999;
+    color: #31312D;
+    top: calc(100% + 8px);
+}
+
+.slider .slick-btn::before {
+    display: none;
+}
+
+.slider .slick-btn i {
+    color: #31312D;
+    font-size: 34px;
+}
+
+.slider .slick-prev {
+    left: 30px;
+}
+
+.slider .slick-prev i {
+    transform: rotate(-90deg);
+}
+
+.slider .slick-next {
+    right: 30px;
+}
+
+.slider .slick-next i {
+    transform: rotate(-90deg);
+}
+
 section {
     padding: 30px 0;
+}
+
+section .title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+section .section-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
 }
 
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 40px 30px;
     border-radius: 0.25rem;
     box-shadow: 0 0 5px 2px rgba(49, 49, 45, 0.1);
 }
@@ -228,14 +320,15 @@ form .input-group .form-control {
 }
 
 section.main {
+    background-image: url("/img/main-back.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     margin-top: 82px;
     min-height: calc(100vh - 82px);
     display: flex;
     align-items: center;
-}
-
-section.main h1, section.main h3 {
-    color: #31312D;
+    position: relative;
 }
 
 section.main .title-block {
@@ -245,10 +338,15 @@ section.main .title-block {
 
 section.main .title-block h1 {
     margin-bottom: 25px;
+    color: #E2E100;
+    font-size: 45px;
+    line-height: 60px;
+    font-weight: 600;
 }
 
 section.main .title-block h3 {
     margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 section.main .title-block h3:last-child {
@@ -259,6 +357,110 @@ section.main form {
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
+}
+
+section.main form .title {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+section.about h3 {
+    text-align: center;
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+section.about h3::before {
+    position: absolute;
+    content: '';
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 2px;
+    background-color: #31312D;
+}
+
+section.about p {
+    margin-bottom: 10px;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+section.about .about-items .about-item {
+    text-align: center;
+}
+
+section.about .about-items .about-item label {
+    font-size: 40px;
+    font-family: robotoBold;
+    color: #31312D;
+}
+
+.product .title {
+    color: white;
+}
+
+.product .product-nav {
+    position: relative;
+    z-index: 2;
+    background-color: #31312D;
+    padding-bottom: 0;
+}
+
+.product .product-content {
+    margin-top: 19px;
+    margin-left: 30px;
+    margin-right: 30px;
+    position: relative;
+    z-index: 1;
+    border: 1px solid rgba(49, 49, 45, 0.2);
+    border-radius: .25rem;
+    padding: 30px;
+    box-shadow: 0 0 15px 0px rgba(49, 49, 45, 0.2);
+}
+
+.product .nav-tabs .nav-link {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.product .nav-tabs .nav-link.active {
+    position: relative;
+}
+
+.product .nav-tabs .nav-link.active::before {
+    position: absolute;
+    content: '';
+    bottom: -20px;
+    left: -2px;
+    right: -2px;
+    height: 20px;
+    border-left: 1px solid rgba(49, 49, 45, 0.2);
+    border-right: 1px solid rgba(49, 49, 45, 0.2);
+    background-color: white;
+}
+
+.product .slider .slick-list {
+    padding-bottom: 15px;
+}
+
+.product .slider .product-slider-item {
+    padding: 10px;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.product .slider .product-slider-item img {
+    width: 100%;
+    max-width: 250px;
+}
+
+.product .slider .product-slider-item h4 {
+    max-width: 300px;
 }
 
 /*# sourceMappingURL=style.css.map */

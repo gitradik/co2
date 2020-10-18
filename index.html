@@ -19,17 +19,17 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="/">
-      <img src="./img/logo.png" alt="logo">
+      <img src="./img/logo-long.png" alt="logo">
     </a>
     <div class="navbar-contacts">
-      <div class="navbar-contacts-places">
+      <!-- <div class="navbar-contacts-places">
         <i class="fas fa-globe-europe"></i>
         <div class="d-flex flex-column">
           <span>Днепр</span>
           <span>Запорожье</span>
           <span>Мариуполь</span>
         </div>
-      </div>
+      </div> -->
       <div class="navbar-contacts-tel ml-3 d-none d-lg-flex">
         <i class="fas fa-phone"></i>
         <div class="d-flex flex-column">
@@ -50,16 +50,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#">О нас</a>
+          <a class="nav-link smooth-anchor" href="#about">О нас</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Каталог</a>
+          <a class="nav-link smooth-anchor" href="#">Каталог</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Доставка</a>
+          <a class="nav-link smooth-anchor" href="#">Доставка</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Контакты</a>
+          <a class="nav-link smooth-anchor" href="#">Контакты</a>
         </li>
         <li class="nav-item d-lg-none">
           <div class="navbar-contacts">
@@ -80,11 +80,15 @@
   </nav>
 
   <section class="main">
+    <div class="section-bg"></div>
     <div class="container">
       <div class="row">
         <div class="col-md-6">
           <div class="title-block">
-            <h1>Продажа CO2</h1>
+            <h1>
+              Продажа технических газов
+              в Днепре, Запорожье и Мариуполе
+            </h1>
             <h3>Пищевая углекислота высшего сорта. Производство: Украина, Польша, Венгрия.</h3>
             <h3>Прозрачная ПЭТ-бутылка из высококачественного первичного сырья.</h3>
           </div>
@@ -103,6 +107,119 @@
         </div>
       </div>
     </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="title">Почему «СО2-СЕРВИС»?</h2>
+          <div class="about-items">
+            <div class="about-item">
+              <h3>15 лет</h3> 
+              <p>Упорного труда завоевала лидирующую позицию в г. ЗАПОРОЖЬЕ<br> в сфере поставок углекислого газа в баллонах. Далее ДНЕПР, МАРИУПОЛЬ.</p>
+            </div>
+          </div>
+          <h3>БЕЗ ВЫХОДНЫХ</h3>
+          <p>Сотрудничество с «СО2-СЕРВИС» — гарантия бесперебойных поставок углекислоты ежедневно.</p>
+          <h3>ГАРАНТИЯ БЕЗОПАСНОСТИ</h3>
+          <p>Заводская аттестация баллонов. Итальянские вентили. Специальные конструкции внутри грузовых автомобилей для безопасной транспортировки баллонов.</p>
+          <p>Заводская заправка баллонов обеспечивает безопасность  эксплуатации углекислотных баллонов, а также гарантирует качественную заправку баллонов заявленным количеством углекислоты.</p>
+          <p>Используемые нами запорные вентили итальянского производства позволяют сохранять углекислоту в баллоне без потерь.<br>
+            Для грузовиков разработаны специальные удерживающие конструкции с целью безопасной транспортировки баллонов к месту приема заказчика.</p>
+          <p>Наша цель на сегодня — расширение контактов. Наша стратегия —  поддержание репутации надежного партнёра на рынке Днепра, Запорожья и Мариуполя.  Наша задача — ответственное сотрудничество с каждым клиентом. Над реализацией своей цели мы работаем 7 дней в неделю, без праздников и выходных. </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="product">
+    <section class="product-nav">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="title">Каталог</h2>
+          </div>
+          <div class="col-md-12 product-bg">
+            <ul class="nav nav-tabs" id="productTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="product1-tab" data-toggle="tab" href="#product1" role="tab" aria-controls="product1" aria-selected="true">Углекислота в баллонах</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" id="product2-tab" data-toggle="tab" href="#product2" role="tab" aria-controls="product2" aria-selected="false">ПЭТ-бутылка</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" id="product3-tab" data-toggle="tab" href="#product3" role="tab" aria-controls="product3" aria-selected="false">Пробки</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="product-content">
+      <div class="tab-content" id="productTabContent">
+        <div class="tab-pane fade show active" id="product1" role="tabpanel" aria-labelledby="product1-tab">
+          <div class="slider">
+            <div class="product-slider-item">
+              <img src="/img/prod1.jpg" alt="prod11">
+              <h4 class="my-3">Углекислота в баллонах<br> 20 кг (40л)</h4>
+            </div>
+            <div class="product-slider-item">
+              <img src="/img/prod1.jpg" alt="prod12">
+              <h4 class="my-3">Углекислота в баллонах ЛЮКС<br> 12 кг (24л)</h4>
+            </div>
+            <div class="product-slider-item">
+              <img src="/img/prod1.jpg" alt="prod13">
+              <h4 class="my-3">Углекислота в баллонах<br> 6 кг (10л)</h4>
+            </div>
+            <div class="product-slider-item">
+              <img src="/img/prod1.jpg" alt="prod14">
+              <h4 class="my-3">Пищевая газовая смесь для разливных напитков<br> (СО2 + N2) 20 кг (40л)</h4>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="product2" role="tabpanel" aria-labelledby="product2-tab">
+          <div class="slider">
+            <div class="product-slider-item">
+              <img src="/img/prod1.jpg" alt="prod21">
+              <h4 class="my-3">Углекислота в баллонах<br> 20 кг (40л)</h4>
+            </div>
+            <div class="product-slider-item">
+              <img src="/img/prod1.jpg" alt="prod22">
+              <h4 class="my-3">Углекислота в баллонах ЛЮКС<br> 12 кг (24л)</h4>
+            </div>
+            <div class="product-slider-item">
+              <img src="/img/prod1.jpg" alt="prod23">
+              <h4 class="my-3">Углекислота в баллонах<br> 6 кг (10л)</h4>
+            </div>
+            <div class="product-slider-item">
+              <img src="/img/prod1.jpg" alt="prod24">
+              <h4 class="my-3">Пищевая газовая смесь для разливных напитков<br> (СО2 + N2) 20 кг (40л)</h4>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="product3" role="tabpanel" aria-labelledby="product3-tab">
+          <div class="slider">
+            <div class="product-slider-item">
+              <img src="/img/prod1.jpg" alt="prod31">
+              <h4 class="my-3">Углекислота в баллонах<br> 20 кг (40л)</h4>
+            </div>
+            <div class="product-slider-item">
+              <img src="/img/prod1.jpg" alt="prod32">
+              <h4 class="my-3">Углекислота в баллонах ЛЮКС<br> 12 кг (24л)</h4>
+            </div>
+            <div class="product-slider-item">
+              <img src="/img/prod1.jpg" alt="prod33">
+              <h4 class="my-3">Углекислота в баллонах<br> 6 кг (10л)</h4>
+            </div>
+            <div class="product-slider-item">
+              <img src="/img/prod1.jpg" alt="prod34">
+              <h4 class="my-3">Пищевая газовая смесь для разливных напитков<br> (СО2 + N2) 20 кг (40л)</h4>
+            </div>
+          </div>        
+        </div>
+      </div>
+    </section>
   </section>
 
 
