@@ -51,6 +51,9 @@ $black: #31312D;
 $yellow: #F3E70D;
 $white: white;
 
+$br: .25rem;
+$bs: 0 0 5px 2px rgba($black, .1);
+
 a {
   transition: .2s;
   color: $black;
@@ -80,12 +83,29 @@ h3 {
   font-size: 22px;
 }
 
+h4 {
+  font-family: robotoLight;
+  font-size: 19px;
+}
+
+input {
+  font-family: robotoLight;
+}
+
+button.btn {
+  font-family: robotoLight;
+  background-color: $yellow !important;
+  padding: 10px 20px !important;
+  color: $black !important;
+  border-color: $yellow !important;
+}
+
 // NAVBAR
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  box-shadow: 0 0 5px 2px rgba($black, .1);
+  box-shadow: $bs;
   background-color: $white;
   min-height: 82px;
   z-index: 999;
@@ -176,6 +196,26 @@ section {
   padding: 30px 0;
 }
 // section
+// form
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: $br;
+  box-shadow: $bs;  
+  .title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .input-group {
+    justify-content: center;
+    .form-control {
+      margin-bottom: 10px;
+    }
+  }
+}
+// form
 // MAIN
 section.main {
   margin-top: 82px;
@@ -197,6 +237,11 @@ section.main {
         margin-bottom: 0;
       }
     }
+  }
+  form {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 // MAIN

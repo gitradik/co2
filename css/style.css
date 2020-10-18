@@ -88,6 +88,23 @@ h3 {
     font-size: 22px;
 }
 
+h4 {
+    font-family: robotoLight;
+    font-size: 19px;
+}
+
+input {
+    font-family: robotoLight;
+}
+
+button.btn {
+    font-family: robotoLight;
+    background-color: #F3E70D !important;
+    padding: 10px 20px !important;
+    color: #31312D !important;
+    border-color: #F3E70D !important;
+}
+
 .navbar {
     position: fixed;
     top: 0;
@@ -188,6 +205,28 @@ section {
     padding: 30px 0;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 5px 2px rgba(49, 49, 45, 0.1);
+}
+
+form .title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form .input-group {
+    justify-content: center;
+}
+
+form .input-group .form-control {
+    margin-bottom: 10px;
+}
+
 section.main {
     margin-top: 82px;
     min-height: calc(100vh - 82px);
@@ -214,6 +253,12 @@ section.main .title-block h3 {
 
 section.main .title-block h3:last-child {
     margin-bottom: 0;
+}
+
+section.main form {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*# sourceMappingURL=style.css.map */
