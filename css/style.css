@@ -320,7 +320,6 @@ form .input-group .form-control {
 }
 
 section.main {
-    background-image: url("/img/main-back.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
