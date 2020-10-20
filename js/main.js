@@ -51,8 +51,8 @@ $(".smooth-anchor").on('click', function(event) {
 $('.slider').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
-  prevArrow: '<button type="button" class="slick-btn slick-prev"><img src="/img/back.svg" /></button>',
-  nextArrow: '<button type="button" class="slick-btn slick-next"><img src="/img/next.svg" /></button>',
+  prevArrow: '<button type="button" class="slick-btn slick-prev"><img src="./img/back.svg" /></button>',
+  nextArrow: '<button type="button" class="slick-btn slick-next"><img src="./img/next.svg" /></button>',
   dots: true,
   responsive: [
     {
