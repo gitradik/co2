@@ -1,3 +1,28 @@
+var lastScrollTop = 0;
+let upCount = 0
+let downCount = 0
+
+document.addEventListener("scroll", function(){
+  var st = window.pageYOffset || document.documentElement.scrollTop;
+  if (document.documentElement.scrollTop > 100) {
+    if (st > lastScrollTop){
+      if (downCount++ >= 20) {
+        $('#navbarSupportedContent').removeClass('show');
+        $('#headerMenu').removeClass("header-menu-open");
+        downCount = 0
+      }
+    } else {
+      if (upCount++ > 30) {
+        $('#headerMenu').addClass("header-menu-open");
+        upCount = 0
+      }
+    }
+  } else {
+    $('#headerMenu').addClass("header-menu-open");
+  }
+  lastScrollTop = st <= 0 ? 0 : st;
+}, false);
+
 $(".input-mask-control").inputmask("+38 (999) 999-99-99");
 
 $(".smooth-anchor").on('click', function(event) {
@@ -18,8 +43,6 @@ $('.slider').slick({
   prevArrow: '<button type="button" class="slick-btn slick-prev"><img src="/img/back.svg" /></button>',
   nextArrow: '<button type="button" class="slick-btn slick-next"><img src="/img/next.svg" /></button>',
   dots: true,
-  infinite: true,
-  speed: 500,
   responsive: [
     {
       breakpoint: 991,
@@ -28,10 +51,17 @@ $('.slider').slick({
       }
     },
     {
-      breakpoint: 767,
+      breakpoint: 499,
       settings: {
         slidesToShow: 1
       }
     }
   ]
 });
+
+const prodNavtabs = [...document.getElementsByClassName('product-nav-tabs')][0];
+if (prodNavtabs) {
+    $(prodNavtabs).on('shown.bs.tab', function () {
+      $('.slider').slick('setPosition')
+    })
+}

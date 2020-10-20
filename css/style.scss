@@ -83,6 +83,15 @@ h3 {
 h4 {
   font-family: robotoMedium;
   font-size: 19px;
+  @media (max-width: 1199px) {
+    font-size: 17px;
+  }
+  @media (max-width: 767px) {
+    font-size: 16px;
+  }
+  @media (max-width: 399px) {
+    font-size: 13px;
+  }
 }
 
 input.form-control {
@@ -112,8 +121,20 @@ button.btn {
   width: 100%;
   box-shadow: $bs;
   background-color: black;
-  min-height: 82px;
+  height: 82px;
   z-index: 999;
+  transition: .3s;
+  top: -82px;
+  &.header-menu-open {
+    transition: .3s;
+    top: 0;
+  }
+  @media (max-width: 991px) {
+    .navbar-collapse {
+      background-color: black;
+      padding: 20px;
+    }
+  }
   .navbar-brand {
     img {
       width: 100%;
@@ -205,21 +226,36 @@ button.btn {
 .nav-tabs {
   justify-content: center;
   border-bottom: 0;
+  flex-wrap: nowrap;
+  @media (max-width: 575px) {
+    flex-wrap: wrap;
+  }
   .nav-item {
-    width: 300px;
+    width: 100%;
     text-align: center;
     margin-right: 5px;
     &:last-child {
       margin-right: 0;
+    }
+    @media (max-width: 991px) {
     }
   }
   .nav-link {
     font-family: robotoMedium;
     font-size: 18px;
     color: $white;
-    &:hover {
+    white-space: nowrap;
+    @media (max-width: 991px) {
+      font-size: 16px;
     }
-    &.active {
+    @media (max-width: 991px) {
+      font-size: 14px;
+    }
+    @media (max-width: 575px) {
+      font-size: 12px;
+      &::before {
+        display: none;
+      }
     }
   }
 }
@@ -254,7 +290,7 @@ button.btn {
     position: absolute;
     z-index: 999;
     color: $black;
-    top: calc(100% + 8px);
+    top: 50%;
     
     &::before {
       display: none;
@@ -270,11 +306,17 @@ button.btn {
     i {
       transform: rotate(-90deg);
     }
+    @media (max-width: 1199px) {
+      left: 0;
+    }
   }
   .slick-next {
     right: 30px;
     i {
       transform: rotate(-90deg);
+    }
+    @media (max-width: 1199px) {
+      right: 0;
     }
   }
 }
@@ -405,6 +447,19 @@ section.about {
     z-index: 2;
     background-color: $black;
     padding-bottom: 0;
+    @media (max-width: 991px) {
+      .container {
+        max-width: 100%;
+      }
+      .product-nav-col {
+        padding-left: 31px;
+        padding-right: 31px;
+
+      }
+    }
+    @media (max-width: 575px) {
+      padding-bottom: 5px;
+    }
   }
   .product-content {
     margin-top: 19px;
@@ -416,6 +471,13 @@ section.about {
     border-radius: .25rem;
     padding: 30px;
     box-shadow: 0 0 15px 0px rgba($black, .2);
+    @media (max-width: 767px) {
+      padding: 10px;
+    }
+    @media (max-width: 399px) {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
   }
   .nav-tabs {
     .nav-link {
@@ -434,7 +496,14 @@ section.about {
           border-right: 1px solid rgba($black, .2);
           background-color: $white;
         }
-      }        
+      }   
+      @media (max-width: 575px) {
+        border-bottom-left-radius: .25rem;
+        border-bottom-right-radius: .25rem;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+      }     
     }
   }
   .slider {
@@ -450,9 +519,20 @@ section.about {
       img {
         width: 100%;
         max-width: 250px;
+        @media (max-width: 1199px) {
+          max-width: 210px;
+        }
+        @media (max-width: 767px) {
+          max-width: 170px;
+        }
       }
       h4 {
         max-width: 300px;
+      }
+    }
+    .slick-dots {
+      @media (max-width: 767px) {
+        bottom: 0;
       }
     }
   }

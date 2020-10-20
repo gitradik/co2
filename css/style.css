@@ -88,6 +88,24 @@ h4 {
     font-size: 19px;
 }
 
+@media (max-width: 1199px) {
+    h4 {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 767px) {
+    h4 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 399px) {
+    h4 {
+        font-size: 13px;
+    }
+}
+
 input.form-control {
     font-family: robotoLight;
     color: #31312D;
@@ -115,8 +133,22 @@ button.btn:hover {
     width: 100%;
     box-shadow: 0 0 5px 2px rgba(49, 49, 45, 0.1);
     background-color: black;
-    min-height: 82px;
+    height: 82px;
     z-index: 999;
+    transition: .3s;
+    top: -82px;
+}
+
+.navbar.header-menu-open {
+    transition: .3s;
+    top: 0;
+}
+
+@media (max-width: 991px) {
+    .navbar .navbar-collapse {
+        background-color: black;
+        padding: 20px;
+    }
 }
 
 .navbar .navbar-brand img {
@@ -214,10 +246,17 @@ button.btn:hover {
 .nav-tabs {
     justify-content: center;
     border-bottom: 0;
+    flex-wrap: nowrap;
+}
+
+@media (max-width: 575px) {
+    .nav-tabs {
+        flex-wrap: wrap;
+    }
 }
 
 .nav-tabs .nav-item {
-    width: 300px;
+    width: 100%;
     text-align: center;
     margin-right: 5px;
 }
@@ -230,6 +269,28 @@ button.btn:hover {
     font-family: robotoMedium;
     font-size: 18px;
     color: white;
+    white-space: nowrap;
+}
+
+@media (max-width: 991px) {
+    .nav-tabs .nav-link {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 991px) {
+    .nav-tabs .nav-link {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 575px) {
+    .nav-tabs .nav-link {
+        font-size: 12px;
+    }
+    .nav-tabs .nav-link::before {
+        display: none;
+    }
 }
 
 .slider img {
@@ -251,7 +312,7 @@ button.btn:hover {
     position: absolute;
     z-index: 999;
     color: #31312D;
-    top: calc(100% + 8px);
+    top: 50%;
 }
 
 .slider .slick-btn::before {
@@ -271,12 +332,24 @@ button.btn:hover {
     transform: rotate(-90deg);
 }
 
+@media (max-width: 1199px) {
+    .slider .slick-prev {
+        left: 0;
+    }
+}
+
 .slider .slick-next {
     right: 30px;
 }
 
 .slider .slick-next i {
     transform: rotate(-90deg);
+}
+
+@media (max-width: 1199px) {
+    .slider .slick-next {
+        right: 0;
+    }
 }
 
 section {
@@ -408,6 +481,22 @@ section.about .about-items .about-item label {
     padding-bottom: 0;
 }
 
+@media (max-width: 991px) {
+    .product .product-nav .container {
+        max-width: 100%;
+    }
+    .product .product-nav .product-nav-col {
+        padding-left: 31px;
+        padding-right: 31px;
+    }
+}
+
+@media (max-width: 575px) {
+    .product .product-nav {
+        padding-bottom: 5px;
+    }
+}
+
 .product .product-content {
     margin-top: 19px;
     margin-left: 30px;
@@ -418,6 +507,19 @@ section.about .about-items .about-item label {
     border-radius: .25rem;
     padding: 30px;
     box-shadow: 0 0 15px 0px rgba(49, 49, 45, 0.2);
+}
+
+@media (max-width: 767px) {
+    .product .product-content {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 399px) {
+    .product .product-content {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }
 
 .product .nav-tabs .nav-link {
@@ -441,6 +543,16 @@ section.about .about-items .about-item label {
     background-color: white;
 }
 
+@media (max-width: 575px) {
+    .product .nav-tabs .nav-link {
+        border-bottom-left-radius: .25rem;
+        border-bottom-right-radius: .25rem;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 .product .slider .slick-list {
     padding-bottom: 15px;
 }
@@ -458,8 +570,26 @@ section.about .about-items .about-item label {
     max-width: 250px;
 }
 
+@media (max-width: 1199px) {
+    .product .slider .product-slider-item img {
+        max-width: 210px;
+    }
+}
+
+@media (max-width: 767px) {
+    .product .slider .product-slider-item img {
+        max-width: 170px;
+    }
+}
+
 .product .slider .product-slider-item h4 {
     max-width: 300px;
+}
+
+@media (max-width: 767px) {
+    .product .slider .slick-dots {
+        bottom: 0;
+    }
 }
 
 /*# sourceMappingURL=style.css.map */
