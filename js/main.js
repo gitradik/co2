@@ -4,7 +4,8 @@ let downCount = 0
 
 document.addEventListener("scroll", function(){
   var st = window.pageYOffset || document.documentElement.scrollTop;
-  if (document.documentElement.scrollTop > 100) {
+  var windowWidth = $(window).width();
+  if (document.documentElement.scrollTop > 100 && windowWidth >= 991) {
     if (st > lastScrollTop){
       if (downCount++ >= 20) {
         $('#navbarSupportedContent').removeClass('show');
@@ -23,6 +24,16 @@ document.addEventListener("scroll", function(){
   lastScrollTop = st <= 0 ? 0 : st;
 }, false);
 
+$(document).on('click', function (e){
+  var menu_opened = $('#navbarSupportedContent').hasClass('show');
+
+  if(!$(e.target).closest('#navbarSupportedContent').length &&
+      !$(e.target).is('#navbarSupportedContent') &&
+      menu_opened === true){
+          $('#navbarSupportedContent').collapse('toggle');
+  }
+});
+
 $(".input-mask-control").inputmask("+38 (999) 999-99-99");
 
 $(".smooth-anchor").on('click', function(event) {
@@ -30,7 +41,7 @@ $(".smooth-anchor").on('click', function(event) {
     event.preventDefault();
     var hash = this.hash;
     $('html, body').animate({
-      scrollTop: $(hash).offset().top - 82
+      scrollTop: $(hash).offset().top
     }, 500, function(){
       window.location.hash = hash;
     });

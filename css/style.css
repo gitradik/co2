@@ -460,6 +460,28 @@ section.about p {
     margin: 0 auto;
 }
 
+section.about p.down-slash {
+    margin-bottom: 20px;
+}
+
+section.about p.line {
+    position: relative;
+    padding: 20px 0;
+    color: white;
+    font-family: robotoMedium;
+}
+
+section.about p.line::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    height: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #31312D;
+    z-index: -1;
+}
+
 section.about .about-items .about-item {
     text-align: center;
 }
