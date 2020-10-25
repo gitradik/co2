@@ -1007,10 +1007,6 @@ section.about .about-txt.line::before {
     }
 }
 
-.partner {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-}
-
 .partner .partner-item {
     height: 200px;
     width: 100%;
@@ -1029,6 +1025,14 @@ section.about .about-txt.line::before {
     text-transform: uppercase;
 }
 
+section footer {
+    background-color: black;
+}
+
+section footer h2, section footer a, section footer p {
+    color: white;
+}
+
 section footer .contacts {
     display: flex;
     align-items: center;
@@ -1039,13 +1043,17 @@ section footer .contacts .icon {
 }
 
 section footer .contacts i {
+    color: white;
     font-size: 22px;
     margin-right: 5px;
 }
 
 section footer .contacts a {
-    color: black;
     font-size: 18px;
+}
+
+section footer .contacts a:hover {
+    color: #FEF853;
 }
 
 @media (max-width: 767px) {
@@ -1058,6 +1066,12 @@ section footer .contacts a {
         transform: translateX(-50%);
         max-width: max-content;
         padding: 10px 0;
+    }
+}
+
+@media (max-width: 575px) {
+    section footer iframe {
+        height: 300px;
     }
 }
 

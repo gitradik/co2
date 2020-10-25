@@ -876,7 +876,6 @@ section.about {
 // SECONDARY FORM
 // PARTNER
 .partner {
-  border-bottom: 1px solid rgba($black, .3);
   .partner-item {
     height: 200px;
     width: 100%;
@@ -898,6 +897,10 @@ section.about {
 // FOOTER
 section {
   footer {
+    background-color: $black;
+    h2, a, p {
+      color: $white;
+    }
     .contacts {
       display: flex;
       align-items: center;
@@ -907,13 +910,16 @@ section {
       }
 
       i {
+        color: $white;
         font-size: 22px;
         margin-right: 5px;
       }
 
       a {
-        color: $black;
         font-size: 18px;
+        &:hover {
+          color: $yellow;
+        }
       }
     }
     @media (max-width: 767px) {
@@ -924,6 +930,11 @@ section {
         transform: translateX(-50%);
         max-width: max-content;
         padding: 10px 0;
+      }
+    }
+    @media (max-width: 575px) {
+      iframe {
+        height: 300px;
       }
     }
   }
