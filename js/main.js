@@ -81,25 +81,45 @@ $('.modal').on('shown.bs.modal', function () {
   $('#myInput').trigger('focus')
 })
 
-function sendMsg(event) {
-  event.preventDefault()
-  const chat_id = '-285705786';
-  const token = '1330455183:AAE6AThknsnALEBxwJ_O9B6m4-WhbxDuJcw';
 
-  let txt = ''
-  const serializeQuery = $(event.target).serialize()
-  const obj = JSON.parse('{"' + serializeQuery.replace(/&/g, '","').replace(/=/g,'":"') + '"}')
-  Object.keys(obj).forEach(key => {
-    obj[key] = decodeURI(obj[key])
-    txt += "<b>" + key + "</b> " + obj[key] + "%0A";
-  })
+class Tg {
+  chat_id = '-285705786';
+  token = '1330455183:AAE6AThknsnALEBxwJ_O9B6m4-WhbxDuJcw';
+  msg = ''
+
+  constructor(serialize){
+    this.createMsg(serialize)
+  }
+
+  createMsg (serialize) {
+    const obj = JSON.parse('{"' + serialize.replace(/&/g, '","').replace(/=/g,'":"') + '"}')
+    Object.keys(obj).forEach(key => {
+      obj[key] = decodeURI(obj[key])
+      this.msg += "<b>" + key + ":" + "</b> " + obj[key] + "%0A";
+    })
+  }
+
+  url () {
+    return `https://api.telegram.org/bot${this.token}/sendMessage?chat_id=${this.chat_id}&parse_mode=html&text=${this.msg}`
+  }
+
+}
+
+function sendMsg(event) {
+  event.preventDefault();
+  $('#loader').addClass('loader-visible')
+  const tg = new Tg($(event.target).serialize())
   $.ajax({
     type: "POST",
-    url: `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&parse_mode=html&text=${txt}`,
+    url: tg.url(),
     data: {},
     success: function () {
-      console.log('>>>>>>>>>>>>>>')
+      $('#loader').removeClass('loader-visible')
     },
-    dataType: 'JSON'
+    dataType: 'JSON',
+    error: function() {
+      $('#loader').removeClass('loader-visible')
+      alert("Что-то пошло не так. Пожалуйста, попробуйте еще раз. Если проблема не исчезнет, свяжитесь с нами по адресу co2_service@ukr.net");
+   }
   })
 }
