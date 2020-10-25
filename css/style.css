@@ -276,7 +276,7 @@ button.btn.call-me {
 .navbar .navbar-toggler .navbar-toggler-line {
     width: 25px;
     height: .15em;
-    background-color: black;
+    background-color: #FEF853;
     margin-bottom: 5px;
 }
 
@@ -783,7 +783,7 @@ section.about .about-txt p {
 }
 
 section.about .about-txt.line {
-    padding: 20px 0;
+    padding: 20px;
     margin-top: 35px;
     margin-bottom: 20px;
 }

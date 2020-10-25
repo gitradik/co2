@@ -236,7 +236,7 @@ button.btn {
     .navbar-toggler-line {
       width: 25px;
       height: .15em;
-      background-color: $black;
+      background-color: $yellow;
       margin-bottom: 5px;
       &:last-child {
         margin-bottom: 0;
@@ -678,7 +678,7 @@ section.about {
       padding: 0 15px;
     }
     &.line {
-      padding: 20px 0;
+      padding: 20px;
       margin-top: 35px;
       margin-bottom: 20px;
       p, h2 {
