@@ -418,7 +418,7 @@ section {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0,0,0,.75);
+    background-color: rgba(0,0,0,.8);
   }
   @media (max-width: 767px) {
     padding-bottom: 0;
@@ -649,8 +649,8 @@ section.about {
   h3 {
     text-align: center;
     position: relative;
-    margin-top: 15px;
-    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     font-size: 24px;
     &::before {
       position: absolute;
@@ -687,6 +687,13 @@ section.about {
         max-width: 900px;
         margin: 0 auto;
         text-align: center;
+      }
+      h3 {
+        margin-top: 0;
+        color: $yellow;
+        &::before {
+          background-color: $yellow;
+        }
       }
       &::before {
         position: absolute;
@@ -817,6 +824,20 @@ section.about {
   }
 }
 // PRODUCT
+// DEL
+.del {
+  h2 {
+    margin-bottom: 30px;
+  }
+  p {
+    font-size: 22px;
+    margin-bottom: 20px;
+    @media (max-width: 575px) {
+      font-size: 19px;
+    }
+  }
+}
+// DEl
 // send order
 .send-order {
   background-color: $gray;
@@ -849,6 +870,27 @@ section.about {
   }
 }
 // SECONDARY FORM
+// PARTNER
+.partner {
+  border-bottom: 1px solid rgba($black, .3);
+  .partner-item {
+    height: 200px;
+    width: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  p {
+    text-align: center;
+    font-family: robotoBold;
+    font-size: 20px;
+    color: $black;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+  }
+}
+// PARTNER
 // FOOTER
 section {
   footer {

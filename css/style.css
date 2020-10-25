@@ -476,7 +476,7 @@ section .section-bg {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 @media (max-width: 767px) {
@@ -746,8 +746,8 @@ section.about {
 section.about h3 {
     text-align: center;
     position: relative;
-    margin-top: 15px;
-    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     font-size: 24px;
 }
 
@@ -794,6 +794,15 @@ section.about .about-txt.line p, section.about .about-txt.line h2 {
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
+}
+
+section.about .about-txt.line h3 {
+    margin-top: 0;
+    color: #FEF853;
+}
+
+section.about .about-txt.line h3::before {
+    background-color: #FEF853;
 }
 
 section.about .about-txt.line::before {
@@ -940,6 +949,21 @@ section.about .about-txt.line::before {
     max-width: 400px;
 }
 
+.del h2 {
+    margin-bottom: 30px;
+}
+
+.del p {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 575px) {
+    .del p {
+        font-size: 19px;
+    }
+}
+
 .send-order {
     background-color: #909090;
 }
@@ -973,6 +997,28 @@ section.about .about-txt.line::before {
     .secondary-form button {
         height: 40px;
     }
+}
+
+.partner {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.partner .partner-item {
+    height: 200px;
+    width: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.partner p {
+    text-align: center;
+    font-family: robotoBold;
+    font-size: 20px;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
 }
 
 section footer .contacts {
