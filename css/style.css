@@ -972,6 +972,14 @@ section.about .about-txt.line::before {
     color: white;
 }
 
+.secondary-form {
+    padding: 10px 0;
+}
+
+.secondary-form form {
+    padding: 0;
+}
+
 .secondary-form button {
     height: 54px !important;
     padding: 0 !important;
@@ -1026,8 +1034,13 @@ section footer .contacts {
     align-items: center;
 }
 
+section footer .contacts .icon {
+    width: 35px;
+}
+
 section footer .contacts i {
-    margin-right: 10px;
+    font-size: 22px;
+    margin-right: 5px;
 }
 
 section footer .contacts a {

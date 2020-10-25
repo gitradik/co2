@@ -849,6 +849,10 @@ section.about {
 // send order
 // SECONDARY FORM
 .secondary-form {
+  padding: 10px 0;
+  form {
+    padding: 0;
+  }
   button {
    height: 54px!important;
    padding: 0 !important;
@@ -898,8 +902,13 @@ section {
       display: flex;
       align-items: center;
 
+      .icon {
+        width: 35px;
+      }
+
       i {
-        margin-right: 10px;
+        font-size: 22px;
+        margin-right: 5px;
       }
 
       a {
