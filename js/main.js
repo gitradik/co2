@@ -76,3 +76,30 @@ if (prodNavtabs) {
       $('.slider').slick('setPosition')
     })
 }
+
+$('.modal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+
+function sendMsg(event) {
+  event.preventDefault()
+  const chat_id = '-285705786';
+  const token = '1330455183:AAE6AThknsnALEBxwJ_O9B6m4-WhbxDuJcw';
+
+  let txt = ''
+  const serializeQuery = $(event.target).serialize()
+  const obj = JSON.parse('{"' + serializeQuery.replace(/&/g, '","').replace(/=/g,'":"') + '"}')
+  Object.keys(obj).forEach(key => {
+    obj[key] = decodeURI(obj[key])
+    txt += "<b>" + key + "</b> " + obj[key] + "%0A";
+  })
+  $.ajax({
+    type: "POST",
+    url: `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&parse_mode=html&text=${txt}`,
+    data: {},
+    success: function () {
+      console.log('>>>>>>>>>>>>>>')
+    },
+    dataType: 'JSON'
+  })
+}

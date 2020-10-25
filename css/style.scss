@@ -47,8 +47,9 @@
   src: url(../assets/fonts/roboto/Roboto-ThinItalic.ttf);
 }
 
-$black: #31312D;
-$yellow: #E2E100;
+$black: black;
+$yellow:#FEF853;
+$red: #FC5C5A;
 $white: white;
 $gray: #909090;
 
@@ -68,16 +69,28 @@ img {
 h1 {
   font-family: robotoBold;
   font-size: 60px;
+  @media (max-width: 991px) {
+    font-size: 50px;
+  }
 }
 
 h2 {
   font-family: robotoBold;
   font-size: 30px;
+  @media (max-width: 575px) {
+    font-size: 25px;
+  }
 }
 
 h3 {
-  font-family: robotoLight;
+  font-family: robotoBold;
   font-size: 22px;
+  @media (max-width: 991px) {
+    font-size: 20px;
+  }
+  @media (max-width: 575px) {
+    font-size: 18px;
+  }
 }
 
 h4 {
@@ -100,6 +113,20 @@ input.form-control {
   border: 2px solid $gray !important;
   padding: 25px 10px;
   font-size: 18px;
+  @media (max-width: 575px) {
+    font-size: 14px;
+    padding: 20px 5px;    
+  }
+}
+
+textarea.form-control {
+  font-family: robotoLight;
+  min-height: 150px;
+  padding: 10px;
+  font-size: 18px;
+  @media (max-width: 575px) {
+    font-size: 14px; 
+  }
 }
 
 button.btn {
@@ -111,6 +138,13 @@ button.btn {
   &:hover {
     transition: .15s;
     background-color: rgba($black,.5) !important;
+  }
+  @media (max-width: 991px) {
+    padding: 14px 30px !important;
+  }
+  @media (max-width: 575px) {
+    font-size: 14px;
+    padding: 12px 20px !important; 
   }
 }
 
@@ -205,16 +239,12 @@ button.btn {
       font-size: 14px;
     }
   }
-}
-@media (min-width: 992px) {
-  .navbar {
+  @media (min-width: 992px) {
     .navbar-toggler {
       display: none;
     }
   }
-}
-@media (max-width: 991px) {
-  .navbar {
+  @media (max-width: 991px) {
     .navbar-contacts {
       flex-direction: column;
       align-items: flex-start;
@@ -336,7 +366,10 @@ section {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0,0,0,.85);
+    background-color: rgba(0,0,0,.75);
+  }
+  @media (max-width: 767px) {
+    padding-bottom: 0;
   }
 }
 // section
@@ -347,7 +380,6 @@ form {
   align-items: center;
   padding: 40px 30px;
   border-radius: $br;
-  box-shadow: $bs;  
   .title {
     text-align: center;
     margin-bottom: 20px;
@@ -360,6 +392,123 @@ form {
   }
 }
 // form
+// modal
+.modal {
+  .modal-header {
+    display: flex;
+    align-items: center;
+    img {
+      height: auto;
+      max-width: 30px;
+      margin-right: 10px;
+    }
+    button {
+      align-self: flex-start;
+    }
+  }
+  h5 {
+    font-family: robotoMedium;
+    font-size: 20px;
+    @media (max-width: 575px) {
+      font-size: 18px;
+    }
+  }
+  .modal-body {
+    form {
+      padding: 15px;
+      box-shadow: 0 0 0 0 transparent;
+      @media (max-width: 575px) {
+        padding: 0;
+      }
+    }
+  }
+}
+// modal
+// fixed button
+.phone-btn {
+  position: fixed;
+  z-index: 999;
+  bottom: 50px;
+  left: 50px;
+  height: 70px;
+  width: 70px;
+  background-color: yellowgreen;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: $white;
+  border-radius: 100%;
+  box-shadow: 0 2px 15px 0 rgba($black, .4);
+  transform: rotateZ(-45deg);
+  animation-name: phoneBtnAnimation;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  @media (max-width: 575px) {
+    left: 30px;
+    bottom: 30px;
+    height: 55px;
+    width: 55px;
+  }
+  @keyframes phoneBtnAnimation{
+    0% {
+      box-shadow: 0 0 0 0 rgba($black, .1);
+      transform: rotateZ(-45deg);
+    }
+    50% {
+      box-shadow: 0 3px 15px 0 rgba($black, .4);
+      transform: rotateZ(45deg);
+    }
+    100% {
+      box-shadow: 0 5px 30px 0 rgba(yellowgreen, .7);
+      transform: rotateZ(-45deg);
+    }
+  }
+}
+.email-btn {
+  position: fixed;
+  z-index: 999;
+  bottom: 25px;
+  right: 25px;
+  height: 50px;
+  width: 50px;
+  background-color: orangered;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: $white;
+  border-radius: 100%;
+  box-shadow: 0 2px 15px 0 rgba($black, .4);
+  animation-name: emailBtnAnimation;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-delay: -2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  @media (max-width: 575px) {
+    right: 15px;
+    bottom: 15px;
+    height: 40px;
+    width: 40px;
+    font-size: 18px;
+  }
+  @keyframes emailBtnAnimation{
+    0% {
+      box-shadow: 0 3px 15px 0 rgba($black, .4);
+    }
+    50% {
+      box-shadow: 0 0 0 0 rgba($black, .1);
+    }
+    100% {
+      box-shadow: 0 5px 30px 0 rgba(orangered, .7);
+    }
+  }
+}
+// fixed button
 // MAIN
 section.main {
   background-size: cover;
@@ -370,31 +519,63 @@ section.main {
   display: flex;
   align-items: center;
   position: relative;
-  .title-block {
-    display: flex;
-    flex-direction: column;
-    h1 {
-      margin-bottom: 25px;
-      color: $yellow;
-      font-size: 45px;
-      line-height: 60px;
-      font-weight: 600;
+  h1 {
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    color: $yellow;
+    font-weight: 600;
+    @media (max-width: 767px) {
+      text-align: center;
     }
-    h3 {
-      margin-bottom: 15px;
-      color: rgba($white, .7);
-      &:last-child {
-        margin-bottom: 0;
-      }
+    @media (max-width: 499px) {
+      font-size: 40px;
+    }
+  }
+  h2 {
+    margin-bottom: 15px;
+    color: $yellow;
+    font-size: 40px;
+    @media (max-width: 992px) {
+      font-size: 30px;
+    }
+    @media (max-width: 767px) {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    @media (max-width: 499px) {
+      font-size: 25px;
     }
   }
   form {
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
+    background-color: $black;
 
     .title {
-      color: rgba($white, .7);
+      color: $yellow;
+      text-transform: uppercase;
+      font-size: 25px;
+    }
+
+    button {
+      text-transform: uppercase;
+    }
+  }
+  .no-weekends {
+    font-family: robotoBold;
+    position: relative;
+    z-index: 2;
+    text-transform: uppercase;
+    background-color: $red;
+    padding: 20px 0;
+    width: 100%;
+    color: $yellow;
+    margin: 20px auto;
+    font-size: 30px;
+    text-align: center;
+    @media (max-width: 767px) {
+      font-size: 24px;
+    }
+    @media (max-width: 575px) {
+      max-width: 350px;
     }
   }
 }
@@ -402,6 +583,7 @@ section.main {
 
 // ABOUT
 section.about {
+  overflow-x: hidden;
   h3 {
     text-align: center;
     position: relative;
@@ -417,39 +599,43 @@ section.about {
       height: 2px;
       background-color: $black;
     }
+    @media (max-width: 767px) {
+      font-size: 18px;
+    }
   }
-  p {
-    margin-bottom: 10px;
-    text-align: center;
-    max-width: 900px;
-    margin: 0 auto;
-    &.down-slash {
-      margin-bottom: 20px;
+  .about-txt {
+    width: 100%;
+    position: relative;
+    p {
+      text-align: center;
+      max-width: 600px;
+      font-size: 19px;
+      margin: 0 auto;
+      color: $black;
+      padding: 0 15px;
     }
     &.line {
-      position: relative;
       padding: 20px 0;
-      color: $white;
-      font-family: robotoMedium;
+      margin-top: 35px;
+      margin-bottom: 20px;
+      p {
+        color: $yellow;
+        font-family: robotoBold;
+      }
       &::before {
         position: absolute;
         content: '';
+        background-color: $black;
         top: 0;
-        height: 100%;
         left: 0;
         width: 100%;
-        background-color: $black;
+        height: 100%;
         z-index: -1;
       }
     }
-  }
-  .about-items {
-    .about-item {
-      text-align: center;
-      label {
-        font-size: 40px;
-        font-family: robotoBold;
-        color: $black;
+    @media (max-width: 767px) {
+      p {
+        font-size: 16px;
       }
     }
   }
@@ -473,11 +659,7 @@ section.about {
       .product-nav-col {
         padding-left: 31px;
         padding-right: 31px;
-
       }
-    }
-    @media (max-width: 575px) {
-      padding-bottom: 5px;
     }
   }
   .product-content {
@@ -502,6 +684,7 @@ section.about {
     .nav-link {
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
+      border-bottom: 1px solid transparent;
       &.active {
         position: relative;
         &::before {
@@ -515,7 +698,15 @@ section.about {
           border-right: 1px solid rgba($black, .2);
           background-color: $white;
         }
-      }   
+        @media (max-width: 575px) {
+          background-color: transparent;
+          border: 0;
+          border-bottom: 1px solid $white;
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+          color: $yellow;
+        }
+      }  
       @media (max-width: 575px) {
         border-bottom-left-radius: .25rem;
         border-bottom-right-radius: .25rem;
@@ -545,15 +736,67 @@ section.about {
           max-width: 170px;
         }
       }
-      h4 {
+      h4, p {
+        width: 100%;
         max-width: 300px;
+      }
+      p {
+        max-width: 400px;
       }
     }
     .slick-dots {
       @media (max-width: 767px) {
-        bottom: 0;
       }
     }
   }
 }
 // PRODUCT
+// SECONDARY FORM
+.secondary-form {
+  box-shadow: $bs;
+  button {
+   height: 54px!important;
+   padding: 0 !important;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   @media (max-width: 991px) {
+     max-width: 300px;
+     margin: 0 auto;
+   }
+   @media (max-width: 575px) {
+     height: 40px;
+   }
+  }
+}
+// SECONDARY FORM
+// FOOTER
+section {
+  footer {
+    .contacts {
+      display: flex;
+      align-items: center;
+
+      i {
+        margin-right: 10px;
+      }
+
+      a {
+        color: $black;
+        font-size: 18px;
+      }
+    }
+    @media (max-width: 767px) {
+      text-align: center;
+      .contacts {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: max-content;
+        padding: 10px 0;
+      }
+    }
+  }
+}
+// FOOTER
