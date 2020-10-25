@@ -130,6 +130,17 @@ h4 {
     }
 }
 
+.hr-shadow {
+    margin: 20px 0;
+    padding: 0;
+    height: 10px;
+    border: none;
+    border-top: 2px solid #333;
+    box-shadow: 0 10px 10px -10px #8c8b8b inset;
+    max-width: 50px;
+    margin: 20px auto 0 auto;
+}
+
 .loader {
     position: fixed;
     top: 0;
@@ -206,34 +217,57 @@ textarea.form-control {
     }
 }
 
-button.btn {
+button.b2 {
     font-family: robotoMedium;
-    padding: 17px 40px !important;
-    border: 2px solid #909090 !important;
-    background-color: black !important;
-    color: white !important;
+    padding: 17px 40px;
+    border: 0;
+    color: white;
+    border-radius: 3px;
+    box-shadow: 0 -3px black inset;
+    transition: 0.2s;
 }
 
-button.btn:hover {
+button.b2:hover {
     transition: .15s;
-    background-color: rgba(0, 0, 0, 0.5) !important;
 }
 
-button.btn.call-me {
-    background-color: #FC5C5A !important;
+button.b2.call-me {
+    padding: 15px 55px;
+    background-color: #FC5C5A;
+    font-size: 20px;
+    color: white;
+    transition: .2s;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.3);
+}
+
+button.b2.call-me:hover {
+    color: white;
+    transition: .2s;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 767px) {
+    button.b2.call-me {
+        padding: 15px 30px;
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 991px) {
-    button.btn {
-        padding: 14px 30px !important;
+    button.b2 {
+        padding: 14px 30px;
     }
 }
 
 @media (max-width: 575px) {
-    button.btn {
+    button.b2 {
         font-size: 14px;
-        padding: 12px 20px !important;
+        padding: 12px 20px;
     }
+}
+
+button.b2:active {
+    box-shadow: 0 3px #FEF853 inset;
 }
 
 .navbar {
@@ -476,12 +510,14 @@ section .section-bg {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
 }
 
-@media (max-width: 767px) {
+@media (min-width: 992px) {
     section {
         padding-bottom: 0;
+    }
+    section .section-bg {
+        background-color: rgba(0, 0, 0, 0.8);
     }
 }
 
@@ -662,6 +698,12 @@ section.main h1 {
     font-weight: 600;
 }
 
+@media (max-width: 991px) {
+    section.main h1 {
+        color: black;
+    }
+}
+
 @media (max-width: 767px) {
     section.main h1 {
         text-align: center;
@@ -680,8 +722,9 @@ section.main h2 {
     font-size: 40px;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
     section.main h2 {
+        color: black;
         font-size: 30px;
     }
 }
@@ -703,6 +746,12 @@ section.main form {
     background-color: black;
 }
 
+@media (max-width: 767px) {
+    section.main form {
+        margin-bottom: 30px;
+    }
+}
+
 section.main form .title {
     color: #FEF853;
     text-transform: uppercase;
@@ -711,6 +760,24 @@ section.main form .title {
 
 section.main form button {
     text-transform: uppercase;
+    color: #FC5C5A;
+    padding: 15px 40px;
+    font-size: 18px;
+    background: linear-gradient(4deg, #fcffc7 0%, #ffde00 100%);
+    transition: .2s;
+    box-shadow: 0 5px 25px 0 rgba(255, 255, 255, 0.2);
+}
+
+section.main form button:hover {
+    transition: .2s;
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 767px) {
+    section.main form button {
+        padding: 15px 30px !important;
+        font-size: 16px !important;
+    }
 }
 
 section.main .no-weekends {
@@ -747,25 +814,7 @@ section.about h3 {
     text-align: center;
     position: relative;
     margin-top: 30px;
-    margin-bottom: 30px;
     font-size: 24px;
-}
-
-section.about h3::before {
-    position: absolute;
-    content: '';
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 30px;
-    height: 2px;
-    background-color: black;
-}
-
-@media (max-width: 767px) {
-    section.about h3 {
-        font-size: 18px;
-    }
 }
 
 section.about .about-txt {
@@ -783,13 +832,13 @@ section.about .about-txt p {
 }
 
 section.about .about-txt.line {
-    padding: 20px;
+    padding: 40px;
     margin-top: 35px;
     margin-bottom: 20px;
 }
 
 section.about .about-txt.line p, section.about .about-txt.line h2 {
-    color: #FEF853;
+    color: white;
     font-family: robotoBold;
     max-width: 900px;
     margin: 0 auto;
@@ -1013,6 +1062,10 @@ section.about .about-txt.line::before {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+.partner .partner-item.pivasov, .partner .partner-item.more-beer {
+    background-size: 80%;
 }
 
 .partner p {

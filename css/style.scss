@@ -109,6 +109,17 @@ h4 {
   }
 }
 
+.hr-shadow {
+	margin: 20px 0;
+	padding: 0;
+	height: 10px;
+	border: none;
+	border-top: 2px solid #333;
+  box-shadow: 0 10px 10px -10px #8c8b8b inset;
+  max-width: 50px;
+  margin: 20px auto 0 auto;
+}
+
 // Loader
 .loader {
   position: fixed;
@@ -178,25 +189,43 @@ textarea.form-control {
   }
 }
 
-button.btn {
+button.b2 {
   font-family: robotoMedium;
-  padding: 17px 40px !important;
-  border: 2px solid $gray !important;
-  background-color: $black !important;
-  color: $white !important;
+  padding: 17px 40px;
+  border: 0;
+  color: $white;
+  border-radius: 3px;
+  box-shadow: 0 -3px $black inset;
+  transition: 0.2s;
   &:hover {
     transition: .15s;
-    background-color: rgba($black,.5) !important;
   }
   &.call-me {
-    background-color: $red !important;
+    padding: 15px 55px;
+    background-color: $red;
+    font-size: 20px;
+    color: $white;
+    transition: .2s;
+    box-shadow: 0 2px 15px 0 rgba($black, .3);
+    &:hover {
+      color: $white;
+      transition: .2s;
+      box-shadow: 0 0 10px 0 rgba($black, .3);
+    }
+    @media (max-width: 767px) {
+      padding: 15px 30px;
+      font-size: 16px;
+    }
   }
   @media (max-width: 991px) {
-    padding: 14px 30px !important;
+    padding: 14px 30px;
   }
   @media (max-width: 575px) {
     font-size: 14px;
-    padding: 12px 20px !important; 
+    padding: 12px 20px; 
+  }
+  &:active {
+    box-shadow: 0 3px $yellow inset;
   }
 }
 
@@ -418,10 +447,12 @@ section {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0,0,0,.8);
   }
-  @media (max-width: 767px) {
+  @media (min-width: 992px) {
     padding-bottom: 0;
+    .section-bg {
+      background-color: rgba($black, .8);
+    }
   }
 }
 // section
@@ -586,6 +617,9 @@ section.main {
     margin-bottom: 25px;
     color: $yellow;
     font-weight: 600;
+    @media (max-width: 991px) {
+      color: $black;
+    }
     @media (max-width: 767px) {
       text-align: center;
     }
@@ -597,7 +631,8 @@ section.main {
     margin-bottom: 15px;
     color: $yellow;
     font-size: 40px;
-    @media (max-width: 992px) {
+    @media (max-width: 991px) {
+      color: $black;
       font-size: 30px;
     }
     @media (max-width: 767px) {
@@ -609,6 +644,9 @@ section.main {
     }
   }
   form {
+    @media (max-width: 767px) {
+      margin-bottom: 30px;
+    }
     background-color: $black;
 
     .title {
@@ -619,6 +657,20 @@ section.main {
 
     button {
       text-transform: uppercase;
+      color: $red;
+      padding: 15px 40px;
+      font-size: 18px;
+      background: linear-gradient(4deg, rgba(252,255,199,1) 0%, rgba(255,222,0,1) 100%);
+      transition: .2s;
+      box-shadow: 0 5px 25px 0 rgba($white, .2);
+      &:hover {
+        transition: .2s;
+        box-shadow: 0 0 10px 0 rgba($white, .2);
+      }
+      @media (max-width: 767px) {
+        padding: 15px 30px !important;
+        font-size: 16px!important;
+      }
     }
   }
   .no-weekends {
@@ -650,21 +702,7 @@ section.about {
     text-align: center;
     position: relative;
     margin-top: 30px;
-    margin-bottom: 30px;
     font-size: 24px;
-    &::before {
-      position: absolute;
-      content: '';
-      bottom: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 30px;
-      height: 2px;
-      background-color: $black;
-    }
-    @media (max-width: 767px) {
-      font-size: 18px;
-    }
   }
   .about-txt {
     width: 100%;
@@ -678,11 +716,11 @@ section.about {
       padding: 0 15px;
     }
     &.line {
-      padding: 20px;
+      padding: 40px;
       margin-top: 35px;
       margin-bottom: 20px;
       p, h2 {
-        color: $yellow;
+        color: $white;
         font-family: robotoBold;
         max-width: 900px;
         margin: 0 auto;
@@ -882,6 +920,9 @@ section.about {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    &.pivasov, &.more-beer {
+      background-size: 80%;
+    }
   }
   p {
     text-align: center;
