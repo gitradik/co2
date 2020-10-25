@@ -138,9 +138,9 @@
       <h3>ГАРАНТИЯ БЕЗОПАСНОСТИ</h3>
     </div>
     <div class="about-txt line">
-      <p>
+      <h2>
         Заводская аттестация баллонов. Итальянские вентили. Специальные конструкции внутри грузовых автомобилей для безопасной транспортировки баллонов.
-      </p>
+      </h2>
     </div>
     <div class="about-txt">
       <p>Заводская заправка баллонов обеспечивает безопасность  эксплуатации углекислотных баллонов, а также гарантирует качественную заправку баллонов заявленным количеством углекислоты.</p>
@@ -149,7 +149,7 @@
       </p>
     </div>
     <div class="about-txt line">
-      <p>Выбор в пользу надёжного партнёра</p>
+      <h2>Выбор в пользу надёжного партнёра</h2>
     </div>
     <div class="about-txt">
       <p>
@@ -159,7 +159,7 @@
   </section>
 
   <section class="pb-0 d-flex justify-content-center">
-    <button class="btn" data-toggle="modal" data-target="#phoneModal">Позвонить</button>
+    <button class="btn call-me" data-toggle="modal" data-target="#phoneModal">Позвонить</button>
   </section>
 
   <section id="product" class="product">
@@ -268,7 +268,7 @@
     </div>
   </section>
 
-  <section>
+  <section class="send-order">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -332,7 +332,7 @@
   </section>
 
   <!-- MODAL -->
-  <div class="modal fade" id="phoneModal" tabindex="-1" role="dialog" aria-labelledby="phoneModal" aria-hidden="true">
+  <div class="modal fade call-modal" id="phoneModal" tabindex="-1" role="dialog" aria-labelledby="phoneModal" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -356,7 +356,7 @@
       </div>
     </div>
   </div>
-  <div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="emailModal" aria-hidden="true">
+  <div class="modal fade mail-modal" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="emailModal" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -367,7 +367,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <form onsubmit="sendMsg(event)" >
+          <form onsubmit="sendMsg(event)" action="mailto:rminzp17@gmail.com" method="post" enctype="text/plain">
             <div class="input-group">
               <input type="text" class="form-control" required placeholder="Ваше имя" name="name" aria-label="Ваше имя">
             </div>
@@ -407,5 +407,6 @@
 
     <!-- MY -->
     <script src="./js/main.js?v=1"></script>
+
 </body>
 </html>

@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "webpack",
+    "dev": "",
     "start": "concurrently --names \"SASS,WATCH,SERVE\" -c \"bgBlue.bold,bgMagenta.bold,bgGreen.bold\" \"npm run sass\" \"npm run sass:watch\" \"npm run serve\"",
     "serve": "lite-server --host 0.0.0.0",
     "sass": "node-sass css/style.scss --output ./css --indent-width 4 --output-style expanded --indent-type space --source-map true",
@@ -14,12 +16,15 @@
   "devDependencies": {
     "concurrently": "^5.1.0",
     "lite-server": "^2.5.4",
-    "node-sass": "^4.13.1"
+    "node-sass": "^4.13.1",
+    "webpack": "^5.2.0",
+    "webpack-cli": "^4.1.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.12.1",
     "install": "^0.13.0",
     "npm": "^6.14.8",
+    "sendmail": "^1.6.1",
     "slick-carousel": "^1.8.1"
   }
 }

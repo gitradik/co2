@@ -92,11 +92,17 @@ class Tg {
   }
 
   createMsg (serialize) {
-    const obj = JSON.parse('{"' + serialize.replace(/&/g, '","').replace(/=/g,'":"') + '"}')
-    Object.keys(obj).forEach(key => {
-      obj[key] = decodeURI(obj[key])
-      this.msg += "<b>" + key + ":" + "</b> " + obj[key] + "%0A";
-    })
+    const obj = JSON.parse('{"' + serialize.replace(/&/g, '","').replace(/=/g,'":"') + '"}');
+    if (!$.isEmptyObject(obj)) {
+      Object.keys(obj).forEach(key => {
+        obj[key] = decodeURI(obj[key])
+        this.msg += "<b>" + key + ":" + "</b> " + obj[key] + "%0A";
+      })
+    }
+  }
+
+  get _msg () {
+    return this.msg
   }
 
   url () {
@@ -108,18 +114,21 @@ class Tg {
 function sendMsg(event) {
   event.preventDefault();
   $('#loader').addClass('loader-visible')
-  const tg = new Tg($(event.target).serialize())
+  const str = $(event.target).serialize()
+  const tg = new Tg(str)
   $.ajax({
     type: "POST",
     url: tg.url(),
-    data: {},
     success: function () {
-      $('#loader').removeClass('loader-visible')
+      alert('Спасибо за заявку! Ваш запрос будет обработан в течении нескольких минут.');
     },
     dataType: 'JSON',
     error: function() {
-      $('#loader').removeClass('loader-visible')
       alert("Что-то пошло не так. Пожалуйста, попробуйте еще раз. Если проблема не исчезнет, свяжитесь с нами по адресу co2_service@ukr.net");
+   },
+   complete: function(){
+    $('#loader').removeClass('loader-visible')
+    $('.modal').modal('hide');
    }
   })
 }

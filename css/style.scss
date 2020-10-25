@@ -52,6 +52,8 @@ $yellow:#FEF853;
 $red: #FC5C5A;
 $white: white;
 $gray: #909090;
+$yellowgreen: yellowgreen;
+$blue: royalblue;
 
 $br: .25rem;
 $bs: 0 0 5px 2px rgba($black, .1);
@@ -185,6 +187,9 @@ button.btn {
   &:hover {
     transition: .15s;
     background-color: rgba($black,.5) !important;
+  }
+  &.call-me {
+    background-color: $red !important;
   }
   @media (max-width: 991px) {
     padding: 14px 30px !important;
@@ -469,6 +474,16 @@ form {
       }
     }
   }
+  &.call-modal {
+    button[type=submit] {
+      background-color: $yellowgreen !important;
+    }
+  }
+  &.mail-modal {
+    button[type=submit] {
+      background-color: $red !important;
+    }
+  }
 }
 // modal
 // fixed button
@@ -479,7 +494,7 @@ form {
   left: 50px;
   height: 70px;
   width: 70px;
-  background-color: yellowgreen;
+  background-color: $yellowgreen;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -510,7 +525,7 @@ form {
       transform: rotateZ(45deg);
     }
     100% {
-      box-shadow: 0 5px 30px 0 rgba(yellowgreen, .7);
+      box-shadow: 0 5px 30px 0 rgba($yellowgreen, .7);
       transform: rotateZ(-45deg);
     }
   }
@@ -636,6 +651,7 @@ section.about {
     position: relative;
     margin-top: 15px;
     margin-bottom: 20px;
+    font-size: 24px;
     &::before {
       position: absolute;
       content: '';
@@ -656,7 +672,7 @@ section.about {
     p {
       text-align: center;
       max-width: 600px;
-      font-size: 19px;
+      font-size: 22px;
       margin: 0 auto;
       color: $black;
       padding: 0 15px;
@@ -665,9 +681,12 @@ section.about {
       padding: 20px 0;
       margin-top: 35px;
       margin-bottom: 20px;
-      p {
+      p, h2 {
         color: $yellow;
         font-family: robotoBold;
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
       }
       &::before {
         position: absolute;
@@ -798,9 +817,17 @@ section.about {
   }
 }
 // PRODUCT
+// send order
+.send-order {
+  background-color: $gray;
+
+  h2 {
+    color: $white;
+  }
+}
+// send order
 // SECONDARY FORM
 .secondary-form {
-  box-shadow: $bs;
   button {
    height: 54px!important;
    padding: 0 !important;
@@ -808,6 +835,10 @@ section.about {
    align-items: center;
    justify-content: center;
    width: 100%;
+   background-color: $blue !important;
+   &:hover {
+    background-color: rgba($blue,.8) !important;
+   }
    @media (max-width: 991px) {
      max-width: 300px;
      margin: 0 auto;

@@ -219,6 +219,10 @@ button.btn:hover {
     background-color: rgba(0, 0, 0, 0.5) !important;
 }
 
+button.btn.call-me {
+    background-color: #FC5C5A !important;
+}
+
 @media (max-width: 991px) {
     button.btn {
         padding: 14px 30px !important;
@@ -539,6 +543,14 @@ form .input-group .form-control {
     }
 }
 
+.modal.call-modal button[type=submit] {
+    background-color: yellowgreen !important;
+}
+
+.modal.mail-modal button[type=submit] {
+    background-color: #FC5C5A !important;
+}
+
 .phone-btn {
     position: fixed;
     z-index: 999;
@@ -736,6 +748,7 @@ section.about h3 {
     position: relative;
     margin-top: 15px;
     margin-bottom: 20px;
+    font-size: 24px;
 }
 
 section.about h3::before {
@@ -763,7 +776,7 @@ section.about .about-txt {
 section.about .about-txt p {
     text-align: center;
     max-width: 600px;
-    font-size: 19px;
+    font-size: 22px;
     margin: 0 auto;
     color: black;
     padding: 0 15px;
@@ -775,9 +788,12 @@ section.about .about-txt.line {
     margin-bottom: 20px;
 }
 
-section.about .about-txt.line p {
+section.about .about-txt.line p, section.about .about-txt.line h2 {
     color: #FEF853;
     font-family: robotoBold;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 section.about .about-txt.line::before {
@@ -924,8 +940,12 @@ section.about .about-txt.line::before {
     max-width: 400px;
 }
 
-.secondary-form {
-    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
+.send-order {
+    background-color: #909090;
+}
+
+.send-order h2 {
+    color: white;
 }
 
 .secondary-form button {
@@ -935,6 +955,11 @@ section.about .about-txt.line::before {
     align-items: center;
     justify-content: center;
     width: 100%;
+    background-color: royalblue !important;
+}
+
+.secondary-form button:hover {
+    background-color: rgba(65, 105, 225, 0.8) !important;
 }
 
 @media (max-width: 991px) {
